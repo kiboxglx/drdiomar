@@ -35,18 +35,18 @@ export default function Navbar() {
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="font-montserrat font-bold text-lg md:text-xl text-slate-50 tracking-wide uppercase">
-                    Dr. Diomar <span className="text-amber-500">Cangussu</span>
+                    Dr. Diomar <span className="text-stone-300">Cangussu</span>
                 </Link>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8">
-                    <button onClick={() => scrollToSection("hubs")} className="text-base font-medium text-slate-300 hover:text-amber-400 transition-colors">
+                    <button onClick={() => scrollToSection("hubs")} className="text-base font-medium text-slate-300 hover:text-stone-300 transition-colors">
                         Locais
                     </button>
-                    <button onClick={() => scrollToSection("protocols")} className="text-base font-medium text-slate-300 hover:text-amber-400 transition-colors">
+                    <button onClick={() => scrollToSection("protocols")} className="text-base font-medium text-slate-300 hover:text-stone-300 transition-colors">
                         Protocolos
                     </button>
-                    <button onClick={() => scrollToSection("testimonials")} className="text-base font-medium text-slate-300 hover:text-amber-400 transition-colors">
+                    <button onClick={() => scrollToSection("testimonials")} className="text-base font-medium text-slate-300 hover:text-stone-300 transition-colors">
                         Resultados
                     </button>
                 </nav>
@@ -57,7 +57,7 @@ export default function Navbar() {
                     target="_blank"
                     rel="noreferrer"
                     className={cn(
-                        "bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold py-3 px-7 rounded-full transition-all shadow-[0_0_15px_rgba(245,158,11,0.3)] hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] text-sm md:text-base"
+                        "bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-3 px-7 rounded-full transition-all shadow-[0_0_15px_rgba(214,211,209,0.3)] hover:shadow-[0_0_20px_rgba(214,211,209,0.5)] text-sm md:text-base"
                     )}
                 >
                     Agendar Consulta

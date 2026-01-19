@@ -11,7 +11,7 @@ export default function Specialist() {
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 z-0" />
 
             {/* Glow Effects */}
-            <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-[128px] pointer-events-none" />
+            <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-stone-400/5 rounded-full blur-[128px] pointer-events-none" />
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
 
@@ -24,8 +24,8 @@ export default function Specialist() {
                     className="text-center mb-16"
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800 mb-4">
-                        <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-                        <span className="text-xs text-amber-200 font-medium tracking-wider uppercase">Sobre o Especialista</span>
+                        <span className="w-2 h-2 rounded-full bg-stone-400 animate-pulse" />
+                        <span className="text-xs text-stone-300 font-medium tracking-wider uppercase">Sobre o Especialista</span>
                     </div>
                     <h2 className="text-3xl md:text-5xl font-bold text-slate-50 mb-4">
                         Dr. Diomar Cangussu
@@ -67,10 +67,10 @@ export default function Specialist() {
                         {/* Description */}
                         <div className="space-y-4">
                             <p className="text-lg text-slate-300 leading-relaxed">
-                                O Dr. Diomar não segue <strong className="text-amber-400">"receitas de bolo"</strong>. Sua abordagem combina <strong className="text-slate-200">ciência de dados</strong> (através de exames laboratoriais aprofundados) com <strong className="text-slate-200">tecnologia clínica</strong>.
+                                O Dr. Diomar não segue <strong className="text-stone-300">"receitas de bolo"</strong>. Sua abordagem combina <strong className="text-slate-200">ciência de dados</strong> (através de exames laboratoriais aprofundados) com <strong className="text-slate-200">tecnologia clínica</strong>.
                             </p>
                             <p className="text-lg text-slate-300 leading-relaxed">
-                                Referência no <strong className="text-amber-400">Norte de Minas</strong>, seu foco é transformar a saúde de pacientes que buscam não apenas estética, mas <strong className="text-slate-200">performance</strong>, <strong className="text-slate-200">longevidade</strong> e <strong className="text-slate-200">equilíbrio hormonal</strong>.
+                                Referência no <strong className="text-stone-300">Norte de Minas</strong>, seu foco é transformar a saúde de pacientes que buscam não apenas estética, mas <strong className="text-slate-200">performance</strong>, <strong className="text-slate-200">longevidade</strong> e <strong className="text-slate-200">equilíbrio hormonal</strong>.
                             </p>
                         </div>
 
@@ -82,11 +82,11 @@ export default function Specialist() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2 }}
-                                className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-amber-500/30 transition-colors"
+                                className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-stone-400/30 transition-colors"
                             >
                                 <div className="flex items-center gap-3 mb-3">
-                                    <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
-                                        <Users className="w-5 h-5 text-amber-500" />
+                                    <div className="w-10 h-10 rounded-lg bg-stone-400/10 flex items-center justify-center">
+                                        <Users className="w-5 h-5 text-stone-400" />
                                     </div>
                                 </div>
                                 <div className="text-3xl font-bold text-slate-50 mb-1">+2.000</div>
@@ -99,11 +99,11 @@ export default function Specialist() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3 }}
-                                className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-amber-500/30 transition-colors"
+                                className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-stone-400/30 transition-colors"
                             >
                                 <div className="flex items-center gap-3 mb-3">
-                                    <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
-                                        <MapPin className="w-5 h-5 text-amber-500" />
+                                    <div className="w-10 h-10 rounded-lg bg-stone-400/10 flex items-center justify-center">
+                                        <MapPin className="w-5 h-5 text-stone-400" />
                                     </div>
                                 </div>
                                 <div className="text-3xl font-bold text-slate-50 mb-1">2 Unidades</div>
@@ -122,7 +122,7 @@ export default function Specialist() {
                             <a
                                 href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
                                 target="_blank"
-                                className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-amber-900/20 transition-all hover:scale-105"
+                                className="inline-flex items-center gap-2 bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-stone-900/20 transition-all hover:scale-105"
                             >
                                 <Award className="w-5 h-5" />
                                 Agendar Consulta

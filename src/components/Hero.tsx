@@ -11,7 +11,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-0" />
 
             {/* Glow Effect */}
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-[128px] pointer-events-none" />
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-stone-400/10 rounded-full blur-[128px] pointer-events-none" />
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-[128px] pointer-events-none" />
 
             <div className="container mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center h-full">
@@ -25,12 +25,12 @@ export default function Hero() {
                         transition={{ duration: 0.8 }}
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800 mb-6">
-                            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-                            <span className="text-xs text-amber-200 font-medium tracking-wider uppercase">Medicina de Alta Performance</span>
+                            <span className="w-2 h-2 rounded-full bg-stone-400 animate-pulse" />
+                            <span className="text-xs text-stone-300 font-medium tracking-wider uppercase">Medicina de Alta Performance</span>
                         </div>
 
                         <h1 className="text-4xl md:text-6xl font-bold text-slate-50 leading-tight mb-4 tracking-tight">
-                            Emagrecimento e Medicina de <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Precisão</span> <br className="hidden md:block" />
+                            Emagrecimento e Medicina de <span className="text-transparent bg-clip-text bg-gradient-to-r from-stone-300 to-stone-400">Precisão</span> <br className="hidden md:block" />
                             Perto de Você.
                         </h1>
 
@@ -48,7 +48,7 @@ export default function Hero() {
                         <a
                             href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
                             target="_blank"
-                            className="flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-amber-900/20 transition-all hover:scale-105"
+                            className="flex items-center justify-center gap-2 bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-stone-900/20 transition-all hover:scale-105"
                         >
                             Agendar Agora
                             <ChevronRight className="w-5 h-5" />
@@ -70,10 +70,10 @@ export default function Hero() {
                         className="pt-4 flex items-center gap-6 opacity-80"
                     >
                         <div className="flex items-center gap-2 text-sm text-slate-500">
-                            <CheckCircle2 className="w-4 h-4 text-amber-500" /> CRM 60.143 MG
+                            <CheckCircle2 className="w-4 h-4 text-stone-400" /> CRM 60.143 MG
                         </div>
                         <div className="flex items-center gap-2 text-sm text-slate-500">
-                            <CheckCircle2 className="w-4 h-4 text-amber-500" /> Especialista
+                            <CheckCircle2 className="w-4 h-4 text-stone-400" /> Especialista
                         </div>
                     </motion.div>
 
@@ -92,7 +92,7 @@ export default function Hero() {
                     <div className="relative w-full h-full max-w-lg mx-auto">
                         {/* Using standard img for quick check, or Next/Image */}
                         <Image
-                            src="/assets/diomar-1.jpg"
+                            src="/assets/diomarnv.jpeg"
                             alt="Dr. Diomar Cangussu"
                             fill
                             priority

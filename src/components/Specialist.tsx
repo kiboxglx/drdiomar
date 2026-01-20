@@ -6,9 +6,9 @@ import { Award, Users, MapPin } from "lucide-react";
 
 export default function Specialist() {
     return (
-        <section id="specialist" className="relative py-24 md:py-32 bg-slate-950 overflow-hidden">
+        <section id="specialist" className="relative py-24 md:py-32 bg-slate-900 overflow-hidden">
             {/* Background Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 z-0" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-900 z-0" />
 
             {/* Glow Effects */}
             <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-stone-400/5 rounded-full blur-[128px] pointer-events-none" />
@@ -48,7 +48,8 @@ export default function Specialist() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10" />
                         <Image
-                            src="/assets/diomar-2.jpg"
+                            src="/assets/diomarsentado.png
+                            "
                             alt="Dr. Diomar Cangussu - Especialista em Nutrologia"
                             fill
                             className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
@@ -122,7 +123,7 @@ export default function Specialist() {
                             <a
                                 href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
                                 target="_blank"
-                                className="inline-flex items-center gap-2 bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-stone-900/20 transition-all hover:scale-105"
+                                className="flex items-center justify-center gap-2 bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-stone-900/20 transition-all hover:scale-105 text-center"
                             >
                                 <Award className="w-5 h-5" />
                                 Agendar Consulta

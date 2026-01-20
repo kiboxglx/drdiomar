@@ -26,11 +26,11 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section id="testimonials" className="py-20 bg-slate-900 border-t border-slate-800">
+        <section id="testimonials" className="py-20 bg-slate-950 border-t border-slate-800">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-6xl font-bold text-slate-50 mb-4">
-                        Histórias de <span className="text-amber-500">Transformação</span>
+                        Histórias de <span className="text-wheat-500">Transformação</span>
                     </h2>
                     <p className="text-slate-400 text-lg md:text-xl">
                         O que nossos pacientes dizem sobre a medicina de precisão.
@@ -47,9 +47,9 @@ export default function Testimonials() {
                             transition={{ delay: i * 0.2 }}
                             className="bg-slate-950 p-10 rounded-2xl border border-slate-800 relative group hover:border-slate-700 transition-colors"
                         >
-                            <Quote className="absolute top-6 right-6 w-10 h-10 text-slate-800 group-hover:text-amber-500/20 transition-colors" />
+                            <Quote className="absolute top-6 right-6 w-10 h-10 text-slate-800 group-hover:text-wheat-500/20 transition-colors" />
 
-                            <div className="flex gap-1 mb-6 text-amber-500">
+                            <div className="flex gap-1 mb-6 text-wheat-500">
                                 {[...Array(t.rating)].map((_, i) => (
                                     <Star key={i} className="w-5 h-5 fill-current" />
                                 ))}

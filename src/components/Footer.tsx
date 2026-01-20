@@ -1,13 +1,20 @@
+import Image from "next/image";
+
 export default function Footer() {
     return (
-        <footer className="bg-slate-950 pt-16 pb-8 border-t border-slate-900">
+        <footer className="bg-slate-900 pt-16 pb-8 border-t border-slate-900">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
 
                     <div className="md:col-span-2">
-                        <h3 className="text-2xl font-montserrat font-bold text-slate-50 mb-4">
-                            Dr. Diomar <span className="text-stone-300">Cangussu</span>
-                        </h3>
+                        <div className="relative h-20 w-80 mb-6">
+                            <Image
+                                src="/assets/logo-diomar.png"
+                                alt="Dr. Diomar Cangussu - Nutrologia"
+                                fill
+                                className="object-contain object-left"
+                            />
+                        </div>
                         <p className="text-slate-400 max-w-sm mb-6">
                             Medicina de precisão focada em emagrecimento, performance e longevidade.
                             Atendimento exclusivo no Norte de Minas.

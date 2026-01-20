@@ -27,11 +27,11 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section id="faq" className="py-20 bg-slate-950">
+        <section id="faq" className="py-20 bg-slate-900">
             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-6xl font-bold text-slate-50 mb-6">
-                        Dúvidas <span className="text-amber-500">Frequentes</span>
+                        Dúvidas <span className="text-wheat-500">Frequentes</span>
                     </h2>
                     <p className="text-slate-400 text-lg md:text-xl">
                         Tudo o que você precisa saber antes de agendar.
@@ -50,7 +50,7 @@ export default function FAQ() {
                             >
                                 <span className="text-lg md:text-xl font-medium text-slate-200">{faq.question}</span>
                                 {openIndex === idx ? (
-                                    <Minus className="w-6 h-6 text-amber-500 flex-shrink-0 ml-4" />
+                                    <Minus className="w-6 h-6 text-wheat-500 flex-shrink-0 ml-4" />
                                 ) : (
                                     <Plus className="w-6 h-6 text-slate-500 flex-shrink-0 ml-4" />
                                 )}

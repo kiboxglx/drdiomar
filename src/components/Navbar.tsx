@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -34,8 +35,14 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="font-montserrat font-bold text-lg md:text-xl text-slate-50 tracking-wide uppercase">
-                    Dr. Diomar <span className="text-stone-300">Cangussu</span>
+                <Link href="/" className="relative h-16 w-64 md:h-20 md:w-80">
+                    <Image
+                        src="/assets/logo-diomar.png"
+                        alt="Dr. Diomar Cangussu - Nutrologia"
+                        fill
+                        className="object-contain object-left"
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Nav */}
@@ -57,7 +64,7 @@ export default function Navbar() {
                     target="_blank"
                     rel="noreferrer"
                     className={cn(
-                        "bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-3 px-7 rounded-full transition-all shadow-[0_0_15px_rgba(214,211,209,0.3)] hover:shadow-[0_0_20px_rgba(214,211,209,0.5)] text-sm md:text-base"
+                        "bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-3 px-7 rounded-full transition-all shadow-[0_0_15px_rgba(214,211,209,0.3)] hover:shadow-[0_0_20px_rgba(214,211,209,0.5)] text-sm md:text-base text-center"
                     )}
                 >
                     Agendar Consulta

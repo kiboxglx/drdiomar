@@ -15,6 +15,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Dr. Diomar Cangussu | Medicina de Precisão",
   description: "Protocolos de emagrecimento e implantes hormonais avançados no Norte de Minas.",
+  icons: {
+    icon: '/app/icon.png',
+    apple: '/app/icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth">
       <body
-        className={`${montserrat.variable} ${inter.variable} antialiased bg-slate-950 text-slate-50 font-sans selection:bg-amber-500/30 selection:text-amber-200`}
+        className={`${montserrat.variable} ${inter.variable} antialiased bg-slate-950 text-slate-50 font-sans selection:bg-wheat-500/30 selection:text-wheat-200`}
       >
         {children}
       </body>

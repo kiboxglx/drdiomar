@@ -48,7 +48,7 @@ export default function Specialist() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10" />
                         <Image
-                            src="/assets/diomarsentado.png"
+                            src="/assets/dr-specialist.png"
                             alt="Dr. Diomar Cangussu - Especialista em Nutrologia"
                             fill
                             loading="lazy"

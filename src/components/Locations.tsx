@@ -16,8 +16,8 @@ const locations = [
             "Japonvar",
             "Coração de Jesus",
         ],
-        address: "Centro Médico, Sala 102", // Placeholder
-        gmaps: "https://goo.gl/maps/placeholder1",
+        address: "Avenida Rui Barbosa, 365, Centro",
+        gmaps: "https://www.google.com/maps/search/?api=1&query=Avenida+Rui+Barbosa+365+Centro+Brasilia+de+Minas",
     },
     {
         hub: "Varzelândia",
@@ -28,8 +28,8 @@ const locations = [
             "Lontra",
             "Verdelândia",
         ],
-        address: "Clínica Saúde, Av. Principal", // Placeholder
-        gmaps: "https://goo.gl/maps/placeholder2",
+        address: "Rua Lucas Alkimin 190, Centro",
+        gmaps: "https://www.google.com/maps/search/?api=1&query=Rua+Lucas+Alkimin+190+Centro+Varzelandia",
     },
 ];
 
@@ -87,9 +87,20 @@ export default function Locations() {
                                 </div>
                             </div>
 
-                            {/* Optional: Add Address/Link 
-              <a href={loc.gmaps} className="text-wheat-500 text-sm hover:underline">Ver no mapa &rarr;</a>
-              */}
+                            <div className="space-y-4 pt-6 border-t border-slate-800">
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Endereço</span>
+                                    <p className="text-slate-300">{loc.address}</p>
+                                </div>
+                                <a
+                                    href={loc.gmaps}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-wheat-500 hover:text-wheat-400 transition-colors text-sm font-semibold group-hover:translate-x-1 duration-300"
+                                >
+                                    Abrir no Google Maps &rarr;
+                                </a>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

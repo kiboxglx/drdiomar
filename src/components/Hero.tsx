@@ -113,12 +113,12 @@ export default function Hero() {
                 >
 
                     <div className="relative w-full h-full max-w-xl md:max-w-2xl mx-auto">
-                        {/* Using standard img for quick check, or Next/Image */}
                         <Image
                             src="/assets/889993.png"
                             alt="Dr. Diomar Cangussu"
                             fill
                             priority
+                            fetchPriority="high"
                             className="object-cover object-top md:object-contain rounded-2xl md:rounded-none mask-image-gradient"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />

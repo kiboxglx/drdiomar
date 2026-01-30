@@ -25,7 +25,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-slate-50 font-bold mb-4 uppercase text-sm tracking-wider">Hubs de Atendimento</h4>
+                        <h3 className="text-slate-50 font-bold mb-4 uppercase text-sm tracking-wider">Hubs de Atendimento</h3>
                         <ul className="space-y-2 text-slate-400 text-sm">
                             <li>Brasília de Minas - MG</li>
                             <li>Varzelândia - MG</li>
@@ -33,7 +33,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-slate-50 font-bold mb-4 uppercase text-sm tracking-wider">Links Legais</h4>
+                        <h3 className="text-slate-50 font-bold mb-4 uppercase text-sm tracking-wider">Links Legais</h3>
                         <ul className="space-y-2 text-slate-400 text-sm">
                             <li><a href="#" className="hover:text-stone-300 transition-colors">Política de Privacidade</a></li>
                             <li><a href="#" className="hover:text-stone-300 transition-colors">Termos de Uso</a></li>

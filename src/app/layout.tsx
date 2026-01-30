@@ -15,10 +15,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Dr. Diomar Cangussu | Medicina de Precisão",
   description: "Protocolos de emagrecimento e implantes hormonais avançados no Norte de Minas.",
-  icons: {
-    icon: '/app/icon.png',
-    apple: '/app/icon.png',
-  },
 };
 
 export default function RootLayout({

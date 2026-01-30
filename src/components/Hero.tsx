@@ -7,16 +7,32 @@ import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 export default function Hero() {
     return (
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-900 pt-20 md:pt-0">
-            {/* Background Image - Optimized WebP */}
-            <div className="absolute inset-0 w-full h-full z-0">
-                <Image
-                    src="/assets/bg-hero.webp"
-                    alt="Background Texture"
-                    fill
-                    priority
-                    className="object-cover opacity-30"
-                    sizes="100vw"
-                />
+            {/* Background Video - Mobile */}
+            <div className="absolute inset-0 w-full h-full z-0 md:hidden">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster="/assets/bg-hero.webp"
+                    className="w-full h-full object-cover opacity-30"
+                >
+                    <source src="/assets/hero-bg.mp4" type="video/mp4" />
+                </video>
+            </div>
+
+            {/* Background Video - Desktop */}
+            <div className="absolute inset-0 w-full h-full z-0 hidden md:block">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster="/assets/bg-hero.webp"
+                    className="w-full h-full object-cover opacity-30"
+                >
+                    <source src="/assets/hero-bg.mp4" type="video/mp4" />
+                </video>
             </div>
 
             {/* Background Gradient / Overlay - Escurece o fundo para manter legibilidade */}

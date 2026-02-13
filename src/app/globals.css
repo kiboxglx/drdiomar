@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-montserrat: var(--font-montserrat);
+  --font-inter: var(--font-inter);
+
+  /* Map default sans to Inter */
+  --font-sans: var(--font-inter);
+
+  /* Custom Wheat Color (#F5DEB3) */
+  --color-wheat-50: #fdfbf7;
+  --color-wheat-100: #faf6ed;
+  --color-wheat-200: #f5ebd9;
+  --color-wheat-300: #f0dfc5;
+  --color-wheat-400: #ebd4b1;
+  --color-wheat-500: #F5DEB3;
+  --color-wheat-600: #d4c29f;
+  --color-wheat-700: #b3a68b;
+  --color-wheat-800: #928a77;
+  --color-wheat-900: #716e63;
+}
+
+/* Custom Base Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-montserrat);
+}
+
+body {
+  font-family: var(--font-inter);
+}

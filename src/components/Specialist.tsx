@@ -68,10 +68,10 @@ export default function Specialist() {
                         {/* Description */}
                         <div className="space-y-4">
                             <p className="text-lg text-slate-300 leading-relaxed">
-                                O Dr. Diomar não segue <strong className="text-stone-300">"receitas de bolo"</strong>. Sua abordagem combina <strong className="text-slate-200">ciência de dados</strong> (através de exames laboratoriais aprofundados) com <strong className="text-slate-200">tecnologia clínica</strong>.
+                                O Dr. Diomar não segue <strong className="text-stone-300">"receitas de bolo"</strong>. Sua abordagem combina <strong className="text-slate-200">ciência de dados</strong> (através de exames laboratoriais aprofundados) com <strong className="text-slate-200">tecnologia clínica</strong> avançada.
                             </p>
                             <p className="text-lg text-slate-300 leading-relaxed">
-                                Referência no <strong className="text-stone-300">Norte de Minas</strong>, seu foco é transformar a saúde de pacientes que buscam não apenas estética, mas <strong className="text-slate-200">performance</strong>, <strong className="text-slate-200">longevidade</strong> e <strong className="text-slate-200">equilíbrio hormonal</strong>.
+                                Referência em <strong className="text-stone-300">Medicina de Precisão</strong> e <strong className="text-stone-300">Emagrecimento</strong> no Norte de Minas (Brasília de Minas, Varzelândia, Montes Claros e região). Seu foco é transformar a saúde de pacientes que buscam não apenas estética, mas <strong className="text-slate-200">performance</strong>, <strong className="text-slate-200">longevidade</strong> e <strong className="text-slate-200">equilíbrio hormonal</strong> através de protocolos personalizados e implantes hormonais.
                             </p>
                         </div>
 

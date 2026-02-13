@@ -55,7 +55,7 @@ export default function Protocols() {
                         Nossos Protocolos <span className="text-wheat-500">Exclusivos</span>
                     </h2>
                     <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl">
-                        Soluções médicas desenhadas para quem busca resultados definitivos.
+                        Protocolos médicos exclusivos para <strong className="text-slate-200">Emagrecimento Rápido</strong>, <strong className="text-slate-200">Hipertrofia</strong> e <strong className="text-slate-200">Reposição Hormonal</strong>. Soluções desenhadas para quem busca resultados definitivos e cientificamente comprovados.
                     </p>
                 </div>
 

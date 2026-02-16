@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -54,6 +55,19 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${inter.variable} antialiased bg-slate-950 text-slate-50 font-sans selection:bg-wheat-500/30 selection:text-wheat-200`}
       >
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CN78RTJQKZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-CN78RTJQKZ');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

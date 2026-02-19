@@ -4,8 +4,15 @@ import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function WhatsAppButton() {
+    const handleClick = () => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", "ads_conversion_Reservar_hor_rio_1", {});
+        }
+    };
+
     return (
         <motion.a
+            onClick={handleClick}
             href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."
             target="_blank"
             rel="noopener noreferrer"

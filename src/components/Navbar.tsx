@@ -13,6 +13,12 @@ export default function Navbar() {
     const { scrollY } = useScroll();
     const [isScrolled, setIsScrolled] = useState(false);
 
+    const handleClick = () => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", "ads_conversion_Reservar_hor_rio_1", {});
+        }
+    };
+
     useMotionValueEvent(scrollY, "change", (latest) => {
         setIsScrolled(latest > 20);
     });
@@ -59,7 +65,9 @@ export default function Navbar() {
                 </nav>
 
                 {/* CTA Button */}
+                {/* CTA Button */}
                 <a
+                    onClick={handleClick}
                     href="https://wa.me/5538998269295"
                     target="_blank"
                     rel="noreferrer"

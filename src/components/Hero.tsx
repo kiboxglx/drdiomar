@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
+    const handleClick = () => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", "ads_conversion_Reservar_hor_rio_1", {});
+        }
+    };
     return (
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-900 pt-20 md:pt-0">
             {/* Background Video - Mobile */}
@@ -73,6 +78,7 @@ export default function Hero() {
                         className="flex flex-col gap-4 w-full items-center md:items-start"
                     >
                         <a
+                            onClick={handleClick}
                             href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
                             target="_blank"
                             className="w-full md:w-auto flex items-center justify-center gap-2 bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-stone-900/20 transition-all hover:scale-105"

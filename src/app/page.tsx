@@ -14,6 +14,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import InlineCTA from "@/components/InlineCTA";
 import ExitIntent from "@/components/ExitIntent";
 import StickyCTA from "@/components/StickyCTA";
+import MobileBottomBar from "@/components/MobileBottomBar";
 
 /* Thin gradient line between major page sections */
 function SectionSeparator() {
@@ -27,7 +28,7 @@ function SectionSeparator() {
 
 export default function Home() {
   return (
-    <main className="bg-slate-950 min-h-screen">
+    <main className="bg-slate-950 min-h-screen pb-20 md:pb-0">
       <Navbar />
       <Hero />
       <SectionSeparator />
@@ -54,6 +55,7 @@ export default function Home() {
       <WhatsAppButton />
       <ExitIntent />
       <StickyCTA />
+      <MobileBottomBar />
     </main>
   );
 }

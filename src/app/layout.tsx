@@ -199,6 +199,14 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Question",
+                  "name": "O implante hormonal dói?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O procedimento é feito com anestesia local — você sente apenas uma leve pressão. A aplicação dura cerca de 10 minutos e a recuperação é rápida: a maioria dos pacientes volta à rotina no mesmo dia."
+                  }
+                },
+                {
+                  "@type": "Question",
                   "name": "Quanto tempo até eu ver resultados?",
                   "acceptedAnswer": {
                     "@type": "Answer",
@@ -207,18 +215,26 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Question",
-                  "name": "O Dr. Diomar atende por convênio?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Trabalhamos com medicina personalizada de alto nível, o que exige tempo e dedicação em cada consulta. Por isso, os atendimentos são particulares. Emitimos nota fiscal para que você possa solicitar reembolso junto ao seu plano de saúde."
-                  }
-                },
-                {
-                  "@type": "Question",
                   "name": "Qual o valor do investimento?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Os protocolos são 100% personalizados — o investimento varia conforme seus exames, objetivos e necessidades. Agende uma avaliação gratuita para receber seu plano sob medida com valores transparentes."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Posso parcelar o tratamento?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim! Oferecemos opções de parcelamento para facilitar seu acesso ao tratamento. As condições são apresentadas na consulta de avaliação, de acordo com o protocolo indicado."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "O Dr. Diomar atende por convênio?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Trabalhamos com medicina personalizada de alto nível, o que exige tempo e dedicação em cada consulta. Por isso, os atendimentos são particulares. Emitimos nota fiscal para que você possa solicitar reembolso junto ao seu plano de saúde."
                   }
                 },
                 {

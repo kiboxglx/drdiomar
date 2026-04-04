@@ -15,16 +15,24 @@ const faqs = [
         answer: "Sim. Os implantes são biodegradáveis e aprovados para uso médico. Antes de qualquer procedimento, fazemos uma avaliação clínica e laboratorial completa para garantir que é indicado para você. O acompanhamento é contínuo — você nunca fica sem suporte. Dr. Diomar tem experiência com centenas de implantes realizados com segurança.",
     },
     {
+        question: "O implante hormonal dói?",
+        answer: "O procedimento é feito com anestesia local — você sente apenas uma leve pressão. A aplicação dura cerca de 10 minutos e a recuperação é rápida: a maioria dos pacientes volta à rotina no mesmo dia. Pode haver um leve desconforto no local nas primeiras 48h, facilmente controlado com orientações simples.",
+    },
+    {
         question: "Quanto tempo até eu ver resultados?",
         answer: "A maioria dos pacientes relata melhora significativa na disposição e energia nas primeiras 2-4 semanas. Resultados visíveis de emagrecimento geralmente aparecem a partir de 30 dias. Cada caso é único, e no seu primeiro retorno já avaliamos os marcadores laboratoriais que comprovam a evolução.",
     },
     {
-        question: "O Dr. Diomar atende por convênio?",
-        answer: "Trabalhamos com medicina personalizada de alto nível, o que exige tempo e dedicação em cada consulta. Por isso, os atendimentos são particulares. Emitimos nota fiscal para que você possa solicitar reembolso junto ao seu plano de saúde — muitos pacientes conseguem.",
-    },
-    {
         question: "Qual o valor do investimento?",
         answer: "Os protocolos são 100% personalizados — o investimento varia conforme seus exames, objetivos e necessidades (emagrecimento, implantes, longevidade). Agende uma avaliação gratuita para receber seu plano sob medida com valores transparentes.",
+    },
+    {
+        question: "Posso parcelar o tratamento?",
+        answer: "Sim! Oferecemos opções de parcelamento para facilitar seu acesso ao tratamento. As condições são apresentadas na consulta de avaliação, de acordo com o protocolo indicado. Nosso objetivo é que o investimento na sua saúde caiba no seu orçamento.",
+    },
+    {
+        question: "O Dr. Diomar atende por convênio?",
+        answer: "Trabalhamos com medicina personalizada de alto nível, o que exige tempo e dedicação em cada consulta. Por isso, os atendimentos são particulares. Emitimos nota fiscal para que você possa solicitar reembolso junto ao seu plano de saúde — muitos pacientes conseguem.",
     },
     {
         question: "Onde ficam os consultórios?",
@@ -92,7 +100,7 @@ export default function FAQ() {
                         >
                             <button
                                 onClick={() => handleToggle(idx, faq.question)}
-                                className="flex items-center justify-between w-full p-6 md:p-8 text-left"
+                                className="flex items-center justify-between w-full p-5 md:p-8 text-left"
                             >
                                 <span className={`text-lg md:text-xl font-medium transition-colors ${
                                     openIndex === idx ? "text-wheat-300" : "text-slate-200"
@@ -120,7 +128,7 @@ export default function FAQ() {
                                         exit={{ height: 0, opacity: 0 }}
                                         className="overflow-hidden"
                                     >
-                                        <div className="px-6 md:px-8 pb-6 md:pb-8 text-slate-400 leading-relaxed text-base md:text-lg border-t border-slate-800/50 pt-5">
+                                        <div className="px-5 md:px-8 pb-5 md:pb-8 text-slate-400 leading-relaxed text-base md:text-lg border-t border-slate-800/50 pt-4">
                                             {faq.answer}
                                         </div>
                                     </motion.div>

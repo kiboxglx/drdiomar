@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, type FormEvent, type ChangeEvent } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle2, AlertCircle, Send } from "lucide-react";
 
@@ -46,6 +47,7 @@ export default function LeadForm({
   onSuccess,
   source = "form",
 }: LeadFormProps) {
+  const router = useRouter();
   const [nome, setNome] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [interesse, setInteresse] = useState("");
@@ -95,6 +97,10 @@ export default function LeadForm({
 
         setStatus("success");
         onSuccess?.();
+
+        // Set session flag and redirect to thank-you page
+        sessionStorage.setItem("lead_submitted", "true");
+        router.push("/obrigado?from=form");
       } catch (err) {
         setStatus("error");
         setErrorMsg(
@@ -102,7 +108,7 @@ export default function LeadForm({
         );
       }
     },
-    [nome, whatsapp, interesse, source, onSuccess]
+    [nome, whatsapp, interesse, source, onSuccess, router]
   );
 
   const isCompact = variant === "compact";

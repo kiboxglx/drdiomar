@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, ShieldCheck, Clock, CheckCircle2, ArrowRight, Phone } from "lucide-react";
+import { ShieldCheck, Clock, CheckCircle2 } from "lucide-react";
+import LeadForm from "./LeadForm";
 
 export default function FinalCTA() {
     return (
@@ -51,26 +52,9 @@ export default function FinalCTA() {
                             </div>
                         </div>
 
-                        {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-                            <a
-                                href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full sm:w-auto flex items-center justify-center gap-3 bg-green-600 hover:bg-green-500 text-white font-bold py-5 px-10 rounded-xl shadow-lg shadow-green-900/30 transition-all hover:scale-[1.02] text-lg group"
-                            >
-                                <MessageCircle className="w-6 h-6" />
-                                Agendar via WhatsApp
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </a>
-
-                            <a
-                                href="tel:+5538998269295"
-                                className="w-full sm:w-auto flex items-center justify-center gap-3 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold py-5 px-10 rounded-xl border border-slate-700 transition-all hover:border-slate-600 text-lg"
-                            >
-                                <Phone className="w-5 h-5" />
-                                Ligar Agora
-                            </a>
+                        {/* Lead Capture Form */}
+                        <div className="max-w-md mx-auto mb-8">
+                            <LeadForm source="final-cta" />
                         </div>
 
                         {/* Risk reversal */}

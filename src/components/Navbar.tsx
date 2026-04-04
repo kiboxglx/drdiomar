@@ -53,13 +53,13 @@ export default function Navbar() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8">
-                    <button onClick={() => scrollToSection("hubs")} className="text-base font-medium text-slate-300 hover:text-stone-300 transition-colors">
+                    <button onClick={() => scrollToSection("hubs")} className="text-base font-medium text-slate-300 hover:text-wheat-400 transition-colors">
                         Locais
                     </button>
-                    <button onClick={() => scrollToSection("protocols")} className="text-base font-medium text-slate-300 hover:text-stone-300 transition-colors">
+                    <button onClick={() => scrollToSection("protocols")} className="text-base font-medium text-slate-300 hover:text-wheat-400 transition-colors">
                         Protocolos
                     </button>
-                    <button onClick={() => scrollToSection("testimonials")} className="text-base font-medium text-slate-300 hover:text-stone-300 transition-colors">
+                    <button onClick={() => scrollToSection("testimonials")} className="text-base font-medium text-slate-300 hover:text-wheat-400 transition-colors">
                         Resultados
                     </button>
                 </nav>
@@ -72,7 +72,7 @@ export default function Navbar() {
                     target="_blank"
                     rel="noreferrer"
                     className={cn(
-                        "bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-3 px-7 rounded-full transition-all shadow-[0_0_15px_rgba(214,211,209,0.3)] hover:shadow-[0_0_20px_rgba(214,211,209,0.5)] text-sm md:text-base text-center"
+                        "bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-3 px-7 rounded-full transition-all shadow-[0_0_15px_rgba(245,222,179,0.3)] hover:shadow-[0_0_20px_rgba(245,222,179,0.5)] text-sm md:text-base text-center"
                     )}
                 >
                     Agendar Consulta

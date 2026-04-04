@@ -13,7 +13,7 @@ export default function ContactPage() {
             <section className="relative min-h-[80vh] flex items-center justify-center pt-24 md:pt-32 pb-16">
                 {/* Background Details */}
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/80 z-[1]" />
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-stone-400/10 rounded-full blur-[128px] pointer-events-none z-[2]" />
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-wheat-500/10 rounded-full blur-[128px] pointer-events-none z-[2]" />
 
                 <div className="container mx-auto px-4 relative z-10 max-w-4xl">
                     <motion.div

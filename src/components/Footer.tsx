@@ -35,9 +35,9 @@ export default function Footer() {
                     <div>
                         <h3 className="text-slate-50 font-bold mb-4 uppercase text-sm tracking-wider">Links Legais</h3>
                         <ul className="space-y-2 text-slate-400 text-sm">
-                            <li><a href="#" className="hover:text-stone-300 transition-colors">Política de Privacidade</a></li>
-                            <li><a href="#" className="hover:text-stone-300 transition-colors">Termos de Uso</a></li>
-                            <li><a href="#" className="hover:text-stone-300 transition-colors">CNPJ: 00.000.000/0001-00</a></li>
+                            <li><a href="#" className="hover:text-wheat-400 transition-colors">Política de Privacidade</a></li>
+                            <li><a href="#" className="hover:text-wheat-400 transition-colors">Termos de Uso</a></li>
+                            <li><a href="#" className="hover:text-wheat-400 transition-colors">CNPJ: 00.000.000/0001-00</a></li>
                         </ul>
                     </div>
                 </div>

@@ -11,6 +11,7 @@ import FinalCTA from "@/components/FinalCTA";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import InlineCTA from "@/components/InlineCTA";
 import ExitIntent from "@/components/ExitIntent";
 import StickyCTA from "@/components/StickyCTA";
 
@@ -31,7 +32,7 @@ export default function Home() {
       <Hero />
       <SectionSeparator />
       <ProblemSection />
-      {/* InlineCTA placeholder — future slice */}
+      <InlineCTA />
       <SectionSeparator />
       <MethodSection />
       <SectionSeparator />

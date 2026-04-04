@@ -40,6 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# lead data (local storage)
+/data
+
 # ── GSD baseline (auto-generated) ──
 .gsd
 .gsd-id

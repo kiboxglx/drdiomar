@@ -62,12 +62,12 @@ export default function Hero() {
                         </div>
 
                         <h1 className="text-4xl md:text-6xl font-bold text-slate-50 leading-tight mb-4 tracking-tight">
-                            Emagrecimento e Medicina de <span className="text-transparent bg-clip-text bg-gradient-to-r from-stone-300 to-stone-400">Precisão</span> <br className="hidden md:block" />
-                            Perto de Você.
+                            Emagreça com <span className="text-transparent bg-clip-text bg-gradient-to-r from-stone-300 to-stone-400">Ciência</span>,<br className="hidden md:block" />
+                            Não com Sofrimento.
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-                            Protocolos avançados de emagrecimento e implantes hormonais em <strong className="text-slate-200 font-semibold">Brasília de Minas</strong> e <strong className="text-slate-200 font-semibold">Varzelândia</strong>.
+                            Protocolos personalizados de emagrecimento, implantes hormonais e longevidade com <strong className="text-slate-200 font-semibold">acompanhamento médico real</strong> em Brasília de Minas e Varzelândia.
                         </p>
                     </motion.div>
 
@@ -79,11 +79,11 @@ export default function Hero() {
                     >
                         <a
                             onClick={handleClick}
-                            href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
+                            href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                             target="_blank"
                             className="w-full md:w-auto flex items-center justify-center gap-2 bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-stone-900/20 transition-all hover:scale-105"
                         >
-                            Agendar Agora
+                            Agendar Minha Avaliação
                             <ChevronRight className="w-5 h-5" />
                         </a>
 

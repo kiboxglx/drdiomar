@@ -152,6 +152,81 @@ export default function RootLayout({
             })
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Já tentei de tudo e nada funciona. Por que seria diferente?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Porque nossos protocolos não são dietas genéricas. Começamos com exames laboratoriais completos para entender sua biologia individual — hormônios, metabolismo, inflamação. A partir daí, montamos um plano personalizado que ataca a causa real, não apenas os sintomas."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "É seguro fazer implante hormonal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim. Os implantes são biodegradáveis e aprovados para uso médico. Antes de qualquer procedimento, fazemos uma avaliação clínica e laboratorial completa para garantir que é indicado para você. O acompanhamento é contínuo."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Quanto tempo até eu ver resultados?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A maioria dos pacientes relata melhora significativa na disposição e energia nas primeiras 2-4 semanas. Resultados visíveis de emagrecimento geralmente aparecem a partir de 30 dias."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "O Dr. Diomar atende por convênio?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Trabalhamos com medicina personalizada de alto nível, o que exige tempo e dedicação em cada consulta. Por isso, os atendimentos são particulares. Emitimos nota fiscal para que você possa solicitar reembolso junto ao seu plano de saúde."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Qual o valor do investimento?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Os protocolos são 100% personalizados — o investimento varia conforme seus exames, objetivos e necessidades. Agende uma avaliação gratuita para receber seu plano sob medida com valores transparentes."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Onde ficam os consultórios?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Temos dois hubs regionais: Brasília de Minas (atendendo São Francisco, Mirabela, Ubaí, Luislândia e região) e Varzelândia (atendendo São João da Ponte, Ibiracatu, Lontra e cidades vizinhas)."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Tenho medo de efeito sanfona. Como vocês evitam isso?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O efeito sanfona acontece quando você faz dietas restritivas sem tratar a causa. Nosso protocolo ajusta hormônios, metabolismo e hábitos de forma sustentável. Além disso, o acompanhamento contínuo garante que você mantenha os resultados a longo prazo."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Preciso fazer dieta muito restritiva?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Não. Nosso objetivo é criar um plano alimentar que funcione para sua rotina, não contra ela. Trabalhamos com reeducação alimentar prática e, quando necessário, com suporte medicamentoso que reduz a compulsão e acelera resultados."
+                  }
+                }
+              ]
+            })
+          }}
+        />
         {children}
       </body>
     </html>

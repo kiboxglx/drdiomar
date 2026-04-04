@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useCallback, type FormEvent, type ChangeEvent } from "react";
+import { useState, useCallback, useRef, type FormEvent, type ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle2, AlertCircle, Send } from "lucide-react";
+import { useTracking } from "@/hooks/useTracking";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -48,6 +49,8 @@ export default function LeadForm({
   source = "form",
 }: LeadFormProps) {
   const router = useRouter();
+  const { track } = useTracking();
+  const formStartFired = useRef(false);
   const [nome, setNome] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [interesse, setInteresse] = useState("");
@@ -56,6 +59,14 @@ export default function LeadForm({
 
   // Field-level validation state — only shown after first submit attempt
   const [touched, setTouched] = useState(false);
+
+  /** Fire form_start once on first field interaction */
+  const fireFormStart = useCallback(() => {
+    if (!formStartFired.current) {
+      formStartFired.current = true;
+      track({ name: 'form_start', params: { form_name: `lead-form-${source}` } });
+    }
+  }, [track, source]);
 
   const nomeError = touched && nome.trim().length < 2;
   const whatsappError = touched && !isValidWhatsApp(whatsapp);
@@ -96,6 +107,10 @@ export default function LeadForm({
         }
 
         setStatus("success");
+
+        // Track lead conversion
+        track({ name: 'lead', params: { content_name: `lead-form-${source}`, value: 0, currency: 'BRL' } });
+
         onSuccess?.();
 
         // Set session flag and redirect to thank-you page
@@ -159,6 +174,7 @@ export default function LeadForm({
                 placeholder="Seu nome completo"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
+                onFocus={fireFormStart}
                 disabled={status === "loading"}
                 aria-invalid={nomeError}
                 aria-label="Nome completo"

@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Gift } from "lucide-react";
 import LeadForm from "./LeadForm";
+import { trackEvent } from "@/lib/tracking";
 
 const SESSION_KEY = "drdiomar_exit_shown";
 const MIN_DWELL_MS = 15_000;
@@ -36,6 +37,7 @@ export default function ExitIntent() {
     const show = () => {
       if (dismissed.current || !dwellReady.current) return;
       setVisible(true);
+      trackEvent({ name: 'exit_intent_shown', params: {} });
       try {
         sessionStorage.setItem(SESSION_KEY, "1");
       } catch {
@@ -114,7 +116,10 @@ export default function ExitIntent() {
               </div>
 
               {/* Compact lead form */}
-              <LeadForm variant="compact" source="exit-intent" onSuccess={close} />
+              <LeadForm variant="compact" source="exit-intent" onSuccess={() => {
+                trackEvent({ name: 'exit_intent_converted', params: {} });
+                close();
+              }} />
             </div>
           </motion.div>
         </motion.div>

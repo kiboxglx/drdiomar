@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Plus, Minus, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTracking } from "@/hooks/useTracking";
 
 const faqs = [
     {
@@ -40,7 +41,16 @@ const faqs = [
 ];
 
 export default function FAQ() {
+    const { track } = useTracking();
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+    const handleToggle = (idx: number, question: string) => {
+        const isOpening = openIndex !== idx;
+        setOpenIndex(isOpening ? idx : null);
+        if (isOpening) {
+            track({ name: 'faq_opened', params: { question, index: idx } });
+        }
+    };
 
     return (
         <section id="faq" className="py-20 md:py-28 bg-slate-900">
@@ -81,7 +91,7 @@ export default function FAQ() {
                             }`}
                         >
                             <button
-                                onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                                onClick={() => handleToggle(idx, faq.question)}
                                 className="flex items-center justify-between w-full p-6 md:p-8 text-left"
                             >
                                 <span className={`text-lg md:text-xl font-medium transition-colors ${

@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CalendarCheck } from "lucide-react";
+import { useTracking } from "@/hooks/useTracking";
 
 const SCROLL_THRESHOLD = 0.3; // 30% of page
 
@@ -53,7 +54,10 @@ export default function StickyCTA() {
     };
   }, [update]);
 
+  const { track } = useTracking();
+
   const handleClick = () => {
+    track({ name: 'sticky_cta_click', params: { cta_text: 'Agendar Avaliação' } });
     const formSection = document.getElementById("final-cta");
     if (formSection) {
       formSection.scrollIntoView({ behavior: "smooth", block: "center" });

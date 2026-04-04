@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronRight, CheckCircle2, Shield, Clock, Users } from "lucide-react";
+import { useTracking } from "@/hooks/useTracking";
 
 export default function Hero() {
-    const handleClick = () => {
-        if (typeof window !== "undefined" && (window as any).gtag) {
-            (window as any).gtag("event", "ads_conversion_Reservar_hor_rio_1", {});
-        }
+    const { track } = useTracking();
+
+    const handleCtaClick = () => {
+        track({ name: 'cta_click', params: { cta_location: 'hero', cta_text: 'Quero Minha Avaliação Gratuita' } });
     };
     return (
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-900 pt-20 md:pt-0">
@@ -81,7 +82,7 @@ export default function Hero() {
                         className="flex flex-col gap-4 w-full items-center md:items-start"
                     >
                         <a
-                            onClick={handleClick}
+                            onClick={handleCtaClick}
                             href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                             target="_blank"
                             className="w-full md:w-auto flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-wheat-900/20 transition-all hover:scale-105"

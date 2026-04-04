@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Zap, Heart, ShieldPlus } from "lucide-react";
+import { useTracking } from "@/hooks/useTracking";
 
 const protocols = [
     {
@@ -47,6 +48,8 @@ const protocols = [
 ];
 
 export default function Protocols() {
+    const { track } = useTracking();
+
     return (
         <section id="protocols" className="py-24 bg-slate-900 relative">
             <div className="container mx-auto px-4 md:px-6">
@@ -93,6 +96,7 @@ export default function Protocols() {
                                 <a
                                     href="https://wa.me/5538998269295"
                                     target="_blank"
+                                    onClick={() => track({ name: 'protocol_interest', params: { protocol_name: proto.title } })}
                                     className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${proto.highlight
                                         ? "bg-wheat-600 hover:bg-wheat-500 text-slate-950 shadow-lg shadow-wheat-900/20"
                                         : "bg-slate-800 hover:bg-slate-700 text-slate-200"

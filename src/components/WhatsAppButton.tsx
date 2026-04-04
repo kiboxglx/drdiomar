@@ -2,12 +2,13 @@
 
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTracking } from "@/hooks/useTracking";
 
 export default function WhatsAppButton() {
+    const { track } = useTracking();
+
     const handleClick = () => {
-        if (typeof window !== "undefined" && (window as any).gtag) {
-            (window as any).gtag("event", "ads_conversion_Reservar_hor_rio_1", {});
-        }
+        track({ name: 'whatsapp_click', params: { location: 'floating-button' } });
     };
 
     return (

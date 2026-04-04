@@ -47,14 +47,21 @@ export default function Specialist() {
                         className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden group"
                     >
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10" />
-                        <Image
-                            src="/assets/dr-specialist.png"
-                            alt="Dr. Diomar Cangussu - Especialista em Nutrologia"
-                            fill
-                            loading="lazy"
-                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
+                        <picture>
+                            <source
+                                srcSet="/assets/specialist-640.webp 640w, /assets/specialist-1280.webp 724w"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                type="image/webp"
+                            />
+                            <Image
+                                src="/assets/specialist-1280.webp"
+                                alt="Dr. Diomar Cangussu - Especialista em Nutrologia"
+                                fill
+                                loading="lazy"
+                                className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                        </picture>
                     </motion.div>
 
                     {/* Text Side */}

@@ -13,21 +13,19 @@ export default function Hero() {
     };
     return (
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-900 pt-20 md:pt-0">
-            {/* Background Video - Mobile */}
+            {/* Background - Mobile: static poster only (saves bandwidth) */}
             <div className="absolute inset-0 w-full h-full z-0 md:hidden">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    poster="/assets/bg-hero.webp"
-                    className="w-full h-full object-cover opacity-30"
-                >
-                    <source src="/assets/hero-bg.mp4" type="video/mp4" />
-                </video>
+                <Image
+                    src="/assets/bg-hero.webp"
+                    alt=""
+                    fill
+                    priority
+                    className="object-cover opacity-30"
+                    sizes="100vw"
+                />
             </div>
 
-            {/* Background Video - Desktop */}
+            {/* Background Video - Desktop only */}
             <div className="absolute inset-0 w-full h-full z-0 hidden md:block">
                 <video
                     autoPlay
@@ -134,15 +132,22 @@ export default function Hero() {
                     transition={{ duration: 1 }}
                 >
                     <div className="relative w-full h-full max-w-xl md:max-w-2xl mx-auto">
-                        <Image
-                            src="/assets/dr-hero.png"
-                            alt="Dr. Diomar Cangussu"
-                            fill
-                            priority
-                            fetchPriority="high"
-                            className="object-cover object-top md:object-contain rounded-2xl md:rounded-none mask-image-gradient"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
+                        <picture>
+                            <source
+                                srcSet="/assets/hero-640.webp 640w, /assets/hero-1280.webp 1280w"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                type="image/webp"
+                            />
+                            <Image
+                                src="/assets/hero-1280.webp"
+                                alt="Dr. Diomar Cangussu"
+                                fill
+                                priority
+                                fetchPriority="high"
+                                className="object-cover object-top md:object-contain rounded-2xl md:rounded-none mask-image-gradient"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                        </picture>
                     </div>
                 </motion.div>
             </div>

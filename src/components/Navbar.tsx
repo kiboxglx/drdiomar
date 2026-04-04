@@ -43,7 +43,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="relative h-16 w-64 md:h-20 md:w-80">
                     <Image
-                        src="/assets/logo-diomar.png"
+                        src="/assets/logo.webp"
                         alt="Dr. Diomar Cangussu - Nutrologia"
                         fill
                         className="object-contain object-left"

@@ -54,6 +54,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
+      <head>
+        <link
+          rel="preload"
+          href="/assets/bg-hero.webp"
+          as="image"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          href="/assets/hero-640.webp"
+          as="image"
+          type="image/webp"
+          media="(max-width: 768px)"
+        />
+        <link
+          rel="preload"
+          href="/assets/hero-1280.webp"
+          as="image"
+          type="image/webp"
+          media="(min-width: 769px)"
+        />
+      </head>
       <body
         className={`${montserrat.variable} ${inter.variable} antialiased bg-slate-950 text-slate-50 font-sans selection:bg-wheat-500/30 selection:text-wheat-200`}
       >

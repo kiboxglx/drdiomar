@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className="md:col-span-2">
                         <div className="relative h-20 w-80 mb-6">
                             <Image
-                                src="/assets/logo-diomar.png"
+                                src="/assets/logo.webp"
                                 alt="Dr. Diomar Cangussu - Nutrologia"
                                 fill
                                 className="object-contain object-left"

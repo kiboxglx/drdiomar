@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm list:*)",
-      "Skill(update-config)"
+      "Skill(update-config)",
+      "Bash(npm run:*)"
     ]
   }
 }

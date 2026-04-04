@@ -94,8 +94,8 @@ export default function ProblemSection() {
                 >
                     <div className="inline-block bg-gradient-to-r from-slate-800/50 via-slate-800 to-slate-800/50 rounded-2xl px-8 py-6 border border-slate-700/50">
                         <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-                            Se você se identificou com <strong className="text-wheat-400">pelo menos 1</strong> desses sinais,<br className="hidden md:block" />
-                            existe um caminho <strong className="text-wheat-400">diferente</strong> — e ele começa com uma avaliação de verdade.
+                            Se marcou pelo menos <strong className="text-wheat-400">1</strong> → o problema não é você.{" "}
+                            <strong className="text-wheat-400">É o método.</strong>
                         </p>
                     </div>
                 </motion.div>

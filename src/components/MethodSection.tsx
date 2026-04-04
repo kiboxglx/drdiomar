@@ -108,7 +108,7 @@ export default function MethodSection() {
                     </div>
                 </div>
 
-                {/* Bottom CTA bridge */}
+                {/* Continuity phrase to protocols */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -116,16 +116,9 @@ export default function MethodSection() {
                     transition={{ delay: 0.5 }}
                     className="text-center mt-14 md:mt-16"
                 >
-                    <p className="text-slate-400 text-lg mb-6">
-                        Tudo começa com uma <strong className="text-wheat-400">avaliação personalizada</strong>.
+                    <p className="text-lg md:text-xl text-slate-400">
+                        Conheça os <strong className="text-wheat-400">protocolos</strong> ↓
                     </p>
-                    <a
-                        href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
-                        target="_blank"
-                        className="inline-flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-[1.02] text-base md:text-lg min-h-[48px]"
-                    >
-                        Quero Minha Avaliação
-                    </a>
                 </motion.div>
             </div>
         </section>

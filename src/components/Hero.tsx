@@ -48,7 +48,7 @@ export default function Hero() {
             <div className="container mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center h-full">
 
                 {/* Text Content */}
-                <div className="order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left space-y-8">
+                <div className="order-1 md:order-1 flex flex-col items-center md:items-start text-center md:text-left space-y-8">
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -61,15 +61,15 @@ export default function Hero() {
                         </div>
 
                         <h1 className="text-4xl md:text-6xl font-bold text-slate-50 leading-tight mb-4 tracking-tight">
-                            Você Merece um Corpo que{" "}
+                            Emagreça de Verdade —{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-400 to-wheat-500">
-                                Funcione a Seu Favor
+                                Sem Dietas Malucas, Sem Efeito Sanfona.
                             </span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-                            Chega de dietas que falham, cansaço sem explicação e hormônios desregulados. Protocolos médicos personalizados com{" "}
-                            <strong className="text-slate-200 font-semibold">acompanhamento real</strong> — em Brasília de Minas e Varzelândia.
+                            Protocolos médicos personalizados com <strong className="text-slate-200 font-semibold">resultados em semanas</strong> e{" "}
+                            <strong className="text-slate-200 font-semibold">acompanhamento via WhatsApp</strong> — em Brasília de Minas e Varzelândia.
                         </p>
                     </motion.div>
 
@@ -88,13 +88,6 @@ export default function Hero() {
                             Quero Minha Avaliação Gratuita
                             <ChevronRight className="w-5 h-5" />
                         </a>
-
-                        <button
-                            onClick={() => document.getElementById('protocols')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="w-full md:w-auto flex items-center justify-center gap-2 bg-slate-800/50 hover:bg-slate-800 text-slate-200 font-medium py-4 px-6 md:px-8 rounded-xl border border-slate-700 hover:border-slate-600 transition-all min-h-[48px]"
-                        >
-                            Conhecer Protocolos
-                        </button>
                     </motion.div>
 
                     {/* Social Proof Bar — compact, inline */}
@@ -140,7 +133,7 @@ export default function Hero() {
 
                 {/* Hero Image */}
                 <motion.div
-                    className="order-1 md:order-2 relative h-[65vh] md:h-[95vh] w-full flex items-end justify-center"
+                    className="order-2 md:order-2 relative h-[40vh] md:h-[95vh] w-full flex items-end justify-center"
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}

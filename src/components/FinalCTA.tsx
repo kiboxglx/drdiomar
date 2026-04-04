@@ -6,7 +6,7 @@ import LeadForm from "./LeadForm";
 
 export default function FinalCTA() {
     return (
-        <section className="relative py-20 md:py-28 bg-slate-900 overflow-hidden">
+        <section id="final-cta" className="relative py-20 md:py-28 bg-slate-900 overflow-hidden">
             {/* Background elements */}
             <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950/50" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-wheat-500/[0.03] rounded-full blur-[180px] pointer-events-none" />

@@ -37,7 +37,7 @@ export default function Footer() {
                         <ul className="space-y-2 text-slate-400 text-sm">
                             <li><a href="#" className="hover:text-wheat-400 transition-colors">Política de Privacidade</a></li>
                             <li><a href="#" className="hover:text-wheat-400 transition-colors">Termos de Uso</a></li>
-                            <li><a href="#" className="hover:text-wheat-400 transition-colors">CNPJ: 00.000.000/0001-00</a></li>
+                            <li><a href="#" className="hover:text-wheat-400 transition-colors">Responsável Técnico: Dr. Diomar — CRM 60.143 MG</a></li>
                         </ul>
                     </div>
                 </div>

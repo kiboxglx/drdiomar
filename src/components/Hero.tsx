@@ -97,12 +97,26 @@ export default function Hero() {
                         </button>
                     </motion.div>
 
-                    {/* Trust Badges */}
+                    {/* Social Proof Bar — compact, inline */}
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5 }}
+                        className="text-xs md:text-sm text-slate-400 tracking-wide"
+                    >
+                        <span className="text-wheat-400 font-semibold">+2.000 pacientes</span>
+                        <span className="mx-1.5 text-slate-600">·</span>
+                        <span>2 unidades</span>
+                        <span className="mx-1.5 text-slate-600">·</span>
+                        <span>CRM 60.143 MG</span>
+                    </motion.p>
+
+                    {/* Trust Badges — hidden on mobile for compactness, shown on md+ */}
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6 }}
-                        className="pt-4 flex flex-wrap items-center gap-5"
+                        className="hidden md:flex pt-2 flex-wrap items-center gap-5"
                     >
                         <div className="flex items-center gap-2 text-sm text-slate-400">
                             <Shield className="w-4 h-4 text-wheat-500" />

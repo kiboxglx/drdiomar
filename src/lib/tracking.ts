@@ -80,7 +80,8 @@ export type TrackingEvent =
   | { name: 'exit_intent_shown'; params?: Record<string, unknown> }
   | { name: 'exit_intent_converted'; params?: Record<string, unknown> }
   | { name: 'whatsapp_click'; params?: { location?: string } }
-  | { name: 'sticky_cta_click'; params?: { cta_text?: string } };
+  | { name: 'sticky_cta_click'; params?: { cta_text?: string } }
+  | { name: 'phone_click'; params?: { location?: string } };
 
 /**
  * Unified tracking dispatcher.
@@ -158,6 +159,9 @@ export function trackEvent(event: TrackingEvent): void {
       break;
     case 'sticky_cta_click':
       fbqTrackCustom('StickyCTAClick', gaParams);
+      break;
+    case 'phone_click':
+      fbqTrack('Contact', { content_name: 'Phone' });
       break;
   }
 }

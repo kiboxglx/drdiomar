@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
+import { ChevronRight, CheckCircle2, Shield, Clock, Users } from "lucide-react";
 
 export default function Hero() {
     const handleClick = () => {
@@ -40,7 +40,7 @@ export default function Hero() {
                 </video>
             </div>
 
-            {/* Background Gradient / Overlay - Escurece o fundo para manter legibilidade */}
+            {/* Background Gradient / Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/80 z-[1]" />
 
             {/* Glow Effect */}
@@ -57,17 +57,20 @@ export default function Hero() {
                         transition={{ duration: 0.8 }}
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800 mb-6">
-                            <span className="w-2 h-2 rounded-full bg-stone-400 animate-pulse" />
-                            <span className="text-xs text-stone-300 font-medium tracking-wider uppercase">Medicina de Alta Performance</span>
+                            <span className="w-2 h-2 rounded-full bg-wheat-500 animate-pulse" />
+                            <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">Medicina de Alta Performance</span>
                         </div>
 
                         <h1 className="text-4xl md:text-6xl font-bold text-slate-50 leading-tight mb-4 tracking-tight">
-                            Emagreça com <span className="text-transparent bg-clip-text bg-gradient-to-r from-stone-300 to-stone-400">Ciência</span>,<br className="hidden md:block" />
-                            Não com Sofrimento.
+                            Você Merece um Corpo que{" "}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-400 to-wheat-500">
+                                Funcione a Seu Favor
+                            </span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-                            Protocolos personalizados de emagrecimento, implantes hormonais e longevidade com <strong className="text-slate-200 font-semibold">acompanhamento médico real</strong> em Brasília de Minas e Varzelândia.
+                            Chega de dietas que falham, cansaço sem explicação e hormônios desregulados. Protocolos médicos personalizados com{" "}
+                            <strong className="text-slate-200 font-semibold">acompanhamento real</strong> — em Brasília de Minas e Varzelândia.
                         </p>
                     </motion.div>
 
@@ -81,9 +84,9 @@ export default function Hero() {
                             onClick={handleClick}
                             href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                             target="_blank"
-                            className="w-full md:w-auto flex items-center justify-center gap-2 bg-stone-300 hover:bg-stone-200 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-stone-900/20 transition-all hover:scale-105"
+                            className="w-full md:w-auto flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-wheat-900/20 transition-all hover:scale-105"
                         >
-                            Agendar Minha Avaliação
+                            Quero Minha Avaliação Gratuita
                             <ChevronRight className="w-5 h-5" />
                         </a>
 
@@ -95,18 +98,28 @@ export default function Hero() {
                         </button>
                     </motion.div>
 
-                    {/* Trust Badges - Optional */}
+                    {/* Trust Badges */}
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6 }}
-                        className="pt-4 flex items-center gap-6 opacity-80"
+                        className="pt-4 flex flex-wrap items-center gap-5"
                     >
-                        <div className="flex items-center gap-2 text-sm text-slate-500">
-                            <CheckCircle2 className="w-4 h-4 text-stone-400" /> CRM 60.143 MG
+                        <div className="flex items-center gap-2 text-sm text-slate-400">
+                            <Shield className="w-4 h-4 text-wheat-500" />
+                            <span>CRM 60.143 MG</span>
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-slate-500">
-                            <CheckCircle2 className="w-4 h-4 text-stone-400" /> Especialista
+                        <div className="flex items-center gap-2 text-sm text-slate-400">
+                            <Users className="w-4 h-4 text-wheat-500" />
+                            <span>+2.000 Pacientes</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-slate-400">
+                            <Clock className="w-4 h-4 text-wheat-500" />
+                            <span>Resultados em 30 dias</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-slate-400">
+                            <CheckCircle2 className="w-4 h-4 text-wheat-500" />
+                            <span>Pós-Graduação em Nutrologia</span>
                         </div>
                     </motion.div>
 
@@ -119,7 +132,6 @@ export default function Hero() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                 >
-
                     <div className="relative w-full h-full max-w-xl md:max-w-2xl mx-auto">
                         <Image
                             src="/assets/dr-hero.png"

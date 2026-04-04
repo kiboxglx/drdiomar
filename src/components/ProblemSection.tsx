@@ -28,7 +28,7 @@ const problems = [
 
 export default function ProblemSection() {
     return (
-        <section className="relative py-20 md:py-28 bg-slate-950 overflow-hidden">
+        <section className="relative py-12 md:py-20 lg:py-28 bg-slate-950 overflow-hidden">
             {/* Subtle gradient accent */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent" />
             <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-red-900/5 rounded-full blur-[120px] pointer-events-none" />
@@ -47,18 +47,18 @@ export default function ProblemSection() {
                         <span className="text-xs text-red-300/80 font-medium tracking-wider uppercase">Você se identifica?</span>
                     </div>
 
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-50 mb-6 leading-tight">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6 leading-tight">
                         Já tentou de tudo<br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-red-400/80"> e nada funciona?</span>
                     </h2>
 
-                    <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
                         Milhares de pessoas no Norte de Minas vivem com esses sinais todos os dias — e acham que é <strong className="text-slate-300">normal</strong>. Não é.
                     </p>
                 </motion.div>
 
                 {/* Problems Grid */}
-                <div className="grid md:grid-cols-2 gap-5 md:gap-6 mb-16">
+                <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-16">
                     {problems.map((problem, i) => (
                         <motion.div
                             key={problem.title}

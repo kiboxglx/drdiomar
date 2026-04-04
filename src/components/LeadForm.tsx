@@ -248,7 +248,7 @@ export default function LeadForm({
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="flex items-center gap-2 bg-red-500/10 border border-red-500/25 rounded-lg px-3 py-2"
+                  className="flex items-center gap-2 bg-red-500/10 border border-red-500/25 rounded-xl px-3 py-2"
                 >
                   <AlertCircle className="w-4 h-4 text-red-400 shrink-0" />
                   <p className="text-sm text-red-300">{errorMsg}</p>

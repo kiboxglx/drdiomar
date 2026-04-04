@@ -80,7 +80,7 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section id="testimonials" className="py-20 md:py-28 bg-slate-950 border-t border-slate-800/50">
+        <section id="testimonials" className="py-12 md:py-20 lg:py-28 bg-slate-950 border-t border-slate-800/50">
             <div className="container mx-auto px-4 md:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -92,19 +92,19 @@ export default function Testimonials() {
                         <span className="w-2 h-2 rounded-full bg-wheat-500 animate-pulse" />
                         <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">Resultados Reais</span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-50 mb-4">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-4">
                         Histórias de Quem{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-400 to-wheat-500">
                             Transformou
                         </span>{" "}
                         a Saúde
                     </h2>
-                    <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">
+                    <p className="text-slate-400 text-sm md:text-base lg:text-xl max-w-2xl mx-auto">
                         Mais de 2.000 pacientes já confiaram no Dr. Diomar. Veja o que eles têm a dizer.
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
                     {testimonials.map((t, i) => (
                         <motion.div
                             key={i}

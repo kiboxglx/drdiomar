@@ -22,10 +22,10 @@ export default function ContactPage() {
                         transition={{ duration: 0.8 }}
                         className="text-center mb-16"
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold text-slate-50 mb-6">
+                        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6">
                             Agende sua <span className="text-wheat-500">Consulta</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto">
+                        <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto">
                             Dê o primeiro passo para transformar sua saúde e performance. Entre em contato agora mesmo.
                         </p>
                     </motion.div>
@@ -50,7 +50,7 @@ export default function ContactPage() {
 
                                 <div className="space-y-6">
                                     <div className="flex items-start gap-4">
-                                        <div className="bg-slate-800 p-3 rounded-lg">
+                                        <div className="bg-slate-800 p-3 rounded-xl">
                                             <MapPin className="w-6 h-6 text-wheat-500" />
                                         </div>
                                         <div>
@@ -60,7 +60,7 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex items-start gap-4">
-                                        <div className="bg-slate-800 p-3 rounded-lg">
+                                        <div className="bg-slate-800 p-3 rounded-xl">
                                             <MapPin className="w-6 h-6 text-wheat-500" />
                                         </div>
                                         <div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                                     href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group relative w-full flex items-center justify-center gap-3 bg-green-600 hover:bg-green-500 text-white font-bold py-5 px-8 rounded-xl shadow-lg shadow-green-900/20 transition-all hover:scale-[1.02]"
+                                    className="group relative w-full flex items-center justify-center gap-3 bg-green-600 hover:bg-green-500 text-white font-bold py-5 px-6 md:px-8 rounded-xl shadow-lg shadow-green-900/20 transition-all hover:scale-[1.02] min-h-[48px]"
                                 >
                                     <MessageCircle className="w-6 h-6" />
                                     <span>Iniciar Conversa Agora</span>

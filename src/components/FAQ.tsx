@@ -53,7 +53,7 @@ export default function FAQ() {
     };
 
     return (
-        <section id="faq" className="py-20 md:py-28 bg-slate-900">
+        <section id="faq" className="py-12 md:py-20 lg:py-28 bg-slate-900">
             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -65,18 +65,18 @@ export default function FAQ() {
                         <span className="w-2 h-2 rounded-full bg-wheat-500 animate-pulse" />
                         <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">Tire Suas Dúvidas</span>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-bold text-slate-50 mb-6">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6">
                         Perguntas{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-400 to-wheat-500">
                             Frequentes
                         </span>
                     </h2>
-                    <p className="text-slate-400 text-lg md:text-xl">
+                    <p className="text-slate-400 text-sm md:text-base lg:text-xl">
                         Respondemos as dúvidas mais comuns para que você agende com total segurança.
                     </p>
                 </motion.div>
 
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                     {faqs.map((faq, idx) => (
                         <motion.div
                             key={idx}
@@ -143,7 +143,7 @@ export default function FAQ() {
                     <a
                         href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20protocolos%20do%20Dr.%20Diomar."
                         target="_blank"
-                        className="inline-flex items-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-wheat-900/20 transition-all hover:scale-105"
+                        className="inline-flex items-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 min-h-[48px]"
                     >
                         <MessageCircle className="w-5 h-5" />
                         Falar no WhatsApp

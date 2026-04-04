@@ -6,7 +6,7 @@ import LeadForm from "./LeadForm";
 
 export default function FinalCTA() {
     return (
-        <section id="final-cta" className="relative py-20 md:py-28 bg-slate-900 overflow-hidden">
+        <section id="final-cta" className="relative py-12 md:py-20 lg:py-28 bg-slate-900 overflow-hidden">
             {/* Background elements */}
             <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950/50" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-wheat-500/[0.03] rounded-full blur-[180px] pointer-events-none" />
@@ -25,12 +25,12 @@ export default function FinalCTA() {
                         <span className="text-sm text-wheat-300 font-semibold">Vagas Limitadas para Este Mês</span>
                     </div>
 
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-50 mb-6 leading-tight">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6 leading-tight">
                         Dê o Primeiro Passo<br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-300 to-wheat-500"> Para sua Transformação</span>
                     </h2>
 
-                    <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
                         Agende sua avaliação personalizada e descubra o protocolo ideal para o <strong className="text-slate-200">seu corpo</strong> e os <strong className="text-slate-200">seus objetivos</strong>.
                     </p>
 

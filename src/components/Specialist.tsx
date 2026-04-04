@@ -6,7 +6,7 @@ import { Award, Users, MapPin } from "lucide-react";
 
 export default function Specialist() {
     return (
-        <section id="specialist" className="relative py-24 md:py-32 bg-slate-900 overflow-hidden">
+        <section id="specialist" className="relative py-12 md:py-20 lg:py-28 bg-slate-900 overflow-hidden">
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-900 z-0" />
 
@@ -27,10 +27,10 @@ export default function Specialist() {
                         <span className="w-2 h-2 rounded-full bg-wheat-500 animate-pulse" />
                         <span className="text-xs text-wheat-400 font-medium tracking-wider uppercase">Sobre o Especialista</span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-50 mb-4">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-4">
                         Dr. Diomar Cangussu
                     </h2>
-                    <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+                    <p className="text-sm md:text-base lg:text-lg text-slate-400 max-w-2xl mx-auto">
                         MÃ©dico com PÃ³s-GraduaÃ§Ã£o em Nutrologia
                     </p>
                 </motion.div>
@@ -93,7 +93,7 @@ export default function Specialist() {
                                 className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-wheat-500/30 transition-colors"
                             >
                                 <div className="flex items-center gap-3 mb-3">
-                                    <div className="w-10 h-10 rounded-lg bg-wheat-500/10 flex items-center justify-center">
+                                    <div className="w-10 h-10 rounded-xl bg-wheat-500/10 flex items-center justify-center">
                                         <Users className="w-5 h-5 text-wheat-500" />
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@ export default function Specialist() {
                                 className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-wheat-500/30 transition-colors"
                             >
                                 <div className="flex items-center gap-3 mb-3">
-                                    <div className="w-10 h-10 rounded-lg bg-wheat-500/10 flex items-center justify-center">
+                                    <div className="w-10 h-10 rounded-xl bg-wheat-500/10 flex items-center justify-center">
                                         <MapPin className="w-5 h-5 text-wheat-500" />
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@ export default function Specialist() {
                             <a
                                 href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
                                 target="_blank"
-                                className="flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 text-center"
+                                className="flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 text-center min-h-[48px]"
                             >
                                 <Award className="w-5 h-5" />
                                 Agendar Consulta

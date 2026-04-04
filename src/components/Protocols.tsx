@@ -51,18 +51,18 @@ export default function Protocols() {
     const { track } = useTracking();
 
     return (
-        <section id="protocols" className="py-24 bg-slate-900 relative">
+        <section id="protocols" className="py-12 md:py-20 lg:py-28 bg-slate-900 relative">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-6xl font-bold text-slate-50 mb-6">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6">
                         Nossos Protocolos <span className="text-wheat-500">Exclusivos</span>
                     </h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl">
+                    <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base lg:text-xl">
                         Protocolos médicos exclusivos para <strong className="text-slate-200">Emagrecimento Rápido</strong>, <strong className="text-slate-200">Hipertrofia</strong> e <strong className="text-slate-200">Reposição Hormonal</strong>. Soluções desenhadas para quem busca resultados definitivos e cientificamente comprovados.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
                     {protocols.map((proto, i) => (
                         <motion.div
                             key={proto.id}
@@ -97,9 +97,9 @@ export default function Protocols() {
                                     href="https://wa.me/5538998269295"
                                     target="_blank"
                                     onClick={() => track({ name: 'protocol_interest', params: { protocol_name: proto.title } })}
-                                    className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${proto.highlight
+                                    className={`w-full py-4 rounded-xl font-bold text-base md:text-lg transition-all min-h-[48px] ${proto.highlight
                                         ? "bg-wheat-600 hover:bg-wheat-500 text-slate-950 shadow-lg shadow-wheat-900/20"
-                                        : "bg-slate-800 hover:bg-slate-700 text-slate-200"
+                                        : "bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700"
                                         }`}
                                 >
                                     Saiba Mais

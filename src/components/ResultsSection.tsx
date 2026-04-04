@@ -94,7 +94,7 @@ const transformations = [
 
 export default function ResultsSection() {
     return (
-        <section className="relative py-20 md:py-28 bg-slate-950 overflow-hidden">
+        <section className="relative py-12 md:py-20 lg:py-28 bg-slate-950 overflow-hidden">
             {/* Background */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-wheat-500/15 to-transparent" />
             <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-wheat-500/[0.02] rounded-full blur-[150px] pointer-events-none" />
@@ -113,17 +113,17 @@ export default function ResultsSection() {
                         <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">Resultados Comprovados</span>
                     </div>
 
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-50 mb-6">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6">
                         Números que <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-300 to-wheat-500">Falam</span>
                     </h2>
 
-                    <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto">
+                    <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto">
                         Resultados reais de pacientes que decidiram investir na própria saúde.
                     </p>
                 </motion.div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 md:mb-20 max-w-4xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-12 md:mb-20 max-w-4xl mx-auto">
                     {stats.map((stat, i) => (
                         <motion.div
                             key={stat.label}
@@ -146,7 +146,7 @@ export default function ResultsSection() {
                 </div>
 
                 {/* Transformation Cards */}
-                <div className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
                     {transformations.map((t, i) => (
                         <motion.div
                             key={t.name}

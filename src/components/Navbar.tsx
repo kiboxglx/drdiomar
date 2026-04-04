@@ -72,7 +72,7 @@ export default function Navbar() {
                     target="_blank"
                     rel="noreferrer"
                     className={cn(
-                        "bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-3 px-7 rounded-full transition-all shadow-[0_0_15px_rgba(245,222,179,0.3)] hover:shadow-[0_0_20px_rgba(245,222,179,0.5)] text-sm md:text-base text-center"
+                        "bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-3 px-5 md:px-7 rounded-xl transition-all shadow-[0_0_15px_rgba(245,222,179,0.3)] hover:shadow-[0_0_20px_rgba(245,222,179,0.5)] text-sm md:text-base text-center min-h-[48px] flex items-center"
                     )}
                 >
                     Agendar Consulta

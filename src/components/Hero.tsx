@@ -83,7 +83,7 @@ export default function Hero() {
                             onClick={handleCtaClick}
                             href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                             target="_blank"
-                            className="w-full md:w-auto flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-8 rounded-lg shadow-lg shadow-wheat-900/20 transition-all hover:scale-105"
+                            className="w-full md:w-auto flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 min-h-[48px]"
                         >
                             Quero Minha Avaliação Gratuita
                             <ChevronRight className="w-5 h-5" />
@@ -91,7 +91,7 @@ export default function Hero() {
 
                         <button
                             onClick={() => document.getElementById('protocols')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="w-full md:w-auto flex items-center justify-center gap-2 bg-slate-800/50 hover:bg-slate-800 text-slate-200 font-medium py-4 px-8 rounded-lg border border-slate-700 hover:border-slate-600 transition-all"
+                            className="w-full md:w-auto flex items-center justify-center gap-2 bg-slate-800/50 hover:bg-slate-800 text-slate-200 font-medium py-4 px-6 md:px-8 rounded-xl border border-slate-700 hover:border-slate-600 transition-all min-h-[48px]"
                         >
                             Conhecer Protocolos
                         </button>

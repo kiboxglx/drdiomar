@@ -29,7 +29,7 @@ const steps = [
 
 export default function MethodSection() {
     return (
-        <section className="relative py-20 md:py-28 bg-slate-900 overflow-hidden">
+        <section className="relative py-12 md:py-20 lg:py-28 bg-slate-900 overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-wheat-500/15 to-transparent" />
             <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-wheat-500/[0.03] rounded-full blur-[128px] pointer-events-none" />
@@ -48,12 +48,12 @@ export default function MethodSection() {
                         <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">O Método</span>
                     </div>
 
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-50 mb-6 leading-tight">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6 leading-tight">
                         Medicina de <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-300 to-wheat-500">Precisão</span>,<br className="hidden md:block" />
                         não receita de bolo.
                     </h2>
 
-                    <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
                         O Dr. Diomar investiga a <strong className="text-slate-200">causa real</strong> do seu problema com ciência de dados e tecnologia clínica — não com achismo.
                     </p>
                 </motion.div>
@@ -122,7 +122,7 @@ export default function MethodSection() {
                     <a
                         href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                         target="_blank"
-                        className="inline-flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-[1.02] text-lg"
+                        className="inline-flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-[1.02] text-base md:text-lg min-h-[48px]"
                     >
                         Quero Minha Avaliação
                     </a>

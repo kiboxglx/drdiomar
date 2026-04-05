@@ -49,11 +49,11 @@ export default function Footer() {
                             <li>Responsável Técnico:</li>
                             <li className="text-slate-300">Dr. Diomar — CRM 60.143 MG</li>
                             <li className="pt-2">
-                                <a href="tel:+5538998269295" className="hover:text-wheat-400 transition-colors">(38) 99826-9295</a>
+                                <a href="tel:+5538998269290" className="hover:text-wheat-400 transition-colors">(38) 99826-9290</a>
                             </li>
                             <li>
                                 <a
-                                    href="https://wa.me/5538998269295"
+                                    href="https://wa.me/5538998269290"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="hover:text-wheat-400 transition-colors"

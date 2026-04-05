@@ -175,7 +175,7 @@ export default function Protocols() {
                                 </div>
 
                                 <a
-                                    href="https://wa.me/5538998269295"
+                                    href="https://wa.me/5538998269290"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => track({ name: 'protocol_interest', params: { protocol_name: proto.title } })}

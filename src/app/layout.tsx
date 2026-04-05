@@ -139,7 +139,7 @@ export default function RootLayout({
               "image": "https://drdiomarcangussu.com.br/assets/dr-specialist.png",
               "@id": "https://drdiomarcangussu.com.br",
               "url": "https://drdiomarcangussu.com.br",
-              "telephone": "+5538998269295",
+              "telephone": "+5538998269290",
               "priceRange": "$$$",
               "medicalSpecialty": ["Nutrology"],
               "hasCredential": {

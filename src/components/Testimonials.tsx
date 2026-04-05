@@ -224,7 +224,7 @@ export default function Testimonials() {
                         Quer ser o próximo?
                     </p>
                     <a
-                        href="https://wa.me/5538998269295"
+                        href="https://wa.me/5538998269290"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block bg-wheat-600 hover:bg-wheat-500 text-slate-950 font-bold py-4 px-8 rounded-xl text-sm md:text-lg transition-all shadow-lg shadow-wheat-900/20 min-h-[48px]"

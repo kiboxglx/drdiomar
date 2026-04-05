@@ -78,7 +78,7 @@ export default function ContactPage() {
                                 </div>
 
                                 <a
-                                    href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
+                                    href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="group relative w-full flex items-center justify-center gap-3 bg-green-600 hover:bg-green-500 text-white font-bold py-5 px-6 md:px-8 rounded-xl shadow-lg shadow-green-900/20 transition-all hover:scale-[1.02] min-h-[48px]"

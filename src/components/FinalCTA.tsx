@@ -78,12 +78,12 @@ export default function FinalCTA() {
             {/* Phone fallback */}
             <div className="mt-4">
               <a
-                href="tel:+5538998269295"
+                href="tel:+5538998269290"
                 onClick={handlePhone}
                 className="flex items-center justify-center gap-2 py-2.5 text-sm text-slate-400 hover:text-wheat-300 transition-colors"
               >
                 <Phone className="w-4 h-4 shrink-0" />
-                Ou ligue: (38) 99826-9295
+                Ou ligue: (38) 99826-9290
               </a>
             </div>
 

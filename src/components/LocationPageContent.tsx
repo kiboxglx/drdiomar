@@ -80,7 +80,7 @@ export default function LocationPageContent({
                 Abrir no Maps
               </a>
               <a
-                href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+                href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleCta}
@@ -181,7 +181,7 @@ export default function LocationPageContent({
             Avaliação gratuita com protocolo personalizado. Resposta em até 2 horas pelo WhatsApp.
           </p>
           <a
-            href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+            href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleCta}

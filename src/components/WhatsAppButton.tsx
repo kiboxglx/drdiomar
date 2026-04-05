@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTracking } from "@/hooks/useTracking";
 
 const WHATSAPP_URL =
-  "https://wa.me/5538998269295?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
+  "https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
 
 const SCROLL_HIDE_THRESHOLD = 400;
 const PING_DURATION_MS = 5000;

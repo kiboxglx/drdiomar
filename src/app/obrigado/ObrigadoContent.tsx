@@ -15,7 +15,7 @@ import {
 import { trackEvent } from "@/lib/tracking";
 
 const WHATSAPP_URL =
-  "https://wa.me/5538998269295?text=Ol%C3%A1%2C%20acabei%20de%20preencher%20o%20formul%C3%A1rio%20no%20site%20e%20gostaria%20de%20confirmar%20meu%20agendamento.";
+  "https://wa.me/5538998269290?text=Ol%C3%A1%2C%20acabei%20de%20preencher%20o%20formul%C3%A1rio%20no%20site%20e%20gostaria%20de%20confirmar%20meu%20agendamento.";
 
 const NEXT_STEPS = [
   {

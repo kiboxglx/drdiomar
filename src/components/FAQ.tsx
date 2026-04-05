@@ -149,7 +149,7 @@ export default function FAQ() {
                         Ainda tem dúvidas? Fale diretamente com nossa equipe.
                     </p>
                     <a
-                        href="https://wa.me/5538998269295?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20protocolos%20do%20Dr.%20Diomar."
+                        href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20protocolos%20do%20Dr.%20Diomar."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 min-h-[48px]"

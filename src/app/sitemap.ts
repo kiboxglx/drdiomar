@@ -9,10 +9,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
-            url: 'https://drdiomarcangussu.com.br/contato',
+            url: 'https://drdiomarcangussu.com.br/emagrecimento',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://drdiomarcangussu.com.br/implante-hormonal',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://drdiomarcangussu.com.br/longevidade',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://drdiomarcangussu.com.br/brasilia-de-minas',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
+        },
+        {
+            url: 'https://drdiomarcangussu.com.br/varzelandia',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: 'https://drdiomarcangussu.com.br/contato',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
         },
     ]
 }

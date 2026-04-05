@@ -1,18 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Clock, CheckCircle2, MessageCircle, Phone } from "lucide-react";
+import { ShieldCheck, Clock, CheckCircle2, Phone } from "lucide-react";
 import { useTracking } from "@/hooks/useTracking";
-
-const WHATSAPP_URL =
-  "https://wa.me/5538998269295?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
+import WhatsAppForm from "./WhatsAppForm";
 
 export default function FinalCTA() {
   const { track } = useTracking();
-
-  const handleWhatsApp = () => {
-    track({ name: "whatsapp_click", params: { location: "final-cta" } });
-  };
 
   const handlePhone = () => {
     track({ name: "phone_click", params: { location: "final-cta" } });
@@ -53,14 +47,14 @@ export default function FinalCTA() {
           </h2>
 
           <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Agende sua avaliação personalizada e descubra o protocolo ideal para
-            o <strong className="text-slate-200">seu corpo</strong> e os{" "}
-            <strong className="text-slate-200">seus objetivos</strong>.
+            Preencha abaixo e sua mensagem chega{" "}
+            <strong className="text-slate-200">pronta no WhatsApp</strong> —
+            é só enviar.
           </p>
 
-          {/* Main CTA Card — simplified on mobile */}
+          {/* Main CTA Card with form */}
           <div className="bg-gradient-to-br from-wheat-500/10 via-slate-900 to-slate-900 border border-wheat-500/20 rounded-3xl p-6 md:p-12 mb-10 shadow-2xl shadow-wheat-900/5">
-            {/* Trust points — reduced on mobile */}
+            {/* Trust points */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 mb-6 md:mb-8 text-sm text-slate-400">
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-wheat-500" />
@@ -76,24 +70,17 @@ export default function FinalCTA() {
               </div>
             </div>
 
-            {/* Mobile: Full-width WhatsApp CTA + subtle phone link */}
-            {/* Desktop: keeps similar layout but with both options */}
+            {/* WhatsApp Form */}
             <div className="max-w-md mx-auto">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleWhatsApp}
-                className="flex items-center justify-center gap-2.5 w-full bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-900/30 transition-colors active:scale-[0.98] text-base md:text-lg"
-              >
-                <MessageCircle className="w-5 h-5 md:w-6 md:h-6 shrink-0" />
-                Agendar Consulta pelo WhatsApp
-              </a>
+              <WhatsAppForm source="final-cta" />
+            </div>
 
+            {/* Phone fallback */}
+            <div className="mt-4">
               <a
                 href="tel:+5538998269295"
                 onClick={handlePhone}
-                className="flex items-center justify-center gap-2 mt-3 py-2.5 text-sm text-slate-400 hover:text-wheat-300 transition-colors"
+                className="flex items-center justify-center gap-2 py-2.5 text-sm text-slate-400 hover:text-wheat-300 transition-colors"
               >
                 <Phone className="w-4 h-4 shrink-0" />
                 Ou ligue: (38) 99826-9295
@@ -101,7 +88,7 @@ export default function FinalCTA() {
             </div>
 
             {/* Risk reversal */}
-            <div className="border-t border-slate-800 pt-5 md:pt-6 mt-5 md:mt-6">
+            <div className="border-t border-slate-800 pt-5 md:pt-6 mt-3 md:mt-4">
               <p className="text-xs md:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
                 <strong className="text-slate-400">Sem compromisso:</strong> Na
                 avaliação, você entenderá exatamente o que está acontecendo com
@@ -110,7 +97,7 @@ export default function FinalCTA() {
             </div>
           </div>
 
-          {/* Social proof micro — hidden on mobile (avatars removed for simplicity) */}
+          {/* Social proof — desktop */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -131,7 +118,7 @@ export default function FinalCTA() {
             <span>+2.000 pacientes já fizeram essa escolha</span>
           </motion.div>
 
-          {/* Mobile: simplified social proof text only */}
+          {/* Mobile social proof */}
           <p className="md:hidden text-xs text-slate-500 mt-2">
             +2.000 pacientes já fizeram essa escolha
           </p>

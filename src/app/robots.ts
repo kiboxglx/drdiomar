@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
+            disallow: '/obrigado',
         },
         sitemap: 'https://drdiomarcangussu.com.br/sitemap.xml',
     }

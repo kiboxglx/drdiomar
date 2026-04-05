@@ -177,6 +177,7 @@ export default function Protocols() {
                                 <a
                                     href="https://wa.me/5538998269295"
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     onClick={() => track({ name: 'protocol_interest', params: { protocol_name: proto.title } })}
                                     className={`w-full py-4 rounded-xl font-bold text-sm md:text-lg transition-all min-h-[48px] text-center block ${proto.highlight
                                         ? "bg-wheat-600 hover:bg-wheat-500 text-slate-950 shadow-lg shadow-wheat-900/20"

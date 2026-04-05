@@ -35,7 +35,7 @@
 
 var CONFIG = {
   // Meta de orçamento mensal total em R$ (soma de todas as campanhas monitoradas)
-  MONTHLY_BUDGET_TARGET: 5000.00,
+  MONTHLY_BUDGET_TARGET: 800.00,
 
   // Limite superior do pace para alerta (1.10 = 110%)
   PACE_HIGH_THRESHOLD: 1.10,
@@ -56,7 +56,7 @@ var CONFIG = {
   MIN_DAILY_BUDGET: 10.00,
 
   // Budget diário máximo permitido em R$ (trava de segurança)
-  MAX_DAILY_BUDGET: 500.00,
+  MAX_DAILY_BUDGET: 35.00,
 
   // Filtro de campanhas: '' = todas, ou nome parcial
   CAMPAIGN_NAME_CONTAINS: '',

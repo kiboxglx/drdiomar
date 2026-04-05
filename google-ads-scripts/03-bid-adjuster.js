@@ -35,7 +35,7 @@
 
 var CONFIG = {
   // CPA target em R$ — referência para ajuste de bids
-  CPA_TARGET: 50.00,
+  CPA_TARGET: 25.00,
 
   // Multiplicador para considerar CPA "muito alto" (2.0 = 2x o target)
   CPA_HIGH_MULTIPLIER: 2.0,

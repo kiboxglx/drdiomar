@@ -94,7 +94,7 @@ const transformations = [
 
 export default function ResultsSection() {
     return (
-        <section className="relative py-12 md:py-20 lg:py-28 bg-slate-950 overflow-hidden">
+        <section id="results" className="relative py-12 md:py-20 lg:py-28 bg-slate-950 overflow-hidden">
             {/* Background */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-wheat-500/15 to-transparent" />
             <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-wheat-500/[0.02] rounded-full blur-[150px] pointer-events-none" />

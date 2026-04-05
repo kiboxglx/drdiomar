@@ -16,9 +16,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Diomar Cangussu | Emagrecimento, Implantes Hormonais e Nutrologia",
-  description: "Especialista em Emagrecimento, Implantes Hormonais e Medicina de Precisão. Atendimento em Brasília de Minas, Varzelândia e região. Agende sua consulta!",
-  keywords: ["Emagrecimento", "Implantes Hormonais", "Nutrologia", "Medicina Esportiva", "Brasília de Minas", "Varzelândia", "Norte de Minas", "Dr. Diomar Cangussu", "Reposição Hormonal", "Saúde"],
+  metadataBase: new URL("https://drdiomarcangussu.com.br"),
+  title: "Dr. Diomar Cangussu | Emagrecimento, Implantes Hormonais e Nutrologia em Brasília de Minas e Varzelândia",
+  description: "Médico nutrologista especialista em emagrecimento, implantes hormonais e longevidade. +2.000 pacientes atendidos em Brasília de Minas e Varzelândia, Norte de Minas Gerais. Agende sua avaliação gratuita!",
+  keywords: ["Emagrecimento", "Implantes Hormonais", "Nutrologia", "Medicina Esportiva", "Brasília de Minas", "Varzelândia", "Norte de Minas", "Dr. Diomar Cangussu", "Reposição Hormonal", "Nutrólogo", "Médico para emagrecer", "Protocolo de emagrecimento"],
   authors: [{ name: "Dr. Diomar Cangussu" }],
   creator: "Dr. Diomar Cangussu",
   publisher: "Dr. Diomar Cangussu",
@@ -30,17 +31,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://drdiomarcangussu.com.br",
-    title: "Dr. Diomar Cangussu | Emagrecimento e Performance",
-    description: "Protocolos avançados de emagrecimento e implantes hormonais no Norte de Minas.",
+    title: "Dr. Diomar Cangussu | Emagrecimento e Implantes Hormonais — Norte de Minas",
+    description: "Protocolos médicos personalizados de emagrecimento e implantes hormonais. +2.000 pacientes em Brasília de Minas e Varzelândia. Avaliação gratuita.",
     siteName: "Dr. Diomar Cangussu",
     images: [
       {
         url: "/assets/dr-specialist.png",
         width: 1200,
         height: 630,
-        alt: "Dr. Diomar Cangussu - Especialista em Emagrecimento",
+        alt: "Dr. Diomar Cangussu - Especialista em Emagrecimento e Implantes Hormonais",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dr. Diomar Cangussu | Emagrecimento e Implantes Hormonais",
+    description: "Protocolos médicos personalizados. +2.000 pacientes em Brasília de Minas e Varzelândia. Avaliação gratuita.",
+    images: ["/assets/dr-specialist.png"],
   },
   other: {
     "facebook-domain-verification": "dsp4uoei7ha8djr8gdrlf9k1tympez",
@@ -128,11 +135,43 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Physician",
               "name": "Dr. Diomar Cangussu",
+              "description": "Médico nutrologista especialista em emagrecimento, implantes hormonais e longevidade. Atendimento em Brasília de Minas e Varzelândia, Norte de Minas Gerais.",
               "image": "https://drdiomarcangussu.com.br/assets/dr-specialist.png",
               "@id": "https://drdiomarcangussu.com.br",
               "url": "https://drdiomarcangussu.com.br",
               "telephone": "+5538998269295",
               "priceRange": "$$$",
+              "medicalSpecialty": ["Nutrology"],
+              "hasCredential": {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "CRM",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Conselho Regional de Medicina de Minas Gerais"
+                },
+                "identifier": "60.143 MG"
+              },
+              "availableService": [
+                {
+                  "@type": "MedicalProcedure",
+                  "name": "Protocolo de Emagrecimento",
+                  "description": "Emagrecimento científico personalizado com bioimpedância, exames e acompanhamento por WhatsApp"
+                },
+                {
+                  "@type": "MedicalProcedure",
+                  "name": "Implantes Hormonais",
+                  "description": "Implantes hormonais biodegradáveis para otimização de testosterona e equilíbrio hormonal"
+                },
+                {
+                  "@type": "MedicalProcedure",
+                  "name": "Longevidade Premium",
+                  "description": "Check-up metabólico completo com soroterapia e gestão do envelhecimento"
+                }
+              ],
+              "areaServed": [
+                "Brasília de Minas", "Varzelândia", "São Francisco", "Mirabela",
+                "Ubaí", "Luislândia", "São João da Ponte", "Ibiracatu", "Lontra"
+              ],
               "address": [
                 {
                   "@type": "PostalAddress",

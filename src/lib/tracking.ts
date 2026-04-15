@@ -129,7 +129,7 @@ export function trackEvent(event: TrackingEvent): void {
         value: p.value || 0,
         currency: p.currency || 'BRL',
       });
-      gtagConversion('ads_conversion_Reservar_hor_rio_1');
+      gtagConversion('FJy-CJiu8JgcENbg1dBC', { value: 25.0, currency: 'BRL' });
       break;
     }
     case 'cta_click':
@@ -137,7 +137,7 @@ export function trackEvent(event: TrackingEvent): void {
       break;
     case 'whatsapp_click':
       fbqTrack('Contact', { content_name: 'WhatsApp' });
-      gtagConversion('ads_conversion_Reservar_hor_rio_1');
+      gtagConversion('FJy-CJiu8JgcENbg1dBC', { value: 25.0, currency: 'BRL' });
       break;
     case 'form_start':
       fbqTrackCustom('FormStart', gaParams);

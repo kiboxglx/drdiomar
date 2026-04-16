@@ -100,6 +100,38 @@ export default function RootLayout({
             gtag('config', 'AW-17885917270');
           `}
         </Script>
+        <Script id="gads-whatsapp-conversion" strategy="afterInteractive">
+          {`
+            window.gtag_report_conversion = function(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') { window.location = url; }
+              };
+              if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                  'send_to': 'AW-17885917270/FJy-CJiu8JgcENbg1dBC',
+                  'value': 25.0,
+                  'currency': 'BRL',
+                  'event_callback': callback
+                });
+              } else if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+              return false;
+            };
+            document.addEventListener('click', function(e) {
+              var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+              if (!a) return;
+              var href = a.getAttribute('href') || '';
+              if (href.indexOf('wa.me') === -1 && href.indexOf('api.whatsapp.com') === -1) return;
+              if (typeof gtag !== 'function') return;
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17885917270/FJy-CJiu8JgcENbg1dBC',
+                'value': 25.0,
+                'currency': 'BRL'
+              });
+            }, true);
+          `}
+        </Script>
         {/* Meta Pixel */}
         {FB_PIXEL_ID && (
           <>

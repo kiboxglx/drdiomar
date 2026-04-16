@@ -9,7 +9,7 @@ export default function Hero() {
     const { track } = useTracking();
 
     const handleCtaClick = () => {
-        track({ name: 'cta_click', params: { cta_location: 'hero', cta_text: 'Quero Minha Avaliação Gratuita' } });
+        track({ name: 'cta_click', params: { cta_location: 'hero', cta_text: 'Quero Agendar Minha Avaliação' } });
     };
     return (
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-900 pt-20 md:pt-0">
@@ -86,7 +86,7 @@ export default function Hero() {
                             rel="noopener noreferrer"
                             className="w-full md:w-auto flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 min-h-[48px]"
                         >
-                            Quero Minha Avaliação Gratuita
+                            Quero Agendar Minha Avaliação
                             <ChevronRight className="w-5 h-5" />
                         </a>
                     </motion.div>

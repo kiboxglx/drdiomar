@@ -43,6 +43,10 @@ next-env.d.ts
 # lead data (local storage)
 /data
 
+# google ads credentials (NEVER COMMIT)
+/.google-ads
+credentials.json
+
 # ── GSD baseline (auto-generated) ──
 .gsd
 .gsd-id

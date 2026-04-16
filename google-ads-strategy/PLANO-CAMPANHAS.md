@@ -32,71 +32,137 @@ A conta está pausada. Ir em **Configurações → Verificação do anunciante**
 **Manter:**
 - "Reservar horário" (GA4) — mas verificar se está disparando corretamente com a LP nova
 
-### 4. Adicionar palavras-chave negativas (LISTA INICIAL)
-Criar lista compartilhada "Negativas Dr. Diomar" e aplicar a todas as campanhas:
+### 4. Adicionar palavras-chave negativas (LISTA REVISADA)
+Criar lista compartilhada "Negativas Dr. Diomar" e aplicar a todas as campanhas.
+
+**⚠️ Formato importante:**
+- Termos em `[colchetes]` = correspondência **exata** (bloqueia exatamente aquilo)
+- Termos entre `"aspas"` = correspondência de **frase** (bloqueia qualquer busca que contenha a frase)
+- Sem pontuação = correspondência **ampla** (uso restrito pra palavras isoladas inequívocas)
+
+**Ajustes vs versão anterior:** removidos `exercício`, `treino`, `online`, `natural`, `o que faz`, `como fazer` como ampla — bloqueavam tráfego válido. Foram convertidos para phrase match onde fazem sentido.
 
 ```
-# Informacionais genéricas
-dieta pdf
-receita
-grátis
-gratuito
-free
-como fazer
-caseiro
-natural
-chá
-suco
-exercício
-treino
-academia
-musculação
-app
-aplicativo
-curso
-faculdade
-livro
+# Conteúdo informacional (phrase match)
+"dieta pdf"
+"receita grátis"
+"receita caseira"
+"cardápio grátis"
+"como fazer dieta"
+"como perder barriga"
+"como emagrecer rapido"
+"como emagrecer em"
+"como ficar magra"
+"como limpar o fígado"
+"como acelerar o metabolismo"
+"dieta para emagrecer"
+"dieta simples"
+"dieta da sopa"
+"dieta dukan"
+"dieta cetogênica receita"
+"jejum intermitente como"
+"jejum 36 horas"
+"remédio caseiro"
+"chá para emagrecer"
+"suco para emagrecer"
+"canela para emagrecer"
+"limão para emagrecer"
+"vinagre para emagrecer"
+"subliminal emagrecer"
+"frequência emagrecer"
+"simpatia para emagrecer"
 
-# Profissionais concorrentes
-nutricionista online
+# Promessas irreais (phrase)
+"10kg em 7 dias"
+"10kg em 10 dias"
+"5 quilos em uma semana"
+"emagrecer em 3 dias"
+"emagrecer rápido 1 semana"
+"perder peso em 1 dia"
+"3 dias sem comer"
+
+# Exercício / treino / academia (phrase — só quando informacional)
+"treino para"
+"exercício para"
+"exercícios para"
+"treino em casa"
+"exercício em casa"
+"musculação para"
+"academia para"
+
+# Profissões / modalidades erradas
+nutricionista
+"nutricionista online"
+"nutricionista grátis"
+"nutricionista barato"
 teleconsulta
-online
+"consulta online"
+"atendimento online"
+"a distância"
 ead
-a distância
+psicólogo
+psicologa
+dentista
+dermatologista
+fisioterapia
+fisioterapeuta
+"personal trainer"
 
-# Fora do escopo
-cirurgia bariátrica
+# Fora do escopo médico
+"cirurgia bariátrica"
 bariátrica
 lipoaspiração
 lipo
-plástica
+"cirurgia plástica"
 botox
-harmonização facial
-dentista
-dermatologista
-psicólogo
-fisioterapia
+"harmonização facial"
+"preenchimento facial"
+mounjaro
+ozempic
+"injeção para emagrecer"
+"remédio para emagrecer"
 
-# Localidades fora da região
-são paulo
-rio de janeiro
-belo horizonte
+# Conteúdo educacional / top-funnel
+"o que é nutrologia"
+"o que é nutrólogo"
+"o que faz o nutrólogo"
+"o que faz o nutrologista"
+"quanto ganha"
+"como ser nutrólogo"
+"faculdade de nutrologia"
+"curso de nutrologia"
+"diferença entre nutrólogo e"
+wikipedia
+pdf
+download
+youtube
+
+# Localidades fora da região (phrase)
+"são paulo"
+"rio de janeiro"
+"belo horizonte"
+"brasília df"
+"brasilia df"
 curitiba
-brasília df
 goiânia
 salvador
 recife
 fortaleza
+"distrito federal"
 
-# Baixa intenção
-o que é
-o que faz
-quanto ganha
-como ser
-diferença entre
-wikipedia
-significado
+# Concorrentes diretos identificados nos search terms
+"dr renan botelho"
+"dr corassa"
+"dr turi souza"
+"nutri inteligente"
+
+# Apps / gadgets
+aplicativo
+"app para emagrecer"
+smartwatch
 ```
+
+**Observação:** essa lista deve ser revisada semanalmente adicionando novos termos irrelevantes que aparecerem no relatório de termos de pesquisa.
 
 ---
 
@@ -105,7 +171,7 @@ significado
 ### Campanha 1: `[Search] Emagrecimento — Norte MG`
 **Objetivo:** Capturar quem busca ativamente emagrecer com médico na região
 **Budget:** R$ 15/dia (R$ 450/mês — ~56% do budget)
-**Estratégia de lance:** Maximizar conversões (após 15-20 conversões, testar CPA desejado de R$ 25)
+**Estratégia de lance:** 🟡 **Maximizar Cliques com CPC máx R$ 4,00** durante o período de aprendizado (4–6 semanas). Migrar para **Maximizar Conversões** somente após acumular ≥20 conversões reais de WhatsApp Click.
 **Rede:** ⚠️ SOMENTE Pesquisa Google (DESMARCAR Display e Parceiros de pesquisa)
 **Dispositivos:** Todos (ajuste +20% mobile depois de 2 semanas de dados)
 **Programação:** Segunda a Sábado, 6h-22h (sem madrugada)
@@ -177,13 +243,15 @@ Keywords (correspondência de frase):
 
 ### Campanha 2: `[Search] Implante Hormonal — Norte MG`
 **Objetivo:** Capturar quem busca implante hormonal / reposição
-**Budget:** R$ 8/dia (R$ 240/mês — 30%)
-**Estratégia de lance:** Maximizar cliques (iniciar com CPC máx R$ 5,00, migrar para conversões após dados)
+**Budget inicial (semana 1-2):** 🟡 **R$ 5/dia (R$ 150/mês)** como teste. Subir para R$ 8/dia apenas se ≥80% dos anúncios forem aprovados.
+**Budget alvo:** R$ 8/dia (R$ 240/mês — 30%)
+**Estratégia de lance:** Maximizar cliques (CPC máx R$ 5,00). Migrar para conversões após ≥20 conv.
 **Rede:** SOMENTE Pesquisa Google
 **Programação:** Segunda a Sábado, 6h-22h
 **Localização:** 50km de cada hub
+**Lançar:** ⚠️ **Somente no Dia 8** (após Campanhas 1 e 3 estarem rodando e validadas). Se Campanha 2 for reprovada por política, realocar os R$ 240/mês para Campanha 1.
 
-⚠️ **CUIDADO COM POLÍTICAS:** Evitar termos que disparem a política de "métodos anticoncepcionais, fertilidade". Focar em "performance", "disposição", "equilíbrio hormonal" em vez de "hormônio" direto nos títulos.
+⚠️ **CUIDADO COM POLÍTICAS:** Evitar termos que disparem a política de "métodos anticoncepcionais, fertilidade, hormônios". **NUNCA usar nos títulos:** "testosterona", "estrogênio", "chip hormonal masculino", "libido". Focar em "performance", "disposição", "equilíbrio", "energia", "bem-estar".
 
 #### Grupo 1: `Implante Hormonal`
 Keywords (correspondência de frase):
@@ -213,34 +281,34 @@ Keywords (correspondência de frase):
 "testosterona baixa tratamento"
 ```
 
-#### Anúncio Responsivo (RSA) — Implante:
+#### Anúncio Responsivo (RSA) — Implante (SEM termos proibidos):
 
 **Títulos (15):**
 | # | Título | Pin |
 |---|--------|-----|
-| 1 | Implantes Hormonais — Dr. Diomar | Pin 1 |
-| 2 | Recupere Sua Disposição e Energia | Pin 1 |
-| 3 | Equilíbrio Hormonal em até 30 Dias | — |
+| 1 | Recupere Sua Energia e Disposição | Pin 1 |
+| 2 | Dr. Diomar — Especialista em Performance | Pin 1 |
+| 3 | Equilíbrio e Bem-Estar em até 30 Dias | — |
 | 4 | +2.000 Pacientes — CRM 60.143 MG | — |
 | 5 | Agende Avaliação — WhatsApp Direto | Pin 2 |
 | 6 | Brasília de Minas e Varzelândia | Pin 3 |
-| 7 | Tecnologia Absorvível — Não É Chip | — |
-| 8 | Performance, Libido e Massa Muscular | — |
-| 9 | Tratamento Personalizado com Exames | — |
-| 10 | Médico Especialista em Performance | Pin 1 |
-| 11 | Resultados Comprovados — Agende Agora | Pin 2 |
-| 12 | Mais Energia, Menos Fadiga | — |
+| 7 | Tecnologia Absorvível e Moderna | — |
+| 8 | Mais Energia para o Seu Dia a Dia | — |
+| 9 | Avaliação com Exames Completos | — |
+| 10 | Médico Especialista em Otimização | Pin 1 |
+| 11 | Protocolo Individual — Agende Agora | Pin 2 |
+| 12 | Chega de Fadiga e Cansaço | — |
 | 13 | Norte de Minas — Perto de Você | Pin 3 |
 | 14 | Acompanhamento Contínuo por WhatsApp | — |
-| 15 | Procedimento Rápido — Volta no Mesmo Dia | — |
+| 15 | Procedimento Rápido — Mesmo Dia | — |
 
 **Descrições (4):**
 | # | Descrição |
 |---|-----------|
-| 1 | Implantes hormonais biodegradáveis com acompanhamento médico contínuo. Procedimento rápido com anestesia local. Agende sua avaliação. |
-| 2 | Cansaço, perda de libido, dificuldade de ganho muscular? Pode ser hormonal. Avaliação completa com exames em Brasília de Minas e Varzelândia. |
-| 3 | Médico especialista em otimização hormonal. Tecnologia absorvível (não é chip). Resultados em até 30 dias. Parcelamento disponível. |
-| 4 | Recupere sua disposição com protocolo hormonal personalizado. +2.000 pacientes atendidos. Agende pelo WhatsApp hoje mesmo. |
+| 1 | Protocolo personalizado com acompanhamento médico contínuo. Procedimento rápido com anestesia local. Agende sua avaliação completa. |
+| 2 | Cansaço, falta de disposição, dificuldade para manter peso? Avaliação médica completa com exames em Brasília de Minas e Varzelândia. |
+| 3 | Médico especialista em otimização e bem-estar. Tecnologia moderna e segura. Resultados em até 30 dias. Parcelamento disponível. |
+| 4 | Recupere sua energia com protocolo personalizado. +2.000 pacientes atendidos. Agende pelo WhatsApp hoje mesmo. |
 
 **URL final:** `https://drdiomarcangussu.com.br`
 **URL de exibição:** drdiomarcangussu.com.br/implante-hormonal
@@ -250,7 +318,7 @@ Keywords (correspondência de frase):
 ### Campanha 3: `[Search] Marca + Região — Norte MG`
 **Objetivo:** Capturar buscas diretas por nome e região (CPC baixo, conversão alta)
 **Budget:** R$ 3/dia (R$ 90/mês — ~11%)
-**Estratégia de lance:** Maximizar cliques (CPC máx R$ 2,00)
+**Estratégia de lance:** Maximizar Cliques com CPC máx R$ 2,00
 **Rede:** SOMENTE Pesquisa Google
 **Programação:** Todos os dias, 6h-22h
 
@@ -365,15 +433,18 @@ Vincular ao Google Meu Negócio (se existir) para mostrar endereço e mapa.
 
 ---
 
-## Cronograma de Implementação
+## Cronograma de Implementação (REVISADO)
 
-| Semana | Ação |
+| Dia | Ação |
 |--------|------|
-| **Dia 1** | Resolver verificação do anunciante. Pausar campanhas atuais. Adicionar lista de negativas. |
-| **Dia 2** | Criar nova conversão WhatsApp Click. Configurar extensões. |
-| **Dia 3** | Criar Campanha 1 (Emagrecimento) e Campanha 3 (Marca). Ativar. |
-| **Dia 4** | Criar Campanha 2 (Implante). Ativar. |
-| **Semana 2** | Revisar termos de pesquisa diariamente. Adicionar negativas. Verificar CTR. |
-| **Semana 3** | Pausar keywords com CTR < 1% e zero conversões. Ajuste de lance mobile. |
-| **Semana 4** | Relatório de performance. Comparar CPA por campanha. Realocar budget se necessário. |
-| **Mês 2** | Se Emagrecimento tem >20 conversões, migrar para CPA desejado R$ 25. |
+| **Dia 1** | Verificação do anunciante. Pausar Leads-Search-1. Deletar Smart Campaign. Criar conversão WhatsApp Click **nativa Ads** (gtag direto). Remover das metas as 6 ações Smart/Google-hosted. |
+| **Dia 2** | Criar lista negativas (revisada). Criar 4 sitelinks + 6 callouts + snippets + extensão chamada no nível de conta. |
+| **Dia 3** | Criar Campanha 1 (Emagrecimento) com **Max Clicks CPC R$ 4**. Criar Campanha 3 (Marca) com **Max Clicks CPC R$ 2**. Ativar ambas. |
+| **Dia 5** | Validar que conversões WhatsApp Click estão chegando no Ads. Primeiro passe em termos de pesquisa → adicionar negativas novas. |
+| **Dia 8** | Criar Campanha 2 (Implante) com R$ 5/dia e RSA sem termos proibidos. Monitorar aprovação dos anúncios em 24h. |
+| **Dia 10** | Se ≥80% dos anúncios da Camp. 2 aprovados → subir pra R$ 8/dia. Se <80% → pausar e realocar orçamento pra Camp. 1. |
+| **Semana 2** | Revisão diária de termos de pesquisa. Adicionar negativas. |
+| **Semana 3** | Pausar keywords com CTR < 1% e zero conversões. Avaliar ajuste +20% lance mobile com base em dados reais. |
+| **Semana 4** | Relatório de performance. Comparar CPA por campanha. Realocar budget. |
+| **Semana 5-6** | Se Camp. 1 acumulou ≥20 conversões reais de WhatsApp Click → migrar de Max Clicks para **Maximizar Conversões**. |
+| **Mês 2** | Se Max Conversões estabilizar ≥15 conversões por semana → testar **CPA desejado R$ 25**. |

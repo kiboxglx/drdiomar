@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description: "Consulta de avaliação aprofundada com o Dr. Diomar para quem busca emagrecer com critério. Investigação clínica antes de qualquer recomendação.",
     url: "https://drdiomarcangussu.com.br/emagrecimento",
     type: "website",
+    images: [{ url: "/assets/dr-specialist.png", width: 1200, height: 630, alt: "Dr. Diomar Cangussu — Avaliação clínica para emagrecimento" }],
   },
 };
 

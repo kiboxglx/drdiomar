@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     description: "Consulta de avaliação clínica aprofundada com o Dr. Diomar Cangussu em Varzelândia. +2.000 pacientes atendidos.",
     url: "https://drdiomarcangussu.com.br/varzelandia",
     type: "website",
+    images: [{ url: "/assets/dr-specialist.png", width: 1200, height: 630, alt: "Dr. Diomar Cangussu — Nutrólogo em Varzelândia" }],
   },
 };
 

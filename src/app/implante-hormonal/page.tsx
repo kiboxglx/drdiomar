@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description: "Consulta de avaliação aprofundada para investigar fadiga, libido e sintomas hormonais antes de qualquer decisão sobre tratamento.",
     url: "https://drdiomarcangussu.com.br/implante-hormonal",
     type: "website",
+    images: [{ url: "/assets/dr-specialist.png", width: 1200, height: 630, alt: "Dr. Diomar Cangussu — Avaliação para sintomas hormonais" }],
   },
 };
 

@@ -162,7 +162,7 @@ export default function ResultsSection() {
                                 <span className="text-xs font-semibold text-wheat-400">{t.result}</span>
                             </div>
 
-                            <p className="text-slate-300 leading-relaxed mb-6 italic">"{t.quote}"</p>
+                            <p className="text-slate-300 leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
 
                             <div className="flex items-center gap-3 pt-4 border-t border-slate-800/60">
                                 <div className="w-9 h-9 rounded-full bg-wheat-500/10 flex items-center justify-center text-wheat-500 font-bold text-sm">

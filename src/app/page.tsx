@@ -27,7 +27,7 @@ function SectionSeparator() {
 
 export default function Home() {
   return (
-    <main className="bg-slate-950 min-h-screen pb-20 md:pb-0">
+    <main id="main-content" className="bg-slate-950 min-h-screen pb-20 md:pb-0">
       <Navbar />
       <Hero />
       <SectionSeparator />

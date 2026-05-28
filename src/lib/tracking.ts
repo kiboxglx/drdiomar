@@ -76,7 +76,6 @@ export type TrackingEvent =
   | { name: 'scroll_depth'; params?: { percent?: number; section?: string } }
   | { name: 'form_start'; params?: { form_name?: string } }
   | { name: 'faq_opened'; params?: { question?: string; index?: number } }
-  | { name: 'protocol_interest'; params?: { protocol_name?: string } }
   | { name: 'exit_intent_shown'; params?: Record<string, unknown> }
   | { name: 'exit_intent_converted'; params?: Record<string, unknown> }
   | { name: 'whatsapp_click'; params?: { location?: string } }
@@ -114,6 +113,8 @@ export function trackEvent(event: TrackingEvent): void {
         value: p.value || 0,
         currency: p.currency || 'BRL',
       });
+      // Google Ads conversion for form submit (same label as WhatsApp click to consolidate funnel)
+      gtagConversion('FJy-CJiu8JgcENbg1dBC', { value: 25.0, currency: 'BRL' });
       break;
     }
     case 'contact': {
@@ -147,9 +148,6 @@ export function trackEvent(event: TrackingEvent): void {
       break;
     case 'faq_opened':
       fbqTrackCustom('FAQOpened', gaParams);
-      break;
-    case 'protocol_interest':
-      fbqTrackCustom('ProtocolInterest', gaParams);
       break;
     case 'exit_intent_shown':
       fbqTrackCustom('ExitIntentShown', gaParams);

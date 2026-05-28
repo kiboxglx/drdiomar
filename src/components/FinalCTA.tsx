@@ -111,12 +111,12 @@ export default function FinalCTA() {
                 </div>
               ))}
             </div>
-            <span>+2.000 pacientes já passaram pela avaliação</span>
+            <span>Atendimento particular · CRM 60.143 MG · 2 unidades no Norte de Minas</span>
           </motion.div>
 
           {/* Mobile social proof */}
-          <p className="md:hidden text-xs text-slate-500 mt-2">
-            +2.000 pacientes já passaram pela avaliação
+          <p className="md:hidden text-xs text-slate-400 mt-2">
+            Atendimento particular · CRM 60.143 MG · Norte de Minas
           </p>
         </motion.div>
       </div>

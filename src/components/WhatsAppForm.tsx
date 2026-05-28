@@ -179,23 +179,28 @@ export default function WhatsAppForm({
           >
             {/* Nome */}
             <div>
+              <label htmlFor="wa-nome" className="sr-only">Nome</label>
               <input
+                id="wa-nome"
                 type="text"
                 placeholder="Seu nome"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
                 onFocus={fireFormStart}
                 disabled={status === "submitting"}
+                autoComplete="name"
                 aria-invalid={nomeError}
-                aria-label="Nome"
+                aria-describedby={nomeError ? "wa-nome-err" : undefined}
                 className={`${inputBase} ${inputSize} ${nomeError ? borderError : borderNormal}`}
               />
               {nomeError && (
                 <motion.p
+                  id="wa-nome-err"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-xs text-red-400 mt-1 ml-1"
+                  className="flex items-center gap-1.5 text-sm text-red-400 mt-1 ml-1"
                 >
+                  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                   Informe seu nome
                 </motion.p>
               )}
@@ -203,23 +208,29 @@ export default function WhatsAppForm({
 
             {/* Telefone */}
             <div>
+              <label htmlFor="wa-tel" className="sr-only">WhatsApp</label>
               <input
+                id="wa-tel"
                 type="tel"
                 placeholder="(00) 00000-0000"
                 value={telefone}
                 onChange={handlePhoneChange}
                 onFocus={fireFormStart}
                 disabled={status === "submitting"}
+                autoComplete="tel"
+                inputMode="numeric"
                 aria-invalid={telefoneError}
-                aria-label="WhatsApp"
+                aria-describedby={telefoneError ? "wa-tel-err" : undefined}
                 className={`${inputBase} ${inputSize} ${telefoneError ? borderError : borderNormal}`}
               />
               {telefoneError && (
                 <motion.p
+                  id="wa-tel-err"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-xs text-red-400 mt-1 ml-1"
+                  className="flex items-center gap-1.5 text-sm text-red-400 mt-1 ml-1"
                 >
+                  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                   Informe um WhatsApp válido com DDD
                 </motion.p>
               )}
@@ -227,13 +238,15 @@ export default function WhatsAppForm({
 
             {/* Interesse */}
             <div>
+              <label htmlFor="wa-interesse" className="sr-only">Motivo da avaliação</label>
               <select
+                id="wa-interesse"
                 value={interesse}
                 onChange={(e) => setInteresse(e.target.value)}
                 onFocus={fireFormStart}
                 disabled={status === "submitting"}
                 aria-invalid={interesseError}
-                aria-label="Interesse"
+                aria-describedby={interesseError ? "wa-interesse-err" : undefined}
                 className={`${inputBase} ${inputSize} ${interesseError ? borderError : borderNormal} ${!interesse ? "text-slate-500" : ""}`}
               >
                 {INTERESSE_OPTIONS.map((opt) => (
@@ -244,10 +257,12 @@ export default function WhatsAppForm({
               </select>
               {interesseError && (
                 <motion.p
+                  id="wa-interesse-err"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-xs text-red-400 mt-1 ml-1"
+                  className="flex items-center gap-1.5 text-sm text-red-400 mt-1 ml-1"
                 >
+                  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                   Selecione uma área de interesse
                 </motion.p>
               )}
@@ -274,7 +289,7 @@ export default function WhatsAppForm({
               disabled={status === "submitting"}
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.98 }}
-              className={`w-full flex items-center justify-center gap-2.5 bg-green-600 hover:bg-green-500 text-white font-bold rounded-xl shadow-lg shadow-green-900/30 transition-all disabled:opacity-70 disabled:cursor-not-allowed min-h-[48px] ${isCompact ? "py-3 text-sm" : "py-4 text-base md:text-lg"}`}
+              className={`w-full flex items-center justify-center gap-2.5 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-wheat-900/25 transition-all disabled:opacity-70 disabled:cursor-not-allowed min-h-[48px] ${isCompact ? "py-3 text-sm" : "py-4 text-base md:text-lg"}`}
             >
               {status === "submitting" ? (
                 <>
@@ -284,7 +299,7 @@ export default function WhatsAppForm({
               ) : (
                 <>
                   <MessageCircle className="w-5 h-5" />
-                  Enviar e Abrir WhatsApp
+                  Agendar minha avaliação
                 </>
               )}
             </motion.button>

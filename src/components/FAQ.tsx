@@ -28,7 +28,7 @@ const faqs = [
     },
     {
         question: "Qual o valor da consulta?",
-        answer: "A consulta de avaliação tem valor particular. A equipe apresenta o valor e as condições durante o agendamento, junto com a disponibilidade de horários. Trabalhamos com tempo e profundidade em cada atendimento — por isso o atendimento não é por convênio.",
+        answer: "A consulta de avaliação tem valor particular, compatível com a profundidade do atendimento (anamnese completa, bioimpedância e solicitação de exames). O valor exato e as condições de pagamento são apresentados durante o agendamento pelo WhatsApp, junto com a disponibilidade de horários. Trabalhamos com tempo e profundidade em cada atendimento — por isso o atendimento não é por convênio.",
     },
     {
         question: "Posso parcelar?",
@@ -100,7 +100,9 @@ export default function FAQ() {
                         >
                             <button
                                 onClick={() => handleToggle(idx, faq.question)}
-                                className="flex items-center justify-between w-full p-5 md:p-8 text-left"
+                                aria-expanded={openIndex === idx}
+                                aria-controls={`faq-answer-${idx}`}
+                                className="flex items-center justify-between w-full p-5 md:p-8 text-left min-h-[56px]"
                             >
                                 <span className={`text-lg md:text-xl font-medium transition-colors ${
                                     openIndex === idx ? "text-wheat-300" : "text-slate-200"
@@ -123,13 +125,17 @@ export default function FAQ() {
                             <AnimatePresence>
                                 {openIndex === idx && (
                                     <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: "auto", opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        className="overflow-hidden"
+                                        initial={{ gridTemplateRows: "0fr", opacity: 0 }}
+                                        animate={{ gridTemplateRows: "1fr", opacity: 1 }}
+                                        exit={{ gridTemplateRows: "0fr", opacity: 0 }}
+                                        transition={{ duration: 0.25, ease: "easeOut" }}
+                                        className="grid overflow-hidden"
+                                        style={{ display: "grid" }}
                                     >
-                                        <div className="px-5 md:px-8 pb-5 md:pb-8 text-slate-400 leading-relaxed text-base md:text-lg border-t border-slate-800/50 pt-4">
-                                            {faq.answer}
+                                        <div className="overflow-hidden">
+                                            <div id={`faq-answer-${idx}`} className="px-5 md:px-8 pb-5 md:pb-8 text-slate-300 leading-relaxed text-base md:text-lg border-t border-slate-800/50 pt-4">
+                                                {faq.answer}
+                                            </div>
                                         </div>
                                     </motion.div>
                                 )}

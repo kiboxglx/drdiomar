@@ -53,7 +53,7 @@ export default function MethodSection() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-300 to-wheat-500">consulta de avaliação</span>.
                     </h2>
 
-                    <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-sm md:text-base lg:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
                         O Dr. Diomar dedica tempo para investigar a <strong className="text-slate-200">causa real</strong> do seu quadro — anamnese, exames e leitura clínica antes de qualquer recomendação de tratamento.
                     </p>
                 </motion.div>
@@ -89,7 +89,7 @@ export default function MethodSection() {
                                         <div className="flex items-center gap-3 mb-2">
                                             <h3 className="text-xl md:text-2xl font-bold text-slate-50">{step.title}</h3>
                                         </div>
-                                        <p className="text-slate-400 leading-relaxed mb-3 text-base md:text-lg">{step.description}</p>
+                                        <p className="text-slate-300 leading-relaxed mb-3 text-base md:text-lg">{step.description}</p>
                                         <span className="inline-flex items-center gap-1.5 text-sm text-wheat-500 font-medium">
                                             <span className="w-1.5 h-1.5 rounded-full bg-wheat-500" />
                                             {step.detail}

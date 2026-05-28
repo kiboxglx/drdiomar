@@ -13,11 +13,46 @@ export default function ExitIntent() {
   const [visible, setVisible] = useState(false);
   const dwellReady = useRef(false);
   const dismissed = useRef(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const previouslyFocused = useRef<HTMLElement | null>(null);
 
   const close = useCallback(() => {
     setVisible(false);
     dismissed.current = true;
+    previouslyFocused.current?.focus();
   }, []);
+
+  // Focus trap + Escape to close + restore focus on unmount
+  useEffect(() => {
+    if (!visible) return;
+    previouslyFocused.current = document.activeElement as HTMLElement;
+    const card = cardRef.current;
+    if (!card) return;
+
+    const focusables = card.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    focusables[0]?.focus();
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        close();
+        return;
+      }
+      if (e.key !== "Tab" || focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [visible, close]);
 
   useEffect(() => {
     // Skip if already shown this session
@@ -80,6 +115,7 @@ export default function ExitIntent() {
 
           {/* Popup card */}
           <motion.div
+            ref={cardRef}
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -106,12 +142,11 @@ export default function ExitIntent() {
                   <Gift className="w-6 h-6 text-wheat-400" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-slate-50 mb-2">
-                  Antes de sair, agende sua avaliação
+                  Não sabe por onde começar?
                 </h3>
-                <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-                  Deixe seus dados e a equipe entra em contato para agendar sua{" "}
-                  <strong className="text-wheat-400">consulta de avaliação</strong>{" "}
-                  com o Dr. Diomar.
+                <p className="text-sm text-slate-300 max-w-sm leading-relaxed">
+                  Deixe seus dados e converse com a equipe — eles entendem o seu caso e te ajudam a agendar a{" "}
+                  <strong className="text-wheat-400">consulta de avaliação</strong>. Resposta em até 2h, sem compromisso.
                 </p>
               </div>
 

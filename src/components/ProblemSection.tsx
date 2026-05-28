@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AlertTriangle, TrendingDown, BatteryLow, Moon, Scale, HeartCrack } from "lucide-react";
+import { AlertTriangle, TrendingDown, BatteryLow, Scale, HeartCrack } from "lucide-react";
 
 const problems = [
     {
@@ -52,7 +52,7 @@ export default function ProblemSection() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-red-400/80"> e nada funciona?</span>
                     </h2>
 
-                    <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-sm md:text-base lg:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
                         Milhares de pessoas no Norte de Minas vivem com esses sinais todos os dias — e acham que é <strong className="text-slate-300">normal</strong>. Não é.
                     </p>
                 </motion.div>
@@ -77,7 +77,7 @@ export default function ProblemSection() {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-bold text-slate-100 mb-2">{problem.title}</h3>
-                                    <p className="text-slate-400 leading-relaxed">{problem.description}</p>
+                                    <p className="text-slate-300 leading-relaxed">{problem.description}</p>
                                 </div>
                             </div>
                         </motion.div>

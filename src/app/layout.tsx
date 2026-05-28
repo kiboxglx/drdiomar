@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
+import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -8,11 +8,13 @@ const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '';
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -62,30 +64,18 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth">
       <head>
-        <link
-          rel="preload"
-          href="/assets/bg-hero.webp"
-          as="image"
-          type="image/webp"
-        />
-        <link
-          rel="preload"
-          href="/assets/hero-640.webp"
-          as="image"
-          type="image/webp"
-          media="(max-width: 768px)"
-        />
-        <link
-          rel="preload"
-          href="/assets/hero-1280.webp"
-          as="image"
-          type="image/webp"
-          media="(min-width: 769px)"
-        />
+        {/* Hero images use next/image with priority + fetchPriority="high" — no manual preload needed */}
       </head>
       <body
-        className={`${montserrat.variable} ${inter.variable} antialiased bg-slate-950 text-slate-50 font-sans selection:bg-wheat-500/30 selection:text-wheat-200`}
+        className={`${montserrat.variable} ${jakarta.variable} antialiased bg-slate-950 text-slate-50 font-sans selection:bg-wheat-500/30 selection:text-wheat-200`}
       >
+        {/* Skip to main content link for keyboard users */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-wheat-500 focus:text-slate-950 focus:rounded-lg focus:font-bold"
+        >
+          Pular para o conteúdo
+        </a>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CN78RTJQKZ"
           strategy="afterInteractive"

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description: "Consulta de avaliação aprofundada para um check-up sério antes de qualquer decisão sobre suplementação ou tratamento preventivo.",
     url: "https://drdiomarcangussu.com.br/longevidade",
     type: "website",
+    images: [{ url: "/assets/dr-specialist.png", width: 1200, height: 630, alt: "Dr. Diomar Cangussu — Avaliação clínica preventiva" }],
   },
 };
 

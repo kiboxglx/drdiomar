@@ -51,14 +51,16 @@ export default function ObrigadoContent() {
         ? sessionStorage.getItem("lead_submitted")
         : null;
 
-    if (fromParam === "form" || sessionFlag === "true") {
-      setAuthorized(true);
-      // Clear the one-time session flag
+    const isAuthorized = fromParam === "form" || sessionFlag === "true";
+
+    if (isAuthorized) {
+      // Clear the one-time session flag before setting state
       if (sessionFlag) {
         sessionStorage.removeItem("lead_submitted");
       }
+      // Defer state update to avoid cascading renders within effect
+      queueMicrotask(() => setAuthorized(true));
     } else {
-      // Not from a valid submission — redirect to home
       router.replace("/");
     }
   }, [searchParams, router]);

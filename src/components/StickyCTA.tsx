@@ -46,7 +46,8 @@ export default function StickyCTA() {
     mql.addEventListener("change", handleChange);
 
     window.addEventListener("scroll", update, { passive: true });
-    update(); // initial check
+    // Defer initial check to avoid cascading renders in effect
+    queueMicrotask(update);
 
     return () => {
       mql.removeEventListener("change", handleChange);

@@ -53,7 +53,8 @@ export default function MobileBottomBar() {
 
     mql.addEventListener("change", handleChange);
     window.addEventListener("scroll", update, { passive: true });
-    update(); // initial check
+    // Defer initial check to avoid cascading renders in effect
+    queueMicrotask(update);
 
     return () => {
       mql.removeEventListener("change", handleChange);
@@ -87,10 +88,10 @@ export default function MobileBottomBar() {
               onClick={handleClick}
               className="flex items-center justify-center gap-2.5
                 w-[calc(100%-2rem)] mx-auto
-                bg-green-600 hover:bg-green-500
-                text-white font-bold
-                py-3 rounded-xl
-                shadow-lg shadow-green-900/30
+                bg-wheat-500 hover:bg-wheat-400
+                text-slate-950 font-bold
+                py-3.5 min-h-[48px] rounded-xl
+                shadow-lg shadow-wheat-900/25
                 transition-colors active:scale-[0.98]"
             >
               <MessageCircle className="w-5 h-5 shrink-0" />

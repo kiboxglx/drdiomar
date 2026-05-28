@@ -170,23 +170,28 @@ export default function LeadForm({
           >
             {/* Nome */}
             <div>
+              <label htmlFor="lead-nome" className="sr-only">Nome completo</label>
               <input
+                id="lead-nome"
                 type="text"
                 placeholder="Seu nome completo"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
                 onFocus={fireFormStart}
                 disabled={status === "loading"}
+                autoComplete="name"
                 aria-invalid={nomeError}
-                aria-label="Nome completo"
+                aria-describedby={nomeError ? "lead-nome-err" : undefined}
                 className={`${inputBase} ${inputSize} ${nomeError ? inputBorderError : inputBorderNormal}`}
               />
               {nomeError && (
                 <motion.p
+                  id="lead-nome-err"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-xs text-red-400 mt-1 ml-1"
+                  className="flex items-center gap-1.5 text-sm text-red-400 mt-1 ml-1"
                 >
+                  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                   Informe seu nome (mínimo 2 caracteres)
                 </motion.p>
               )}
@@ -194,22 +199,28 @@ export default function LeadForm({
 
             {/* WhatsApp */}
             <div>
+              <label htmlFor="lead-whats" className="sr-only">WhatsApp</label>
               <input
+                id="lead-whats"
                 type="tel"
                 placeholder="(00) 00000-0000"
                 value={whatsapp}
                 onChange={handleWhatsAppChange}
                 disabled={status === "loading"}
+                autoComplete="tel"
+                inputMode="numeric"
                 aria-invalid={whatsappError}
-                aria-label="WhatsApp"
+                aria-describedby={whatsappError ? "lead-whats-err" : undefined}
                 className={`${inputBase} ${inputSize} ${whatsappError ? inputBorderError : inputBorderNormal}`}
               />
               {whatsappError && (
                 <motion.p
+                  id="lead-whats-err"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-xs text-red-400 mt-1 ml-1"
+                  className="flex items-center gap-1.5 text-sm text-red-400 mt-1 ml-1"
                 >
+                  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                   Informe um WhatsApp válido com DDD
                 </motion.p>
               )}
@@ -217,12 +228,14 @@ export default function LeadForm({
 
             {/* Interesse */}
             <div>
+              <label htmlFor="lead-interesse" className="sr-only">Motivo da avaliação</label>
               <select
+                id="lead-interesse"
                 value={interesse}
                 onChange={(e) => setInteresse(e.target.value)}
                 disabled={status === "loading"}
                 aria-invalid={interesseError}
-                aria-label="Interesse"
+                aria-describedby={interesseError ? "lead-interesse-err" : undefined}
                 className={`${inputBase} ${inputSize} ${interesseError ? inputBorderError : inputBorderNormal} ${!interesse ? "text-slate-500" : ""}`}
               >
                 {INTERESSE_OPTIONS.map((opt) => (
@@ -233,10 +246,12 @@ export default function LeadForm({
               </select>
               {interesseError && (
                 <motion.p
+                  id="lead-interesse-err"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
-                  className="text-xs text-red-400 mt-1 ml-1"
+                  className="flex items-center gap-1.5 text-sm text-red-400 mt-1 ml-1"
                 >
+                  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                   Selecione uma área de interesse
                 </motion.p>
               )}

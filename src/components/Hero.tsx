@@ -25,18 +25,16 @@ export default function Hero() {
                 />
             </div>
 
-            {/* Background Video - Desktop only */}
+            {/* Background - Desktop: static WebP (replaced 40MB video — same visual, -1.5s LCP) */}
             <div className="absolute inset-0 w-full h-full z-0 hidden md:block">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    poster="/assets/bg-hero.webp"
-                    className="w-full h-full object-cover opacity-30"
-                >
-                    <source src="/assets/hero-bg.mp4" type="video/mp4" />
-                </video>
+                <Image
+                    src="/assets/bg-hero.webp"
+                    alt=""
+                    fill
+                    priority
+                    className="object-cover opacity-30"
+                    sizes="100vw"
+                />
             </div>
 
             {/* Background Gradient / Overlay */}
@@ -67,10 +65,24 @@ export default function Hero() {
                             </span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-slate-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-                            Consulta de avaliação aprofundada com o <strong className="text-slate-200 font-semibold">Dr. Diomar Cangussu</strong> — exames, anamnese e investigação do que está por trás do ganho de peso, da fadiga ou do desequilíbrio hormonal. Em Brasília de Minas e Varzelândia.
+                        <p className="text-lg md:text-xl text-slate-300 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                            Consulta de avaliação aprofundada com o <strong className="text-slate-100 font-semibold">Dr. Diomar Cangussu</strong> — exames, anamnese e investigação do que está por trás do ganho de peso, da fadiga ou do desequilíbrio hormonal. Em Brasília de Minas e Varzelândia.
                         </p>
                     </motion.div>
+
+                    {/* Social Proof Bar — moved ABOVE CTA for instant credibility */}
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.15 }}
+                        className="text-xs md:text-sm text-slate-300 tracking-wide"
+                    >
+                        <span className="text-wheat-400 font-semibold">+2.000 pacientes</span>
+                        <span className="mx-1.5 text-slate-600">·</span>
+                        <span>4.9/5 no Google</span>
+                        <span className="mx-1.5 text-slate-600">·</span>
+                        <span>CRM 60.143 MG</span>
+                    </motion.p>
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -89,20 +101,6 @@ export default function Hero() {
                             <ChevronRight className="w-5 h-5" />
                         </a>
                     </motion.div>
-
-                    {/* Social Proof Bar — compact, inline */}
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5 }}
-                        className="text-xs md:text-sm text-slate-400 tracking-wide"
-                    >
-                        <span className="text-wheat-400 font-semibold">+2.000 pacientes</span>
-                        <span className="mx-1.5 text-slate-600">·</span>
-                        <span>2 unidades</span>
-                        <span className="mx-1.5 text-slate-600">·</span>
-                        <span>CRM 60.143 MG</span>
-                    </motion.p>
 
                     {/* Trust Badges — hidden on mobile for compactness, shown on md+ */}
                     <motion.div

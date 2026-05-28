@@ -48,13 +48,13 @@ export default function InlineCTA() {
           onClick={handleClick}
           className="inline-flex items-center justify-center gap-2.5
             w-full md:w-auto
-            bg-green-600 hover:bg-green-500
-            text-white font-bold
+            bg-wheat-500 hover:bg-wheat-400
+            text-slate-950 font-bold
             py-4 px-8
             text-lg
             min-h-[48px]
             rounded-xl
-            shadow-lg shadow-green-900/30
+            shadow-lg shadow-wheat-900/20
             transition-colors active:scale-[0.98]"
         >
           <MessageCircle className="w-5 h-5 shrink-0" />

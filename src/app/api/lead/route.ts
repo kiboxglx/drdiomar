@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
 
 /* ─────────────────────────── Types ─────────────────────────── */
 
@@ -43,8 +41,29 @@ function isRateLimited(ip: string): boolean {
 
 /* ─────────────────────── Validation ────────────────────────── */
 
-const VALID_INTERESSES = ["emagrecimento", "implantes", "longevidade"] as const;
-const VALID_SOURCES = ["form", "exit-intent", "sticky-cta", "final-cta"] as const;
+const VALID_INTERESSES = [
+  "ganho-peso",
+  "sintomas-hormonais",
+  "checkup",
+  "outro",
+  // Compat: legacy values from WhatsAppForm (free text, sent as-is)
+  "Ganho de peso / dificuldade para emagrecer",
+  "Fadiga / queda de libido / sintomas hormonais",
+  "Check-up e prevenção",
+  "Outro motivo",
+] as const;
+
+const VALID_SOURCES = [
+  "form",
+  "exit-intent",
+  "sticky-cta",
+  "final-cta",
+  "hero",
+  "inline-cta",
+  "mobile-bottom-bar",
+  "navbar",
+  "whatsapp-form",
+] as const;
 
 function sanitize(input: string): string {
   return input.replace(/[<>"'&]/g, "").trim();
@@ -107,24 +126,52 @@ function validatePayload(
 
 /* ──────────────────────── Storage ──────────────────────────── */
 
-const DATA_DIR = path.join(process.cwd(), "data");
-const LEADS_FILE = path.join(DATA_DIR, "leads.json");
+/**
+ * Persist a lead to Supabase. Returns true on success, false on failure or
+ * when Supabase env vars are not configured (in that case the lead is logged
+ * to console only — WhatsApp remains the source of truth via deep link).
+ *
+ * Required env vars (Netlify dashboard):
+ *   - SUPABASE_URL
+ *   - SUPABASE_SERVICE_ROLE_KEY  (server-side only — never expose to client)
+ *
+ * Expected table: public.leads
+ *   columns: id (uuid pk, default gen_random_uuid()), nome (text), whatsapp (text),
+ *            interesse (text), source (text), ip (text), created_at (timestamptz default now())
+ */
+async function saveLead(record: LeadRecord): Promise<boolean> {
+  const SUPABASE_URL = process.env.SUPABASE_URL;
+  const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-async function loadLeads(): Promise<LeadRecord[]> {
-  try {
-    const raw = await fs.readFile(LEADS_FILE, "utf-8");
-    return JSON.parse(raw) as LeadRecord[];
-  } catch {
-    // File doesn't exist yet or is invalid — start fresh
-    return [];
+  if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY) {
+    // Not configured yet — non-blocking. WhatsApp is the primary channel.
+    if (process.env.NODE_ENV === "development") {
+      console.warn("[api/lead] Supabase env vars missing — lead not persisted:", record);
+    }
+    return false;
   }
-}
 
-async function saveLead(record: LeadRecord): Promise<void> {
-  await fs.mkdir(DATA_DIR, { recursive: true });
-  const leads = await loadLeads();
-  leads.push(record);
-  await fs.writeFile(LEADS_FILE, JSON.stringify(leads, null, 2), "utf-8");
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: SUPABASE_SERVICE_KEY,
+        Authorization: `Bearer ${SUPABASE_SERVICE_KEY}`,
+        Prefer: "return=minimal",
+      },
+      body: JSON.stringify({
+        nome: record.nome,
+        whatsapp: record.whatsapp,
+        interesse: record.interesse,
+        source: record.source,
+        ip: record.ip,
+      }),
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
 }
 
 /* ──────────────────────── Handler ──────────────────────────── */
@@ -166,7 +213,7 @@ export async function POST(request: NextRequest) {
       ip,
     };
 
-    // Persist
+    // Persist (non-blocking — WhatsApp deep link is the primary conversion path)
     await saveLead(record);
 
     return NextResponse.json(
@@ -174,7 +221,9 @@ export async function POST(request: NextRequest) {
       { status: 201 }
     );
   } catch (err) {
-    console.error("[api/lead] Unexpected error:", err);
+    if (process.env.NODE_ENV === "development") {
+      console.error("[api/lead] Unexpected error:", err);
+    }
     return NextResponse.json(
       { error: "Erro interno. Tente novamente mais tarde." },
       { status: 500 }

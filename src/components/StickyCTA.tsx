@@ -57,7 +57,7 @@ export default function StickyCTA() {
   const { track } = useTracking();
 
   const handleClick = () => {
-    track({ name: 'sticky_cta_click', params: { cta_text: 'Agendar Avaliação' } });
+    track({ name: 'sticky_cta_click', params: { cta_text: 'Agendar minha avaliação' } });
     const formSection = document.getElementById("final-cta");
     if (formSection) {
       formSection.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -84,7 +84,7 @@ export default function StickyCTA() {
               className="w-full flex items-center justify-center gap-2.5 bg-gradient-to-r from-wheat-500 to-wheat-600 hover:from-wheat-400 hover:to-wheat-500 text-slate-900 font-bold py-3.5 rounded-xl shadow-lg shadow-wheat-900/25 transition-all active:scale-[0.98]"
             >
               <CalendarCheck className="w-5 h-5" />
-              Agendar Avaliação
+              Agendar minha avaliação
             </button>
           </div>
         </motion.div>

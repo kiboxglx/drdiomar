@@ -1,35 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FlaskConical, Dna, HeartHandshake, ArrowDown } from "lucide-react";
+import { ClipboardList, FlaskConical, Stethoscope, ArrowDown } from "lucide-react";
 
 const steps = [
     {
         number: "01",
-        icon: FlaskConical,
-        title: "Avaliação Completa",
-        description: "Exames laboratoriais aprofundados, bioimpedância de alta precisão e análise metabólica individual. Nada de consulta de 10 minutos.",
-        detail: "Entendemos o seu corpo por dentro",
+        icon: ClipboardList,
+        title: "Anamnese aprofundada",
+        description: "Histórico clínico, sintomas, rotina, exames anteriores e contexto de vida. Tempo dedicado para entender o seu caso por inteiro — nada de consulta de 10 minutos.",
+        detail: "Olhamos o seu caso por inteiro",
     },
     {
         number: "02",
-        icon: Dna,
-        title: "Protocolo Personalizado",
-        description: "Com base nos seus dados reais, montamos um protocolo único — emagrecimento, reposição hormonal ou longevidade — feito sob medida para você.",
-        detail: "Nada de receita de bolo",
+        icon: FlaskConical,
+        title: "Investigação clínica e laboratorial",
+        description: "Bioimpedância de alta precisão e solicitação de exames específicos para entender o que está por trás do quadro — hormônios, metabolismo, marcadores inflamatórios.",
+        detail: "Ciência, não achismo",
     },
     {
         number: "03",
-        icon: HeartHandshake,
-        title: "Acompanhamento Contínuo",
-        description: "Você não fica sozinho. Acompanhamento via WhatsApp, ajustes em tempo real e suporte do início ao resultado final.",
-        detail: "Do começo ao resultado",
+        icon: Stethoscope,
+        title: "Leitura clínica do seu caso",
+        description: "Você sai da consulta com clareza sobre o que está acontecendo no seu corpo. Só então, se fizer sentido para o seu caso, o Dr. Diomar apresenta o caminho clínico recomendado.",
+        detail: "Decisão construída com critério",
     },
 ];
 
 export default function MethodSection() {
     return (
-        <section className="relative py-12 md:py-20 lg:py-28 bg-slate-900 overflow-hidden">
+        <section id="method" className="relative py-12 md:py-20 lg:py-28 bg-slate-900 overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-wheat-500/15 to-transparent" />
             <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-wheat-500/[0.03] rounded-full blur-[128px] pointer-events-none" />
@@ -45,16 +45,16 @@ export default function MethodSection() {
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800 mb-6">
                         <span className="w-2 h-2 rounded-full bg-wheat-500 animate-pulse" />
-                        <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">O Método</span>
+                        <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">A Consulta de Avaliação</span>
                     </div>
 
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6 leading-tight">
-                        Medicina de <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-300 to-wheat-500">Precisão</span>,<br className="hidden md:block" />
-                        não receita de bolo.
+                        O que acontece na sua{" "}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-300 to-wheat-500">consulta de avaliação</span>.
                     </h2>
 
                     <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                        O Dr. Diomar investiga a <strong className="text-slate-200">causa real</strong> do seu problema com ciência de dados e tecnologia clínica — não com achismo.
+                        O Dr. Diomar dedica tempo para investigar a <strong className="text-slate-200">causa real</strong> do seu quadro — anamnese, exames e leitura clínica antes de qualquer recomendação de tratamento.
                     </p>
                 </motion.div>
 
@@ -108,7 +108,7 @@ export default function MethodSection() {
                     </div>
                 </div>
 
-                {/* Continuity phrase to protocols */}
+                {/* CTA suave para agendamento */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -116,9 +116,14 @@ export default function MethodSection() {
                     transition={{ delay: 0.5 }}
                     className="text-center mt-14 md:mt-16"
                 >
-                    <p className="text-lg md:text-xl text-slate-400">
-                        Conheça os <strong className="text-wheat-400">protocolos</strong> ↓
-                    </p>
+                    <a
+                        href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 min-h-[48px]"
+                    >
+                        Agendar minha avaliação
+                    </a>
                 </motion.div>
             </div>
         </section>

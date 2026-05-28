@@ -43,7 +43,7 @@ const stats = [
         prefix: "+",
         suffix: "",
         label: "Pacientes Atendidos",
-        description: "Vidas transformadas com protocolos personalizados",
+        description: "Casos avaliados com investigação clínica aprofundada",
     },
     {
         icon: Star,
@@ -51,7 +51,7 @@ const stats = [
         prefix: "",
         suffix: "%",
         label: "Satisfação",
-        description: "Dos pacientes recomendam o tratamento",
+        description: "Dos pacientes recomendam a consulta",
     },
     {
         icon: MapPin,
@@ -67,28 +67,28 @@ const stats = [
         prefix: "",
         suffix: " anos",
         label: "De Experiência",
-        description: "Em medicina de precisão e nutrologia",
+        description: "Em nutrologia clínica e medicina personalizada",
     },
 ];
 
 const transformations = [
     {
-        quote: "Perdi 12kg em 3 meses sem passar fome. O protocolo mudou minha relação com a comida.",
+        quote: "Foi a primeira consulta em que alguém realmente parou para olhar meu histórico por inteiro. Saí entendendo o que estava acontecendo comigo.",
         name: "Paciente R.S.",
         city: "Brasília de Minas",
-        result: "-12kg em 3 meses",
+        result: "Diagnóstico claro",
     },
     {
-        quote: "Depois do implante hormonal, voltei a ter energia para treinar e minha libido voltou ao normal.",
+        quote: "Levei meus exames antigos. O Dr. Diomar identificou marcadores que tinham passado despercebidos em outras consultas. Mudou minha leitura do caso.",
         name: "Paciente M.A.",
         city: "São Francisco",
-        result: "Energia restaurada",
+        result: "Investigação a fundo",
     },
     {
-        quote: "Meus exames nunca estiveram tão bons. O Dr. Diomar investigou o que nenhum outro médico olhou.",
+        quote: "Ele explicou tudo com calma, mostrou os números e fez a leitura clínica completa antes de qualquer recomendação. Decidi com critério.",
         name: "Paciente L.C.",
         city: "Varzelândia",
-        result: "Saúde otimizada",
+        result: "Decisão consciente",
     },
 ];
 
@@ -110,15 +110,15 @@ export default function ResultsSection() {
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800 mb-6">
                         <TrendingUp className="w-3.5 h-3.5 text-wheat-500" />
-                        <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">Resultados Comprovados</span>
+                        <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">Casos Investigados</span>
                     </div>
 
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6">
-                        Números que <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-300 to-wheat-500">Falam</span>
+                        Mais de 2.000 casos avaliados <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-300 to-wheat-500">a fundo</span>.
                     </h2>
 
                     <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto">
-                        Resultados reais de pacientes que decidiram investir na própria saúde.
+                        Pacientes que receberam uma leitura clínica séria do próprio caso antes de qualquer decisão sobre tratamento.
                     </p>
                 </motion.div>
 

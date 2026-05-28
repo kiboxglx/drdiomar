@@ -10,7 +10,7 @@ import { trackEvent } from "@/lib/tracking";
 
 const NAV_LINKS = [
   { label: "Início", id: "top" },
-  { label: "Protocolos", id: "protocols" },
+  { label: "A Consulta", id: "method" },
   { label: "Resultados", id: "results" },
   { label: "Especialista", id: "specialist" },
   { label: "Depoimentos", id: "testimonials" },
@@ -86,12 +86,12 @@ export default function Navbar() {
             {/* CTA Button */}
             <a
               onClick={handleCtaClick}
-              href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."
+              href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-2.5 px-5 md:px-7 rounded-xl transition-all shadow-[0_0_15px_rgba(245,222,179,0.3)] hover:shadow-[0_0_20px_rgba(245,222,179,0.5)] text-sm md:text-base text-center min-h-[44px] items-center"
             >
-              Agendar Consulta
+              Agendar minha avaliação
             </a>
 
             {/* Mobile menu button */}
@@ -143,12 +143,12 @@ export default function Navbar() {
                     handleCtaClick();
                     setMobileOpen(false);
                   }}
-                  href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."
+                  href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-3.5 rounded-xl text-base min-h-[48px] transition-colors"
                 >
-                  Agendar Consulta
+                  Agendar minha avaliação
                 </a>
               </div>
             </motion.nav>

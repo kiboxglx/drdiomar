@@ -8,37 +8,37 @@ const testimonials = [
     {
         name: "Ana Cláudia",
         location: "Brasília de Minas",
-        text: "Minha vida mudou depois do protocolo de Reativação. Perdi 8kg em 2 meses e recuperei minha disposição. Dr. Diomar é extremamente atencioso.",
+        text: "Foi a primeira vez que um médico realmente parou para entender meu histórico. Saí da consulta com clareza sobre o que estava acontecendo no meu corpo — algo que nenhum outro tinha conseguido me explicar.",
         rating: 5,
-        protocol: "Emagrecimento",
-        duration: "Paciente há 8 meses",
+        tag: "Anamnese aprofundada",
+        duration: "Atendida em 2025",
         highlight: true,
     },
     {
         name: "Carlos Eduardo",
         location: "São Francisco",
-        text: "O implante hormonal devolveu minha energia para os treinos. Atendimento de excelência, estrutura impecável. Melhor decisão que tomei.",
+        text: "Levei meus exames antigos. Ele identificou marcadores que tinham passado batidos em outras consultas. Mudou completamente minha leitura do meu próprio caso.",
         rating: 5,
-        protocol: "Implante Hormonal",
-        duration: "Paciente há 6 meses",
+        tag: "Investigação clínica",
+        duration: "Atendido em 2025",
         highlight: false,
     },
     {
         name: "Patrícia Mendes",
         location: "Montes Claros",
-        text: "A agenda é concorrida, mas vale cada minuto de espera. Perdi 12kg em 4 meses e ganhei uma autoestima que não tinha há anos. O acompanhamento pelo WhatsApp faz toda a diferença.",
+        text: "A consulta dura o tempo necessário, não 10 minutos. Pela primeira vez senti que meu caso estava sendo investigado de verdade — anamnese cuidadosa, exames específicos, leitura clínica completa.",
         rating: 4,
-        protocol: "Emagrecimento",
-        duration: "Paciente há 5 meses",
+        tag: "Tempo dedicado",
+        duration: "Atendida em 2025",
         highlight: false,
     },
     {
         name: "Marcos Vinícius",
         location: "Luislândia",
-        text: "Com 52 anos, achei que já era tarde pra mudar. O Dr. Diomar mostrou que não. Hoje treino 5x por semana e meus exames nunca estiveram tão bons.",
+        text: "O Dr. Diomar explicou tudo com calma, mostrou os números, fez a leitura clínica completa antes de qualquer recomendação. Saí da consulta com uma decisão construída com critério, não empurrada.",
         rating: 5,
-        protocol: "Longevidade",
-        duration: "Paciente há 1 ano",
+        tag: "Decisão com critério",
+        duration: "Atendido em 2024",
         highlight: false,
     },
 ];
@@ -95,17 +95,16 @@ export default function Testimonials() {
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800 mb-4">
                         <span className="w-2 h-2 rounded-full bg-wheat-500 animate-pulse" />
-                        <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">Resultados Reais</span>
+                        <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">Quem já passou pela avaliação</span>
                     </div>
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-4">
-                        Histórias de Quem{" "}
+                        Histórias de quem saiu da consulta{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-400 to-wheat-500">
-                            Transformou
-                        </span>{" "}
-                        a Saúde
+                            com clareza
+                        </span>
                     </h2>
                     <p className="text-slate-400 text-sm md:text-base lg:text-xl max-w-2xl mx-auto">
-                        Mais de 2.000 pacientes já confiaram no Dr. Diomar. Veja o que eles têm a dizer.
+                        Mais de 2.000 pacientes já passaram pela avaliação com o Dr. Diomar. Veja o que eles dizem sobre a experiência.
                     </p>
                 </motion.div>
 
@@ -139,9 +138,9 @@ export default function Testimonials() {
                         >
                             <Quote className="absolute top-4 right-4 w-7 h-7 text-slate-800 group-hover:text-wheat-500/15 transition-colors" />
 
-                            {/* Protocol tag */}
+                            {/* Experience tag */}
                             <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-wheat-500/10 border border-wheat-500/20 mb-3">
-                                <span className="text-xs font-medium text-wheat-400">{t.protocol}</span>
+                                <span className="text-xs font-medium text-wheat-400">{t.tag}</span>
                             </div>
 
                             {/* Stars */}
@@ -221,15 +220,15 @@ export default function Testimonials() {
                     className="mt-10 md:mt-14 text-center"
                 >
                     <p className="text-slate-300 text-lg md:text-xl font-medium mb-4">
-                        Quer ser o próximo?
+                        Quer ter a mesma clareza sobre o seu caso?
                     </p>
                     <a
-                        href="https://wa.me/5538998269290"
+                        href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block bg-wheat-600 hover:bg-wheat-500 text-slate-950 font-bold py-4 px-8 rounded-xl text-sm md:text-lg transition-all shadow-lg shadow-wheat-900/20 min-h-[48px]"
                     >
-                        Agendar Avaliação
+                        Agendar minha avaliação
                     </a>
                 </motion.div>
             </div>

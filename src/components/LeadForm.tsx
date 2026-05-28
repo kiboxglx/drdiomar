@@ -37,10 +37,11 @@ function isValidWhatsApp(formatted: string): boolean {
 }
 
 const INTERESSE_OPTIONS = [
-  { value: "", label: "Selecione seu interesse" },
-  { value: "emagrecimento", label: "Emagrecimento" },
-  { value: "implantes", label: "Implantes Hormonais" },
-  { value: "longevidade", label: "Longevidade" },
+  { value: "", label: "Qual o motivo principal da avaliação?" },
+  { value: "ganho-peso", label: "Ganho de peso / dificuldade para emagrecer" },
+  { value: "sintomas-hormonais", label: "Fadiga / libido / sintomas hormonais" },
+  { value: "checkup", label: "Check-up e prevenção" },
+  { value: "outro", label: "Outro motivo" },
 ] as const;
 
 export default function LeadForm({
@@ -272,7 +273,7 @@ export default function LeadForm({
               ) : (
                 <>
                   <Send className="w-5 h-5" />
-                  Quero Agendar Minha Avaliação
+                  Agendar minha avaliação
                 </>
               )}
             </motion.button>

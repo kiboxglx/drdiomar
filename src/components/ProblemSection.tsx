@@ -92,10 +92,10 @@ export default function ProblemSection() {
                     transition={{ delay: 0.4 }}
                     className="text-center"
                 >
-                    <div className="inline-block bg-gradient-to-r from-slate-800/50 via-slate-800 to-slate-800/50 rounded-2xl px-8 py-6 border border-slate-700/50">
+                    <div className="inline-block bg-gradient-to-r from-slate-800/50 via-slate-800 to-slate-800/50 rounded-2xl px-8 py-6 border border-slate-700/50 max-w-2xl">
                         <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-                            Se marcou pelo menos <strong className="text-wheat-400">1</strong> → o problema não é você.{" "}
-                            <strong className="text-wheat-400">É o método.</strong>
+                            Se você se identificou em algum desses sinais, o primeiro passo não é mais uma dieta ou um tratamento genérico.{" "}
+                            <strong className="text-wheat-400">É uma avaliação que olhe o seu caso a fundo.</strong>
                         </p>
                     </div>
                 </motion.div>

@@ -17,11 +17,11 @@ interface WhatsAppFormProps {
 const PHONE_NUMBER = "5538998269290";
 
 const INTERESSE_OPTIONS = [
-  { value: "", label: "Qual seu interesse?" },
-  { value: "Emagrecimento", label: "🔥 Emagrecimento" },
-  { value: "Implantes Hormonais", label: "💉 Implantes Hormonais" },
-  { value: "Longevidade", label: "💚 Longevidade / Check-up" },
-  { value: "Outro", label: "📋 Outro assunto" },
+  { value: "", label: "Qual o motivo principal da avaliação?" },
+  { value: "Ganho de peso / dificuldade para emagrecer", label: "Ganho de peso / dificuldade para emagrecer" },
+  { value: "Fadiga / queda de libido / sintomas hormonais", label: "Fadiga / libido / sintomas hormonais" },
+  { value: "Check-up e prevenção", label: "Check-up e prevenção" },
+  { value: "Outro motivo", label: "Outro motivo" },
 ] as const;
 
 /** Format phone to (XX) XXXXX-XXXX */

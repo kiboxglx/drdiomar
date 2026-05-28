@@ -75,12 +75,12 @@ export default function Specialist() {
                         {/* Description — 2 compact paragraphs */}
                         <div className="space-y-4">
                             <p className="text-base md:text-lg text-slate-300 leading-relaxed">
-                                O Dr. Diomar combina <strong className="text-slate-200">exames laboratoriais aprofundados</strong> com{" "}
-                                <strong className="text-slate-200">tecnologia clínica avançada</strong> para montar protocolos individuais — nada de receita de bolo.
+                                O Dr. Diomar combina <strong className="text-slate-200">anamnese cuidadosa</strong>,{" "}
+                                <strong className="text-slate-200">exames laboratoriais aprofundados</strong> e{" "}
+                                <strong className="text-slate-200">leitura clínica do caso</strong> — antes de qualquer recomendação de tratamento.
                             </p>
                             <p className="text-base md:text-lg text-slate-300 leading-relaxed">
-                                Referência em <strong className="text-wheat-400">Medicina de Precisão</strong> e{" "}
-                                <strong className="text-wheat-400">Emagrecimento</strong> no Norte de Minas, atende em Brasília de Minas e Varzelândia com foco em resultados reais.
+                                Referência em <strong className="text-wheat-400">avaliação clínica aprofundada</strong> no Norte de Minas, atende em Brasília de Minas e Varzelândia com tempo dedicado à investigação individual de cada caso.
                             </p>
                         </div>
 
@@ -89,7 +89,7 @@ export default function Specialist() {
                             {[
                                 "CRM 60.143 — Minas Gerais",
                                 "Pós-Graduação em Nutrologia",
-                                "Especialista em Implantes Hormonais",
+                                "Foco em Medicina Personalizada e Nutrologia Clínica",
                                 "+2.000 pacientes atendidos",
                                 "2 unidades — Brasília de Minas e Varzelândia",
                             ].map((cred, i) => (
@@ -111,13 +111,13 @@ export default function Specialist() {
                             className="pt-4"
                         >
                             <a
-                                href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
+                                href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 text-center min-h-[48px]"
                             >
                                 <Award className="w-5 h-5" />
-                                Agendar Consulta
+                                Agendar minha avaliação
                             </a>
                         </motion.div>
                     </motion.div>

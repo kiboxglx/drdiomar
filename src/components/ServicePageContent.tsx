@@ -109,7 +109,7 @@ export default function ServicePageContent({
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-50 text-center mb-12">
-            O Que Você Pode <span className="text-wheat-500">Esperar</span>
+            O que você sai <span className="text-wheat-500">entendendo</span>
           </h2>
           <div className="space-y-4">
             {results.map((result, i) => (
@@ -157,10 +157,10 @@ export default function ServicePageContent({
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-2xl">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-50 mb-6">
-            Pronto para <span className="text-wheat-500">Começar</span>?
+            Pronto para <span className="text-wheat-500">agendar</span>?
           </h2>
           <p className="text-slate-400 mb-8">
-            Agende sua avaliação gratuita pelo WhatsApp. Resposta em até 2 horas.
+            Agende sua consulta de avaliação pelo WhatsApp. A equipe responde em até 2 horas.
           </p>
           <a
             href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."

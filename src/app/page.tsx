@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
 import MethodSection from "@/components/MethodSection";
-import Protocols from "@/components/Protocols";
 import ResultsSection from "@/components/ResultsSection";
 import Specialist from "@/components/Specialist";
 import Testimonials from "@/components/Testimonials";
@@ -38,9 +37,6 @@ export default function Home() {
       <MethodSection />
       <SectionSeparator />
       <ResultsSection />
-      <SectionSeparator />
-      <Protocols />
-      {/* Transform placeholder — future slice */}
       <SectionSeparator />
       <Specialist />
       <SectionSeparator />

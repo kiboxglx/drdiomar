@@ -5,18 +5,18 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ServicePageContent from "@/components/ServicePageContent";
 
 export const metadata: Metadata = {
-  title: "Protocolo de Emagrecimento Médico | Dr. Diomar Cangussu — Brasília de Minas e Varzelândia",
+  title: "Avaliação Clínica para Emagrecimento | Dr. Diomar Cangussu — Brasília de Minas e Varzelândia",
   description:
-    "Emagrecimento com acompanhamento médico personalizado. Protocolo científico com bioimpedância, exames e suporte por WhatsApp. Resultados em 30 dias. Agende avaliação gratuita em Brasília de Minas ou Varzelândia.",
+    "Consulta de avaliação clínica aprofundada para quem busca emagrecer com critério. Anamnese, exames específicos e bioimpedância para investigar a causa real do ganho de peso. Atendimento em Brasília de Minas e Varzelândia.",
   keywords: [
-    "emagrecimento médico", "protocolo de emagrecimento", "médico para emagrecer",
-    "emagrecer com acompanhamento", "nutrólogo emagrecimento", "emagrecer brasília de minas",
-    "clínica emagrecimento norte de minas", "emagrecer sem efeito sanfona",
+    "médico para emagrecer", "consulta nutrólogo emagrecimento", "avaliação emagrecimento",
+    "nutrólogo brasília de minas", "investigação clínica ganho de peso",
+    "consulta emagrecimento norte de minas", "avaliação clínica peso",
   ],
   alternates: { canonical: "https://drdiomarcangussu.com.br/emagrecimento" },
   openGraph: {
-    title: "Protocolo de Emagrecimento Médico | Dr. Diomar Cangussu",
-    description: "Emagrecimento científico com resultados em 30 dias. +2.000 pacientes em Brasília de Minas e Varzelândia.",
+    title: "Avaliação Clínica para Emagrecimento | Dr. Diomar Cangussu",
+    description: "Consulta de avaliação aprofundada com o Dr. Diomar para quem busca emagrecer com critério. Investigação clínica antes de qualquer recomendação.",
     url: "https://drdiomarcangussu.com.br/emagrecimento",
     type: "website",
   },
@@ -25,50 +25,50 @@ export const metadata: Metadata = {
 const steps = [
   {
     number: "01",
-    title: "Avaliação Completa",
+    title: "Anamnese aprofundada",
     description:
-      "Exames laboratoriais, bioimpedância de alta precisão e análise do histórico. Entendemos sua biologia individual — hormônios, metabolismo, inflamação.",
+      "Histórico de tentativas, sintomas, rotina, exames anteriores. Tempo dedicado para entender por que o seu corpo não está respondendo às tentativas anteriores.",
   },
   {
     number: "02",
-    title: "Protocolo Personalizado",
+    title: "Bioimpedância de alta precisão",
     description:
-      "Plano montado para o SEU corpo: nutrição, suplementação e, quando necessário, suporte medicamentoso. Nada genérico — cada protocolo é único.",
+      "Análise da composição corporal — gordura, massa magra, água, taxa metabólica. Dados objetivos para construir a leitura clínica do seu quadro.",
   },
   {
     number: "03",
-    title: "Acompanhamento Contínuo",
+    title: "Investigação laboratorial",
     description:
-      "Suporte por WhatsApp, retornos regulares e ajustes no protocolo. Você nunca fica sem orientação — estamos junto em cada etapa.",
+      "Exames específicos para entender o que está por trás do ganho de peso — hormônios, metabolismo, marcadores inflamatórios. Sem chutar diagnóstico.",
   },
   {
     number: "04",
-    title: "Resultados Sustentáveis",
+    title: "Leitura clínica do seu caso",
     description:
-      "Resultados visíveis nas primeiras semanas. O foco é emagrecer de verdade, sem efeito sanfona, tratando a causa e não os sintomas.",
+      "Você sai da consulta entendendo o que está acontecendo no seu corpo. Só então, se fizer sentido para o seu caso, o Dr. Diomar apresenta o caminho clínico recomendado.",
   },
 ];
 
 const faqs = [
   {
-    question: "Preciso fazer dieta muito restritiva?",
+    question: "A consulta é específica para quem quer emagrecer?",
     answer:
-      "Não. Trabalhamos com reeducação alimentar prática que funciona para sua rotina, não contra ela. Quando necessário, usamos suporte medicamentoso que reduz compulsão e acelera resultados — sem sofrimento.",
+      "Não. A consulta é uma avaliação clínica aprofundada. O foco maior em emagrecimento aparece quando o paciente chega com essa dor específica — a investigação se direciona para os marcadores que explicam o ganho de peso. Mas o produto é o mesmo: uma leitura clínica séria do seu caso.",
   },
   {
-    question: "Quanto tempo até ver resultados?",
+    question: "Saio da consulta com a dieta prescrita?",
     answer:
-      "A maioria dos pacientes relata melhora na disposição em 2-4 semanas. Resultados visíveis de emagrecimento aparecem a partir de 30 dias. Cada caso é avaliado individualmente.",
+      "Depende. A consulta é uma avaliação — o foco é entender o que está por trás do quadro antes de qualquer prescrição. Quando há exames suficientes, o Dr. Diomar já apresenta o caminho clínico. Em casos que pedem mais investigação, exames são solicitados antes de qualquer recomendação.",
   },
   {
-    question: "O tratamento é seguro?",
+    question: "Preciso levar exames anteriores?",
     answer:
-      "Sim. Todo protocolo começa com exames laboratoriais completos. Usamos apenas tratamentos com evidência científica e acompanhamento médico contínuo.",
+      "Sim, sempre que possível. Ajuda a montar uma leitura mais completa do seu quadro já na primeira consulta. Se você não tem exames, o Dr. Diomar solicita os necessários no atendimento.",
   },
   {
-    question: "Qual o valor do tratamento?",
+    question: "Qual o valor da consulta?",
     answer:
-      "Os protocolos são personalizados — o investimento varia conforme exames e necessidades. Agende uma avaliação gratuita para receber seu plano com valores transparentes. Parcelamento disponível.",
+      "A consulta de avaliação tem valor particular. A equipe apresenta o valor e as condições durante o agendamento.",
   },
 ];
 
@@ -77,23 +77,23 @@ export default function EmagrecimentoPage() {
     <main className="bg-slate-950 min-h-screen">
       <Navbar />
       <ServicePageContent
-        badge="Protocolo de Emagrecimento"
-        title="Emagreça de Verdade — Sem Dietas Malucas, Sem Efeito Sanfona"
-        subtitle="Protocolo médico personalizado com exames, nutrição e acompanhamento por WhatsApp. Resultados reais a partir de 30 dias."
+        badge="Avaliação para quem busca emagrecer"
+        title="Antes da dieta, uma leitura clínica séria do seu caso."
+        subtitle="Consulta de avaliação aprofundada com o Dr. Diomar para investigar o que está por trás do ganho de peso. Anamnese, exames e bioimpedância — antes de qualquer recomendação."
         heroGradient="from-blue-500 to-indigo-500"
         steps={steps}
         results={[
-          "Perda de gordura real (não apenas peso na balança)",
-          "Mais energia e disposição desde as primeiras semanas",
-          "Sem efeito sanfona — tratamos a causa, não os sintomas",
-          "Plano alimentar que funciona para sua rotina",
-          "Acompanhamento contínuo por WhatsApp",
+          "Entendimento real de por que o seu corpo não responde às tentativas anteriores",
+          "Leitura objetiva da composição corporal e do metabolismo",
+          "Identificação de marcadores hormonais e inflamatórios envolvidos no quadro",
+          "Direção clínica para decidir os próximos passos com critério",
+          "Diagnóstico construído com exames, não com palpite",
         ]}
         faqs={faqs}
-        ctaText="Agendar Avaliação de Emagrecimento"
+        ctaText="Agendar minha avaliação"
         relatedLinks={[
-          { href: "/implante-hormonal", label: "Implantes Hormonais" },
-          { href: "/longevidade", label: "Longevidade Premium" },
+          { href: "/implante-hormonal", label: "Sintomas hormonais" },
+          { href: "/longevidade", label: "Check-up preventivo" },
           { href: "/brasilia-de-minas", label: "Brasília de Minas" },
           { href: "/varzelandia", label: "Varzelândia" },
         ]}

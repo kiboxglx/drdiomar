@@ -17,8 +17,8 @@ export default function Footer() {
                             />
                         </div>
                         <p className="text-slate-400 text-sm max-w-xs mb-4">
-                            Medicina de precisão focada em emagrecimento, performance e longevidade.
-                            Atendimento exclusivo no Norte de Minas.
+                            Consulta de avaliação clínica aprofundada com o Dr. Diomar Cangussu.
+                            Atendimento no Norte de Minas.
                         </p>
                         <p className="text-slate-500 text-sm">
                             CRM 60.143 MG
@@ -26,11 +26,11 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-slate-50 font-bold mb-4 uppercase text-sm tracking-wider">Serviços</h3>
+                        <h3 className="text-slate-50 font-bold mb-4 uppercase text-sm tracking-wider">Avaliação por perfil</h3>
                         <ul className="space-y-2.5 text-slate-400 text-sm">
-                            <li><Link href="/emagrecimento" className="hover:text-wheat-400 transition-colors">Emagrecimento</Link></li>
-                            <li><Link href="/implante-hormonal" className="hover:text-wheat-400 transition-colors">Implantes Hormonais</Link></li>
-                            <li><Link href="/longevidade" className="hover:text-wheat-400 transition-colors">Longevidade Premium</Link></li>
+                            <li><Link href="/emagrecimento" className="hover:text-wheat-400 transition-colors">Para quem busca emagrecer</Link></li>
+                            <li><Link href="/implante-hormonal" className="hover:text-wheat-400 transition-colors">Para sintomas hormonais</Link></li>
+                            <li><Link href="/longevidade" className="hover:text-wheat-400 transition-colors">Para check-up preventivo</Link></li>
                         </ul>
                     </div>
 

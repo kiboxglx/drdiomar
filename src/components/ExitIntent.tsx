@@ -106,12 +106,12 @@ export default function ExitIntent() {
                   <Gift className="w-6 h-6 text-wheat-400" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-slate-50 mb-2">
-                  Espere! Não perca essa oportunidade
+                  Antes de sair, agende sua avaliação
                 </h3>
                 <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-                  Deixe seus dados e receba uma{" "}
-                  <strong className="text-wheat-400">avaliação personalizada</strong>{" "}
-                  sem compromisso.
+                  Deixe seus dados e a equipe entra em contato para agendar sua{" "}
+                  <strong className="text-wheat-400">consulta de avaliação</strong>{" "}
+                  com o Dr. Diomar.
                 </p>
               </div>
 

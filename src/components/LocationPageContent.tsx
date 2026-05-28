@@ -80,14 +80,14 @@ export default function LocationPageContent({
                 Abrir no Maps
               </a>
               <a
-                href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+                href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleCta}
                 className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold py-3 rounded-xl transition-colors text-sm"
               >
                 <MessageCircle className="w-4 h-4" />
-                Agendar Consulta
+                Agendar minha avaliação
               </a>
             </div>
           </div>
@@ -136,12 +136,15 @@ export default function LocationPageContent({
         </div>
       </section>
 
-      {/* Services */}
+      {/* Avaliação por perfil */}
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-slate-50 text-center mb-12">
-            Nossos <span className="text-wheat-500">Serviços</span> em {city}
+          <h2 className="text-2xl md:text-4xl font-bold text-slate-50 text-center mb-4">
+            <span className="text-wheat-500">Avaliação clínica</span> em {city}
           </h2>
+          <p className="text-slate-400 text-center mb-12 max-w-xl mx-auto">
+            A consulta é a mesma. O que muda é o perfil de quem chega — e o tipo de investigação que faz sentido para o quadro.
+          </p>
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((service, i) => (
               <motion.div
@@ -175,20 +178,20 @@ export default function LocationPageContent({
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-2xl">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-50 mb-6">
-            Agende Sua Consulta em <span className="text-wheat-500">{city}</span>
+            Agende sua avaliação em <span className="text-wheat-500">{city}</span>
           </h2>
           <p className="text-slate-400 mb-8">
-            Avaliação gratuita com protocolo personalizado. Resposta em até 2 horas pelo WhatsApp.
+            Consulta de avaliação clínica aprofundada com o Dr. Diomar. A equipe responde em até 2 horas pelo WhatsApp.
           </p>
           <a
-            href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+            href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleCta}
             className="inline-flex items-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 min-h-[48px] text-base md:text-lg"
           >
             <MessageCircle className="w-5 h-5" />
-            Agendar pelo WhatsApp
+            Agendar minha avaliação
           </a>
         </div>
       </section>

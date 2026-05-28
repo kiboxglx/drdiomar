@@ -22,19 +22,19 @@ const NEXT_STEPS = [
     icon: MessageCircle,
     title: "Confirmação via WhatsApp",
     description:
-      "Nossa equipe entrará em contato pelo WhatsApp em até 2 horas para confirmar sua avaliação.",
+      "A equipe entra em contato pelo WhatsApp em até 2 horas para confirmar seu agendamento.",
   },
   {
     icon: ClipboardList,
-    title: "Avaliação Personalizada",
+    title: "Consulta de avaliação aprofundada",
     description:
-      "Na consulta, o Dr. Diomar analisará seu caso com exames e histórico completo.",
+      "Na consulta, o Dr. Diomar realiza anamnese cuidadosa, bioimpedância e solicita exames específicos para entender o seu caso.",
   },
   {
     icon: Sparkles,
-    title: "Início do Protocolo",
+    title: "Leitura clínica do seu caso",
     description:
-      "Você receberá um plano personalizado com acompanhamento contínuo e resultados reais.",
+      "Você sai entendendo o que está por trás do seu quadro. O caminho clínico só é apresentado depois dessa leitura — com critério.",
   },
 ] as const;
 
@@ -135,8 +135,7 @@ export default function ObrigadoContent() {
               </span>
             </h1>
             <p className="text-lg text-slate-400 max-w-md mx-auto leading-relaxed">
-              Seus dados foram recebidos com sucesso. Estamos preparando tudo
-              para sua avaliação personalizada.
+              Seus dados foram recebidos. A equipe entra em contato em até 2 horas para confirmar sua consulta de avaliação com o Dr. Diomar.
             </p>
           </motion.div>
 

@@ -29,27 +29,25 @@ export default function FinalCTA() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          {/* Urgency badge */}
+          {/* Agenda badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-wheat-500/10 border border-wheat-500/25 mb-8">
             <Clock className="w-4 h-4 text-wheat-400" />
             <span className="text-sm text-wheat-300 font-semibold">
-              Vagas Limitadas para Este Mês
+              Agenda com vagas limitadas
             </span>
           </div>
 
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6 leading-tight">
-            Dê o Primeiro Passo
+            Dê o primeiro passo.{" "}
             <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-300 to-wheat-500">
-              {" "}
-              Para sua Transformação
+              Agende a sua avaliação.
             </span>
           </h2>
 
           <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Preencha abaixo e sua mensagem chega{" "}
-            <strong className="text-slate-200">pronta no WhatsApp</strong> —
-            é só enviar.
+            Preencha abaixo e fale com a equipe pelo WhatsApp para agendar sua{" "}
+            <strong className="text-slate-200">consulta de avaliação</strong> com o Dr. Diomar.
           </p>
 
           {/* Main CTA Card with form */}
@@ -62,7 +60,7 @@ export default function FinalCTA() {
               </div>
               <div className="hidden md:flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-wheat-500" />
-                <span>Consulta particular com nota fiscal</span>
+                <span>Atendimento particular com nota fiscal</span>
               </div>
               <div className="hidden md:flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-wheat-500" />
@@ -90,9 +88,7 @@ export default function FinalCTA() {
             {/* Risk reversal */}
             <div className="border-t border-slate-800 pt-5 md:pt-6 mt-3 md:mt-4">
               <p className="text-xs md:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                <strong className="text-slate-400">Sem compromisso:</strong> Na
-                avaliação, você entenderá exatamente o que está acontecendo com
-                seu corpo e qual o melhor caminho. A decisão é sempre sua.
+                <strong className="text-slate-400">Sem pressa:</strong> a avaliação é o momento em que o seu caso é olhado por inteiro. Você sai entendendo o que está acontecendo no seu corpo. A decisão sobre os próximos passos é sempre sua.
               </p>
             </div>
           </div>
@@ -115,12 +111,12 @@ export default function FinalCTA() {
                 </div>
               ))}
             </div>
-            <span>+2.000 pacientes já fizeram essa escolha</span>
+            <span>+2.000 pacientes já passaram pela avaliação</span>
           </motion.div>
 
           {/* Mobile social proof */}
           <p className="md:hidden text-xs text-slate-500 mt-2">
-            +2.000 pacientes já fizeram essa escolha
+            +2.000 pacientes já passaram pela avaliação
           </p>
         </motion.div>
       </div>

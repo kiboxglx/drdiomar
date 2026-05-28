@@ -5,18 +5,18 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ServicePageContent from "@/components/ServicePageContent";
 
 export const metadata: Metadata = {
-  title: "Implante Hormonal | Dr. Diomar Cangussu — Brasília de Minas e Varzelândia",
+  title: "Avaliação para Sintomas Hormonais | Dr. Diomar Cangussu — Brasília de Minas e Varzelândia",
   description:
-    "Implantes hormonais biodegradáveis para equilíbrio hormonal, ganho de massa muscular e melhora da libido. Procedimento rápido com anestesia local. Agende avaliação em Brasília de Minas ou Varzelândia.",
+    "Consulta de avaliação clínica aprofundada para quem apresenta sintomas hormonais — fadiga, queda de libido, perda de massa muscular, alterações de humor. Anamnese e exames específicos antes de qualquer recomendação. Brasília de Minas e Varzelândia.",
   keywords: [
-    "implante hormonal", "chip hormonal", "reposição hormonal",
-    "implante hormonal brasília de minas", "implante testosterona",
-    "reposição hormonal norte de minas", "equilíbrio hormonal",
+    "avaliação hormonal", "consulta sintomas hormonais", "fadiga e libido",
+    "nutrólogo brasília de minas", "consulta hormônios norte de minas",
+    "investigação hormonal", "queda de libido médico",
   ],
   alternates: { canonical: "https://drdiomarcangussu.com.br/implante-hormonal" },
   openGraph: {
-    title: "Implante Hormonal | Dr. Diomar Cangussu",
-    description: "Implantes hormonais biodegradáveis com acompanhamento médico contínuo. Resultados em até 30 dias.",
+    title: "Avaliação para Sintomas Hormonais | Dr. Diomar Cangussu",
+    description: "Consulta de avaliação aprofundada para investigar fadiga, libido e sintomas hormonais antes de qualquer decisão sobre tratamento.",
     url: "https://drdiomarcangussu.com.br/implante-hormonal",
     type: "website",
   },
@@ -25,50 +25,50 @@ export const metadata: Metadata = {
 const steps = [
   {
     number: "01",
-    title: "Avaliação Clínica e Laboratorial",
+    title: "Anamnese de sintomas hormonais",
     description:
-      "Exames hormonais completos, histórico clínico e análise dos seus objetivos. Verificamos se o implante é indicado para o seu caso.",
+      "Mapeamento detalhado dos sintomas — fadiga, libido, humor, sono, composição corporal, performance. Tempo dedicado para entender o quadro por inteiro.",
   },
   {
     number: "02",
-    title: "Plano Hormonal Personalizado",
+    title: "Bioimpedância e avaliação física",
     description:
-      "Dosagem calculada individualmente. Usamos tecnologia absorvível (não é chip permanente) — implantes biodegradáveis com liberação controlada.",
+      "Análise da composição corporal e sinais clínicos relacionados ao equilíbrio hormonal. Dados objetivos para construir a leitura inicial do caso.",
   },
   {
     number: "03",
-    title: "Procedimento Rápido",
+    title: "Painel hormonal específico",
     description:
-      "Aplicação em consultório com anestesia local. Dura aproximadamente 10 minutos. A maioria dos pacientes volta à rotina no mesmo dia.",
+      "Solicitação de exames laboratoriais direcionados — testosterona, estrogênio, tireoide, marcadores adrenais. O caminho clínico só é decidido depois dos resultados.",
   },
   {
     number: "04",
-    title: "Acompanhamento Contínuo",
+    title: "Leitura clínica do seu caso",
     description:
-      "Retornos regulares com exames de controle. Suporte por WhatsApp para dúvidas. Equilíbrio hormonal completo em até 30 dias.",
+      "Você sai entendendo o que está por trás dos sintomas. Só então, se fizer sentido, o Dr. Diomar apresenta o caminho clínico — que pode incluir ou não terapia hormonal, conforme o caso.",
   },
 ];
 
 const faqs = [
   {
-    question: "O implante hormonal dói?",
+    question: "Já vou sair da consulta com um implante hormonal prescrito?",
     answer:
-      "O procedimento é feito com anestesia local — você sente apenas uma leve pressão. A aplicação dura cerca de 10 minutos. Pode haver leve desconforto nas primeiras 48h, controlado com orientações simples.",
+      "Não. A consulta é uma avaliação clínica aprofundada — anamnese, bioimpedância e solicitação de exames hormonais específicos. Qualquer decisão sobre terapia hormonal só é feita depois da leitura clínica completa, com base em exames e contexto. Sem pressa, sem prescrição empurrada.",
   },
   {
-    question: "É seguro fazer implante hormonal?",
+    question: "Quais sintomas justificam essa avaliação?",
     answer:
-      "Sim. Os implantes são biodegradáveis e aprovados para uso médico. Fazemos avaliação clínica e laboratorial completa antes do procedimento. O acompanhamento é contínuo.",
+      "Fadiga persistente, queda de libido, perda de massa muscular, alterações de humor, dificuldade de concentração, sono ruim, ganho de gordura abdominal, baixa performance. Se você sente que algo não está certo, a investigação faz sentido.",
   },
   {
-    question: "Quanto tempo dura o implante?",
+    question: "Preciso levar exames anteriores?",
     answer:
-      "Os implantes têm duração média de 6 meses. Após esse período, é necessário reavaliar e, se indicado, renovar. O implante é totalmente absorvido pelo organismo.",
+      "Sim, sempre que possível. Exames hormonais recentes ajudam a montar uma leitura mais completa. Se não tiver, o Dr. Diomar solicita os necessários durante a consulta.",
   },
   {
-    question: "Quem pode fazer implante hormonal?",
+    question: "Qual o valor da consulta?",
     answer:
-      "Homens e mulheres com sintomas de desequilíbrio hormonal: fadiga, perda de libido, dificuldade de ganho muscular, alterações de humor. A indicação é sempre baseada em exames.",
+      "A consulta de avaliação tem valor particular. A equipe apresenta o valor e as condições durante o agendamento.",
   },
 ];
 
@@ -77,23 +77,23 @@ export default function ImplanteHormonalPage() {
     <main className="bg-slate-950 min-h-screen">
       <Navbar />
       <ServicePageContent
-        badge="Implantes Hormonais"
-        title="Recupere Sua Energia e Disposição com Equilíbrio Hormonal"
-        subtitle="Implantes hormonais biodegradáveis com acompanhamento médico contínuo. Procedimento rápido, resultados em até 30 dias."
+        badge="Avaliação para sintomas hormonais"
+        title="Antes da reposição, uma leitura clínica séria do seu caso."
+        subtitle="Consulta de avaliação aprofundada com o Dr. Diomar para investigar fadiga, libido, humor e demais sintomas hormonais. Anamnese e exames específicos antes de qualquer decisão."
         heroGradient="from-wheat-400 to-orange-600"
         steps={steps}
         results={[
-          "Mais energia e disposição desde as primeiras semanas",
-          "Melhora da libido e do humor",
-          "Ganho de massa muscular e redução de gordura",
-          "Procedimento rápido — volta à rotina no mesmo dia",
-          "Tecnologia absorvível — não é chip permanente",
+          "Mapeamento clínico dos sintomas hormonais que você apresenta",
+          "Leitura objetiva da composição corporal e sinais relacionados",
+          "Painel laboratorial específico solicitado com critério",
+          "Entendimento real do que está por trás do seu quadro",
+          "Direção clínica construída com base em exames, não em pressa",
         ]}
         faqs={faqs}
-        ctaText="Agendar Avaliação Hormonal"
+        ctaText="Agendar minha avaliação"
         relatedLinks={[
-          { href: "/emagrecimento", label: "Protocolo de Emagrecimento" },
-          { href: "/longevidade", label: "Longevidade Premium" },
+          { href: "/emagrecimento", label: "Quem busca emagrecer" },
+          { href: "/longevidade", label: "Check-up preventivo" },
           { href: "/brasilia-de-minas", label: "Brasília de Minas" },
           { href: "/varzelandia", label: "Varzelândia" },
         ]}

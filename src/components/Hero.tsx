@@ -9,7 +9,7 @@ export default function Hero() {
     const { track } = useTracking();
 
     const handleCtaClick = () => {
-        track({ name: 'cta_click', params: { cta_location: 'hero', cta_text: 'Quero Agendar Minha Avaliação' } });
+        track({ name: 'cta_click', params: { cta_location: 'hero', cta_text: 'Agendar minha avaliação' } });
     };
     return (
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-900 pt-20 md:pt-0">
@@ -57,19 +57,18 @@ export default function Hero() {
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800 mb-6">
                             <span className="w-2 h-2 rounded-full bg-wheat-500 animate-pulse" />
-                            <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">Medicina de Alta Performance</span>
+                            <span className="text-xs text-wheat-300 font-medium tracking-wider uppercase">Avaliação Clínica Aprofundada</span>
                         </div>
 
                         <h1 className="text-4xl md:text-6xl font-bold text-slate-50 leading-tight mb-4 tracking-tight">
-                            Emagreça de Verdade —{" "}
+                            Antes de qualquer tratamento,{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-wheat-400 to-wheat-500">
-                                Sem Dietas Malucas, Sem Efeito Sanfona.
+                                uma leitura clínica séria do seu caso.
                             </span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-                            Protocolos médicos personalizados com <strong className="text-slate-200 font-semibold">resultados em semanas</strong> e{" "}
-                            <strong className="text-slate-200 font-semibold">acompanhamento via WhatsApp</strong> — em Brasília de Minas e Varzelândia.
+                            Consulta de avaliação aprofundada com o <strong className="text-slate-200 font-semibold">Dr. Diomar Cangussu</strong> — exames, anamnese e investigação do que está por trás do ganho de peso, da fadiga ou do desequilíbrio hormonal. Em Brasília de Minas e Varzelândia.
                         </p>
                     </motion.div>
 
@@ -86,7 +85,7 @@ export default function Hero() {
                             rel="noopener noreferrer"
                             className="w-full md:w-auto flex items-center justify-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 min-h-[48px]"
                         >
-                            Quero Agendar Minha Avaliação
+                            Agendar minha avaliação
                             <ChevronRight className="w-5 h-5" />
                         </a>
                     </motion.div>
@@ -122,7 +121,7 @@ export default function Hero() {
                         </div>
                         <div className="flex items-center gap-2 text-sm text-slate-400">
                             <Clock className="w-4 h-4 text-wheat-500" />
-                            <span>Resultados em 30 dias</span>
+                            <span>Atendimento particular</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-slate-400">
                             <CheckCircle2 className="w-4 h-4 text-wheat-500" />

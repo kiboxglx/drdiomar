@@ -23,10 +23,10 @@ export default function ContactPage() {
                         className="text-center mb-16"
                     >
                         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-50 mb-6">
-                            Agende sua <span className="text-wheat-500">Consulta</span>
+                            Agende sua <span className="text-wheat-500">avaliação</span>
                         </h1>
                         <p className="text-sm md:text-base lg:text-xl text-slate-400 max-w-2xl mx-auto">
-                            Dê o primeiro passo para transformar sua saúde e performance. Entre em contato agora mesmo.
+                            Consulta de avaliação clínica aprofundada com o Dr. Diomar Cangussu. Fale com a equipe pelo WhatsApp.
                         </p>
                     </motion.div>
 
@@ -42,9 +42,9 @@ export default function ContactPage() {
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="space-y-8">
                                 <div className="space-y-2">
-                                    <h3 className="text-2xl font-bold text-slate-50">Atendimento Exclusivo</h3>
+                                    <h3 className="text-2xl font-bold text-slate-50">Atendimento da equipe</h3>
                                     <p className="text-slate-400">
-                                        Nossa equipe está pronta para tirar suas dúvidas sobre protocolos de emagrecimento e implantes hormonais.
+                                        A equipe está pronta para tirar suas dúvidas sobre a consulta de avaliação e ajudar a marcar seu horário.
                                     </p>
                                 </div>
 
@@ -78,7 +78,7 @@ export default function ContactPage() {
                                 </div>
 
                                 <a
-                                    href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20Dr.%20Diomar."
+                                    href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="group relative w-full flex items-center justify-center gap-3 bg-green-600 hover:bg-green-500 text-white font-bold py-5 px-6 md:px-8 rounded-xl shadow-lg shadow-green-900/20 transition-all hover:scale-[1.02] min-h-[48px]"

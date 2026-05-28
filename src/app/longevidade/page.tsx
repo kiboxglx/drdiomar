@@ -5,18 +5,18 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ServicePageContent from "@/components/ServicePageContent";
 
 export const metadata: Metadata = {
-  title: "Longevidade Premium | Dr. Diomar Cangussu — Check-up e Prevenção",
+  title: "Avaliação Clínica Preventiva | Dr. Diomar Cangussu — Check-up Aprofundado",
   description:
-    "Programa de longevidade com check-up metabólico completo, soroterapia e gestão do envelhecimento. Prevenção avançada de doenças crônicas. Brasília de Minas e Varzelândia.",
+    "Consulta de avaliação clínica aprofundada para quem quer um check-up sério. Anamnese, bioimpedância e painel laboratorial extenso para entender o seu estado atual antes de qualquer recomendação. Brasília de Minas e Varzelândia.",
   keywords: [
-    "longevidade", "check-up metabólico", "soroterapia",
-    "medicina preventiva", "anti-aging", "prevenção de doenças",
-    "suplementação injetável", "gestão do envelhecimento",
+    "check-up médico", "consulta preventiva", "avaliação clínica preventiva",
+    "nutrólogo brasília de minas", "medicina preventiva norte de minas",
+    "check-up metabólico", "consulta nutrologia preventiva",
   ],
   alternates: { canonical: "https://drdiomarcangussu.com.br/longevidade" },
   openGraph: {
-    title: "Longevidade Premium | Dr. Diomar Cangussu",
-    description: "Check-up metabólico completo e prevenção avançada. Envelheça com saúde e vitalidade.",
+    title: "Avaliação Clínica Preventiva | Dr. Diomar Cangussu",
+    description: "Consulta de avaliação aprofundada para um check-up sério antes de qualquer decisão sobre suplementação ou tratamento preventivo.",
     url: "https://drdiomarcangussu.com.br/longevidade",
     type: "website",
   },
@@ -25,50 +25,50 @@ export const metadata: Metadata = {
 const steps = [
   {
     number: "01",
-    title: "Check-up Metabólico Completo",
+    title: "Anamnese preventiva",
     description:
-      "Painel laboratorial extenso: hormônios, vitaminas, minerais, marcadores inflamatórios, lipídicos e metabólicos. Visão completa da sua saúde atual.",
+      "Histórico clínico, hábitos, sono, alimentação, performance física e mental, contexto familiar. Tempo para mapear o seu estado atual por inteiro.",
   },
   {
     number: "02",
-    title: "Plano Preventivo Personalizado",
+    title: "Bioimpedância de alta precisão",
     description:
-      "Estratégias individualizadas de suplementação, nutrição e estilo de vida baseadas nos seus marcadores. Prevenção ativa de doenças crônicas.",
+      "Análise da composição corporal e taxa metabólica. Dados objetivos sobre o estado físico atual.",
   },
   {
     number: "03",
-    title: "Soroterapia Injetável",
+    title: "Painel laboratorial extenso",
     description:
-      "Suplementação intravenosa de vitaminas e minerais com absorção superior. Protocolos de hidratação, detox e revitalização.",
+      "Solicitação de exames de hormônios, vitaminas, minerais, marcadores inflamatórios, lipídicos e metabólicos. Visão completa antes de qualquer recomendação.",
   },
   {
     number: "04",
-    title: "Acompanhamento Contínuo",
+    title: "Leitura clínica do seu estado atual",
     description:
-      "Monitoramento regular dos marcadores. Ajustes no protocolo conforme evolução. Objetivo: envelhecer com saúde, disposição e qualidade de vida.",
+      "Você sai entendendo onde estão os pontos fortes e onde estão os marcadores que merecem atenção. Só então, se fizer sentido, o Dr. Diomar apresenta o caminho preventivo recomendado.",
   },
 ];
 
 const faqs = [
   {
-    question: "A partir de que idade devo começar?",
+    question: "A partir de que idade faz sentido essa avaliação?",
     answer:
-      "Não existe idade mínima para cuidar da saúde. O check-up preventivo é recomendado a partir dos 30 anos, mas pessoas mais jovens com sintomas (fadiga, queda de imunidade) também se beneficiam.",
+      "Não há idade mínima. A consulta preventiva é especialmente recomendada a partir dos 30 anos, mas pessoas mais jovens com sintomas (fadiga, queda de imunidade, performance baixa) também se beneficiam de uma leitura clínica séria.",
   },
   {
-    question: "O que é soroterapia?",
+    question: "Saio da consulta com suplementação prescrita?",
     answer:
-      "É a administração intravenosa de vitaminas, minerais e aminoácidos. Por ser direto na veia, a absorção é muito superior à suplementação oral. Indicada para hidratação, detox e reposição nutricional.",
+      "Depende. A consulta é uma avaliação — o foco é entender o seu estado atual antes de qualquer prescrição. Quando há exames suficientes, o Dr. Diomar já apresenta o caminho preventivo. Em casos que pedem mais investigação, exames são solicitados antes de qualquer recomendação.",
   },
   {
-    question: "Qual a frequência das consultas?",
+    question: "Preciso levar exames anteriores?",
     answer:
-      "O protocolo inicial geralmente envolve avaliação + retorno em 30-60 dias. Depois, acompanhamento trimestral ou semestral conforme os resultados.",
+      "Sim, sempre que possível. Ajuda a comparar evolução e a construir uma leitura mais completa. Se não tiver, o Dr. Diomar solicita os necessários durante a consulta.",
   },
   {
     question: "Atende por convênio?",
     answer:
-      "Trabalhamos com medicina personalizada. Atendimento particular com emissão de nota fiscal para reembolso junto ao plano de saúde. Parcelamento disponível.",
+      "Não. O atendimento é particular, com tempo dedicado e profundidade que o modelo de convênio não comporta. Emitimos nota fiscal para reembolso quando previsto em contrato.",
   },
 ];
 
@@ -77,23 +77,23 @@ export default function LongevidadePage() {
     <main className="bg-slate-950 min-h-screen">
       <Navbar />
       <ServicePageContent
-        badge="Longevidade Premium"
-        title="Envelheça com Saúde, Disposição e Qualidade de Vida"
-        subtitle="Check-up metabólico completo, soroterapia e gestão do envelhecimento. Prevenção avançada para quem quer viver mais e melhor."
+        badge="Avaliação clínica preventiva"
+        title="Antes de qualquer suplementação, uma leitura clínica séria do seu estado atual."
+        subtitle="Consulta de avaliação aprofundada com o Dr. Diomar para um check-up sério. Anamnese, bioimpedância e painel laboratorial extenso antes de qualquer recomendação preventiva."
         heroGradient="from-emerald-400 to-teal-600"
         steps={steps}
         results={[
-          "Melhora nos marcadores de saúde e vitalidade",
-          "Prevenção ativa de doenças crônicas",
-          "Mais energia e imunidade fortalecida",
-          "Plano preventivo personalizado",
-          "Suplementação injetável de alta absorção",
+          "Mapeamento completo do seu estado clínico atual",
+          "Identificação objetiva de marcadores que merecem atenção",
+          "Leitura laboratorial extensa para visão preventiva real",
+          "Direção clínica construída com base em dados, não em palpite",
+          "Decisão sobre suplementação ou tratamento preventivo com critério",
         ]}
         faqs={faqs}
-        ctaText="Agendar Check-up Preventivo"
+        ctaText="Agendar minha avaliação"
         relatedLinks={[
-          { href: "/emagrecimento", label: "Protocolo de Emagrecimento" },
-          { href: "/implante-hormonal", label: "Implantes Hormonais" },
+          { href: "/emagrecimento", label: "Quem busca emagrecer" },
+          { href: "/implante-hormonal", label: "Sintomas hormonais" },
           { href: "/brasilia-de-minas", label: "Brasília de Minas" },
           { href: "/varzelandia", label: "Varzelândia" },
         ]}

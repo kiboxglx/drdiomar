@@ -17,9 +17,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://drdiomarcangussu.com.br"),
-  title: "Dr. Diomar Cangussu | Emagrecimento, Implantes Hormonais e Nutrologia em Brasília de Minas e Varzelândia",
-  description: "Médico nutrologista especialista em emagrecimento, implantes hormonais e longevidade. +2.000 pacientes atendidos em Brasília de Minas e Varzelândia, Norte de Minas Gerais. Agende sua avaliação gratuita!",
-  keywords: ["Emagrecimento", "Implantes Hormonais", "Nutrologia", "Medicina Esportiva", "Brasília de Minas", "Varzelândia", "Norte de Minas", "Dr. Diomar Cangussu", "Reposição Hormonal", "Nutrólogo", "Médico para emagrecer", "Protocolo de emagrecimento"],
+  title: "Dr. Diomar Cangussu | Avaliação Clínica Aprofundada — Brasília de Minas e Varzelândia",
+  description: "Médico nutrologista no Norte de Minas. Consulta de avaliação clínica aprofundada para investigar o que está por trás do ganho de peso, da fadiga ou do desequilíbrio hormonal. +2.000 pacientes atendidos em Brasília de Minas e Varzelândia. Agende sua avaliação.",
+  keywords: ["Nutrologia", "Nutrólogo", "Brasília de Minas", "Varzelândia", "Norte de Minas", "Dr. Diomar Cangussu", "Avaliação clínica", "Consulta nutrologia", "Médico nutrologista", "Investigação clínica", "CRM 60.143 MG"],
   authors: [{ name: "Dr. Diomar Cangussu" }],
   creator: "Dr. Diomar Cangussu",
   publisher: "Dr. Diomar Cangussu",
@@ -31,22 +31,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://drdiomarcangussu.com.br",
-    title: "Dr. Diomar Cangussu | Emagrecimento e Implantes Hormonais — Norte de Minas",
-    description: "Protocolos médicos personalizados de emagrecimento e implantes hormonais. +2.000 pacientes em Brasília de Minas e Varzelândia. Avaliação gratuita.",
+    title: "Dr. Diomar Cangussu | Avaliação Clínica Aprofundada — Norte de Minas",
+    description: "Consulta de avaliação clínica aprofundada com o Dr. Diomar Cangussu. Anamnese, exames e leitura clínica do seu caso antes de qualquer recomendação. +2.000 pacientes em Brasília de Minas e Varzelândia.",
     siteName: "Dr. Diomar Cangussu",
     images: [
       {
         url: "/assets/dr-specialist.png",
         width: 1200,
         height: 630,
-        alt: "Dr. Diomar Cangussu - Especialista em Emagrecimento e Implantes Hormonais",
+        alt: "Dr. Diomar Cangussu - Avaliação Clínica Aprofundada em Brasília de Minas e Varzelândia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Diomar Cangussu | Emagrecimento e Implantes Hormonais",
-    description: "Protocolos médicos personalizados. +2.000 pacientes em Brasília de Minas e Varzelândia. Avaliação gratuita.",
+    title: "Dr. Diomar Cangussu | Avaliação Clínica Aprofundada",
+    description: "Consulta de avaliação clínica com o Dr. Diomar Cangussu — investigação séria do seu caso. +2.000 pacientes em Brasília de Minas e Varzelândia.",
     images: ["/assets/dr-specialist.png"],
   },
   other: {
@@ -167,7 +167,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Physician",
               "name": "Dr. Diomar Cangussu",
-              "description": "Médico nutrologista especialista em emagrecimento, implantes hormonais e longevidade. Atendimento em Brasília de Minas e Varzelândia, Norte de Minas Gerais.",
+              "description": "Médico nutrologista. Consulta de avaliação clínica aprofundada em Brasília de Minas e Varzelândia, Norte de Minas Gerais.",
               "image": "https://drdiomarcangussu.com.br/assets/dr-specialist.png",
               "@id": "https://drdiomarcangussu.com.br",
               "url": "https://drdiomarcangussu.com.br",
@@ -186,18 +186,8 @@ export default function RootLayout({
               "availableService": [
                 {
                   "@type": "MedicalProcedure",
-                  "name": "Protocolo de Emagrecimento",
-                  "description": "Emagrecimento científico personalizado com bioimpedância, exames e acompanhamento por WhatsApp"
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  "name": "Implantes Hormonais",
-                  "description": "Implantes hormonais biodegradáveis para otimização de testosterona e equilíbrio hormonal"
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  "name": "Longevidade Premium",
-                  "description": "Check-up metabólico completo com soroterapia e gestão do envelhecimento"
+                  "name": "Consulta de Avaliação Clínica Aprofundada",
+                  "description": "Avaliação clínica com anamnese aprofundada, bioimpedância de alta precisão, solicitação de exames específicos e leitura clínica individual do caso do paciente."
                 }
               ],
               "areaServed": [
@@ -254,50 +244,58 @@ export default function RootLayout({
               "mainEntity": [
                 {
                   "@type": "Question",
+                  "name": "O que acontece na consulta com o Dr. Diomar?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A consulta é uma avaliação clínica aprofundada. O Dr. Diomar dedica tempo para anamnese, faz bioimpedância de alta precisão e solicita exames específicos quando necessário. No retorno, apresenta a leitura clínica do caso e, se fizer sentido, recomenda o caminho técnico para o quadro do paciente."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Quanto tempo dura a consulta?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O tempo necessário para olhar o caso com profundidade. O Dr. Diomar reserva uma janela ampla para investigar o histórico clínico, ouvir os sintomas, fazer a bioimpedância e construir a leitura inicial do quadro com o paciente."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Preciso levar exames anteriores?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim, sempre que possível. Exames recentes ajudam a montar uma leitura mais completa do quadro já na primeira consulta. Se o paciente não tem exames, o Dr. Diomar solicita os necessários durante o atendimento."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Saio da consulta com tratamento prescrito?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Depende do caso. A consulta é uma avaliação clínica — o foco é entender o que está por trás do quadro antes de qualquer decisão. Quando há exames suficientes, o Dr. Diomar já apresenta a recomendação clínica. Em casos que pedem mais investigação, novos exames são solicitados antes de qualquer prescrição."
+                  }
+                },
+                {
+                  "@type": "Question",
                   "name": "Já tentei de tudo e nada funciona. Por que seria diferente?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Porque nossos protocolos não são dietas genéricas. Começamos com exames laboratoriais completos para entender sua biologia individual — hormônios, metabolismo, inflamação. A partir daí, montamos um plano personalizado que ataca a causa real, não apenas os sintomas."
+                    "text": "Porque o ponto de partida é outro. A consulta começa pela investigação — anamnese cuidadosa, exames específicos e leitura clínica do caso antes de qualquer recomendação. É comum pacientes que já tentaram de tudo descobrirem na avaliação algo que tinha passado batido em outras consultas."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "É seguro fazer implante hormonal?",
+                  "name": "Qual o valor da consulta?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sim. Os implantes são biodegradáveis e aprovados para uso médico. Antes de qualquer procedimento, fazemos uma avaliação clínica e laboratorial completa para garantir que é indicado para você. O acompanhamento é contínuo."
+                    "text": "A consulta de avaliação tem valor particular. A equipe apresenta o valor e as condições durante o agendamento, junto com a disponibilidade de horários."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "O implante hormonal dói?",
+                  "name": "Posso parcelar?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "O procedimento é feito com anestesia local — você sente apenas uma leve pressão. A aplicação dura cerca de 10 minutos e a recuperação é rápida: a maioria dos pacientes volta à rotina no mesmo dia."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Quanto tempo até eu ver resultados?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A maioria dos pacientes relata melhora significativa na disposição e energia nas primeiras 2-4 semanas. Resultados visíveis de emagrecimento geralmente aparecem a partir de 30 dias."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Qual o valor do investimento?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Os protocolos são 100% personalizados — o investimento varia conforme seus exames, objetivos e necessidades. Agende uma avaliação gratuita para receber seu plano sob medida com valores transparentes."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Posso parcelar o tratamento?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sim! Oferecemos opções de parcelamento para facilitar seu acesso ao tratamento. As condições são apresentadas na consulta de avaliação, de acordo com o protocolo indicado."
+                    "text": "Sim. As formas de pagamento e condições de parcelamento são apresentadas no momento do agendamento, junto com o valor da consulta."
                   }
                 },
                 {
@@ -305,7 +303,7 @@ export default function RootLayout({
                   "name": "O Dr. Diomar atende por convênio?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Trabalhamos com medicina personalizada de alto nível, o que exige tempo e dedicação em cada consulta. Por isso, os atendimentos são particulares. Emitimos nota fiscal para que você possa solicitar reembolso junto ao seu plano de saúde."
+                    "text": "Não. A avaliação clínica aprofundada exige tempo e dedicação em cada caso. O atendimento é particular, com emissão de nota fiscal para que o paciente possa solicitar reembolso junto ao plano de saúde quando previsto em contrato."
                   }
                 },
                 {
@@ -313,23 +311,15 @@ export default function RootLayout({
                   "name": "Onde ficam os consultórios?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Temos dois hubs regionais: Brasília de Minas (atendendo São Francisco, Mirabela, Ubaí, Luislândia e região) e Varzelândia (atendendo São João da Ponte, Ibiracatu, Lontra e cidades vizinhas)."
+                    "text": "Dois hubs regionais no Norte de Minas: Brasília de Minas (atendendo São Francisco, Mirabela, Ubaí, Luislândia e região) e Varzelândia (atendendo São João da Ponte, Ibiracatu, Lontra e cidades vizinhas)."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Tenho medo de efeito sanfona. Como vocês evitam isso?",
+                  "name": "Como faço para agendar?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "O efeito sanfona acontece quando você faz dietas restritivas sem tratar a causa. Nosso protocolo ajusta hormônios, metabolismo e hábitos de forma sustentável. Além disso, o acompanhamento contínuo garante que você mantenha os resultados a longo prazo."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Preciso fazer dieta muito restritiva?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Não. Nosso objetivo é criar um plano alimentar que funcione para sua rotina, não contra ela. Trabalhamos com reeducação alimentar prática e, quando necessário, com suporte medicamentoso que reduz a compulsão e acelera resultados."
+                    "text": "Pelo WhatsApp da equipe. Basta preencher o formulário do site ou clicar em qualquer botão de agendamento. A recepção responde com a disponibilidade da agenda do Dr. Diomar."
                   }
                 }
               ]

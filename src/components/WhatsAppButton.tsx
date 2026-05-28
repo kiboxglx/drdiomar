@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTracking } from "@/hooks/useTracking";
 
 const WHATSAPP_URL =
-  "https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
+  "https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar.";
 
 const SCROLL_HIDE_THRESHOLD = 400;
 const PING_DURATION_MS = 5000;
@@ -64,7 +64,7 @@ export default function WhatsAppButton() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Agendar consulta via WhatsApp com Dr. Diomar"
+          aria-label="Agendar avaliação via WhatsApp com Dr. Diomar"
           className="fixed bottom-20 right-6 z-50 md:bottom-6 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-lg shadow-green-500/30 transition-all group"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}

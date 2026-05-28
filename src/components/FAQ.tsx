@@ -7,44 +7,44 @@ import { useTracking } from "@/hooks/useTracking";
 
 const faqs = [
     {
+        question: "O que acontece na consulta com o Dr. Diomar?",
+        answer: "A consulta é uma avaliação clínica aprofundada. O Dr. Diomar dedica tempo para a anamnese — histórico, sintomas, rotina, exames anteriores — faz bioimpedância de alta precisão e solicita exames específicos quando necessário. No retorno, apresenta a leitura clínica do seu caso e, se fizer sentido, recomenda o caminho técnico para o seu quadro. A consulta não é um atendimento de 10 minutos.",
+    },
+    {
+        question: "Quanto tempo dura a consulta?",
+        answer: "O tempo necessário para olhar o seu caso com profundidade. Não trabalhamos com encaixes apressados — o Dr. Diomar reserva uma janela ampla para conseguir investigar o histórico clínico, ouvir os sintomas, fazer a bioimpedância e construir a leitura inicial do quadro com você.",
+    },
+    {
+        question: "Preciso levar exames anteriores?",
+        answer: "Sim, sempre que possível. Exames recentes ajudam a montar uma leitura mais completa do seu quadro logo na primeira consulta. Se você não tem exames, sem problema — o Dr. Diomar solicita os necessários durante o atendimento.",
+    },
+    {
+        question: "Saio da consulta com tratamento prescrito?",
+        answer: "Depende do caso. A consulta é uma avaliação clínica — o foco é entender o que está por trás do quadro antes de qualquer decisão. Quando há exames suficientes e o caso permite, o Dr. Diomar já apresenta a recomendação clínica. Em casos que pedem mais investigação, novos exames são solicitados antes de qualquer prescrição. Decisão construída com critério, não pressa.",
+    },
+    {
         question: "Já tentei de tudo e nada funciona. Por que seria diferente?",
-        answer: "Porque nossos protocolos não são dietas genéricas. Começamos com exames laboratoriais completos para entender sua biologia individual — hormônios, metabolismo, inflamação. A partir daí, montamos um plano personalizado que ataca a causa real, não apenas os sintomas. É por isso que pacientes que 'já tentaram de tudo' conseguem resultados com a gente.",
+        answer: "Porque o ponto de partida é outro. A maioria das tentativas começa pela receita — dieta, medicação, suplementação — sem que ninguém tenha investigado o que está acontecendo no seu corpo. Aqui, a consulta começa pela investigação. Anamnese cuidadosa, exames específicos e leitura clínica do seu caso antes de qualquer recomendação. É comum pacientes que 'já tentaram de tudo' descobrirem na avaliação algo que tinha passado batido em outras consultas.",
     },
     {
-        question: "É seguro fazer implante hormonal?",
-        answer: "Sim. Os implantes são biodegradáveis e aprovados para uso médico. Antes de qualquer procedimento, fazemos uma avaliação clínica e laboratorial completa para garantir que é indicado para você. O acompanhamento é contínuo — você nunca fica sem suporte. Dr. Diomar tem experiência com centenas de implantes realizados com segurança.",
+        question: "Qual o valor da consulta?",
+        answer: "A consulta de avaliação tem valor particular. A equipe apresenta o valor e as condições durante o agendamento, junto com a disponibilidade de horários. Trabalhamos com tempo e profundidade em cada atendimento — por isso o atendimento não é por convênio.",
     },
     {
-        question: "O implante hormonal dói?",
-        answer: "O procedimento é feito com anestesia local — você sente apenas uma leve pressão. A aplicação dura cerca de 10 minutos e a recuperação é rápida: a maioria dos pacientes volta à rotina no mesmo dia. Pode haver um leve desconforto no local nas primeiras 48h, facilmente controlado com orientações simples.",
-    },
-    {
-        question: "Quanto tempo até eu ver resultados?",
-        answer: "A maioria dos pacientes relata melhora significativa na disposição e energia nas primeiras 2-4 semanas. Resultados visíveis de emagrecimento geralmente aparecem a partir de 30 dias. Cada caso é único, e no seu primeiro retorno já avaliamos os marcadores laboratoriais que comprovam a evolução.",
-    },
-    {
-        question: "Qual o valor do investimento?",
-        answer: "Os protocolos são 100% personalizados — o investimento varia conforme seus exames, objetivos e necessidades (emagrecimento, implantes, longevidade). Agende uma avaliação gratuita para receber seu plano sob medida com valores transparentes.",
-    },
-    {
-        question: "Posso parcelar o tratamento?",
-        answer: "Sim! Oferecemos opções de parcelamento para facilitar seu acesso ao tratamento. As condições são apresentadas na consulta de avaliação, de acordo com o protocolo indicado. Nosso objetivo é que o investimento na sua saúde caiba no seu orçamento.",
+        question: "Posso parcelar?",
+        answer: "Sim. As formas de pagamento e condições de parcelamento são apresentadas no momento do agendamento, junto com o valor da consulta. O objetivo é que o investimento na avaliação caiba no seu planejamento.",
     },
     {
         question: "O Dr. Diomar atende por convênio?",
-        answer: "Trabalhamos com medicina personalizada de alto nível, o que exige tempo e dedicação em cada consulta. Por isso, os atendimentos são particulares. Emitimos nota fiscal para que você possa solicitar reembolso junto ao seu plano de saúde — muitos pacientes conseguem.",
+        answer: "Não. A avaliação clínica aprofundada exige tempo e dedicação em cada caso — algo que o modelo de convênio não comporta. O atendimento é particular, com emissão de nota fiscal para que você possa solicitar reembolso junto ao seu plano de saúde quando previsto em contrato.",
     },
     {
         question: "Onde ficam os consultórios?",
-        answer: "Temos dois hubs regionais: Brasília de Minas (atendendo São Francisco, Mirabela, Ubaí, Luislândia e região) e Varzelândia (atendendo São João da Ponte, Ibiracatu, Lontra e cidades vizinhas).",
+        answer: "Temos dois hubs regionais no Norte de Minas: Brasília de Minas (atendendo São Francisco, Mirabela, Ubaí, Luislândia e região) e Varzelândia (atendendo São João da Ponte, Ibiracatu, Lontra e cidades vizinhas).",
     },
     {
-        question: "Tenho medo de efeito sanfona. Como vocês evitam isso?",
-        answer: "O efeito sanfona acontece quando você faz dietas restritivas sem tratar a causa. Nosso protocolo ajusta hormônios, metabolismo e hábitos de forma sustentável. Além disso, o acompanhamento contínuo — com retornos e suporte por WhatsApp — garante que você mantenha os resultados a longo prazo.",
-    },
-    {
-        question: "Preciso fazer dieta muito restritiva?",
-        answer: "Não. Nosso objetivo é criar um plano alimentar que funcione para sua rotina, não contra ela. Trabalhamos com reeducação alimentar prática e, quando necessário, com suporte medicamentoso que reduz a compulsão e acelera resultados — sem sofrimento.",
+        question: "Como faço para agendar?",
+        answer: "Pelo WhatsApp da equipe. Você preenche o formulário do site ou clica em qualquer botão de agendamento, conversa com a recepção, e o horário é marcado conforme a disponibilidade da agenda do Dr. Diomar.",
     },
 ];
 
@@ -146,10 +146,10 @@ export default function FAQ() {
                     className="mt-12 text-center"
                 >
                     <p className="text-slate-400 mb-6 text-lg">
-                        Ainda tem dúvidas? Fale diretamente com nossa equipe.
+                        Ainda tem dúvidas sobre a consulta? Fale diretamente com a equipe.
                     </p>
                     <a
-                        href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20protocolos%20do%20Dr.%20Diomar."
+                        href="https://wa.me/5538998269290?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20a%20consulta%20de%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 bg-wheat-500 hover:bg-wheat-400 text-slate-950 font-bold py-4 px-6 md:px-8 rounded-xl shadow-lg shadow-wheat-900/20 transition-all hover:scale-105 min-h-[48px]"

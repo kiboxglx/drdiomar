@@ -5,19 +5,19 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import LocationPageContent from "@/components/LocationPageContent";
 
 export const metadata: Metadata = {
-  title: "Nutrólogo em Varzelândia | Dr. Diomar Cangussu — Emagrecimento e Implantes",
+  title: "Nutrólogo em Varzelândia | Dr. Diomar Cangussu — Avaliação Clínica Aprofundada",
   description:
-    "Dr. Diomar Cangussu atende em Varzelândia, MG. Nutrólogo especialista em emagrecimento, implantes hormonais e longevidade. Atendemos São João da Ponte, Ibiracatu, Lontra e região. Agende avaliação gratuita.",
+    "Dr. Diomar Cangussu atende em Varzelândia, MG. Consulta de avaliação clínica aprofundada com nutrólogo. Atendemos pacientes de São João da Ponte, Ibiracatu, Lontra, Verdelândia e região. Agende sua avaliação.",
   keywords: [
     "nutrólogo varzelândia", "médico varzelândia",
-    "emagrecimento varzelândia", "implante hormonal varzelândia",
+    "consulta nutrólogo varzelândia", "avaliação clínica varzelândia",
     "clínica médica varzelândia", "médico são joão da ponte",
-    "nutrologia norte de minas",
+    "consulta nutrologia norte de minas",
   ],
   alternates: { canonical: "https://drdiomarcangussu.com.br/varzelandia" },
   openGraph: {
     title: "Nutrólogo em Varzelândia | Dr. Diomar Cangussu",
-    description: "Emagrecimento, implantes hormonais e longevidade em Varzelândia. +2.000 pacientes atendidos.",
+    description: "Consulta de avaliação clínica aprofundada com o Dr. Diomar Cangussu em Varzelândia. +2.000 pacientes atendidos.",
     url: "https://drdiomarcangussu.com.br/varzelandia",
     type: "website",
   },
@@ -32,24 +32,24 @@ export default function VarzelandiaPage() {
         state="MG"
         address="Rua Lucas Alkimin 190, Centro"
         gmapsUrl="https://www.google.com/maps/search/?api=1&query=Rua+Lucas+Alkimin+190+Centro+Varzelandia"
-        description="Hub regional de saúde e performance. Protocolos médicos avançados de emagrecimento, reposição hormonal e longevidade para Varzelândia e toda a região."
+        description="Hub regional de avaliação clínica aprofundada. Consulta com anamnese cuidadosa, exames específicos e leitura clínica do seu caso para Varzelândia e toda a região."
         cities={[
           "São João da Ponte", "Ibiracatu", "Lontra", "Verdelândia",
         ]}
         services={[
           {
-            title: "Protocolo de Emagrecimento",
-            description: "Emagrecimento científico com bioimpedância, exames e acompanhamento por WhatsApp.",
+            title: "Para quem busca emagrecer",
+            description: "Avaliação clínica para investigar o que está por trás do ganho de peso — anamnese, bioimpedância e exames específicos.",
             href: "/emagrecimento",
           },
           {
-            title: "Implantes Hormonais",
-            description: "Implantes biodegradáveis para equilíbrio hormonal, energia e performance.",
+            title: "Para sintomas hormonais",
+            description: "Avaliação para fadiga, queda de libido, alterações de humor e desequilíbrios hormonais — painel laboratorial específico.",
             href: "/implante-hormonal",
           },
           {
-            title: "Longevidade Premium",
-            description: "Check-up metabólico completo, soroterapia e prevenção de doenças crônicas.",
+            title: "Para check-up preventivo",
+            description: "Avaliação clínica preventiva com painel laboratorial extenso e leitura do seu estado atual.",
             href: "/longevidade",
           },
         ]}

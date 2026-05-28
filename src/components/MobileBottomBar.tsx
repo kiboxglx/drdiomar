@@ -6,7 +6,7 @@ import { MessageCircle } from "lucide-react";
 import { useTracking } from "@/hooks/useTracking";
 
 const WHATSAPP_URL =
-  "https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
+  "https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar.";
 
 const SCROLL_THRESHOLD_PX = 400;
 
@@ -94,7 +94,7 @@ export default function MobileBottomBar() {
                 transition-colors active:scale-[0.98]"
             >
               <MessageCircle className="w-5 h-5 shrink-0" />
-              Agendar Consulta
+              Agendar minha avaliação
             </a>
           </div>
         </motion.div>

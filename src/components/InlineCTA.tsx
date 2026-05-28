@@ -5,7 +5,7 @@ import { MessageCircle, Clock } from "lucide-react";
 import { useTracking } from "@/hooks/useTracking";
 
 const WHATSAPP_URL =
-  "https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
+  "https://wa.me/5538998269290?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Dr.%20Diomar.";
 
 export default function InlineCTA() {
   const { track } = useTracking();
@@ -36,7 +36,7 @@ export default function InlineCTA() {
         <p className="text-lg md:text-xl text-slate-200 font-medium leading-relaxed mb-6">
           Já se identificou?{" "}
           <span className="text-wheat-400">
-            Fale com a equipe do Dr.&nbsp;Diomar agora.
+            Agende sua avaliação com o Dr.&nbsp;Diomar.
           </span>
         </p>
 
@@ -58,7 +58,7 @@ export default function InlineCTA() {
             transition-colors active:scale-[0.98]"
         >
           <MessageCircle className="w-5 h-5 shrink-0" />
-          Agendar via WhatsApp
+          Agendar minha avaliação
         </a>
 
         {/* Micro-copy */}

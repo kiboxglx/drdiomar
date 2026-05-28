@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ManageCookiesButton from "./ManageCookiesButton";
 
 export default function Footer() {
     return (
@@ -65,9 +66,26 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-slate-600 text-xs gap-4">
+                <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-slate-500 text-xs gap-4">
                     <p>&copy; {new Date().getFullYear()} Dr. Diomar Cangussu. Todos os direitos reservados.</p>
-                    <p>Desenvolvido com ⚡ por Squad Elite</p>
+                    <div className="flex flex-wrap items-center gap-3 md:gap-4">
+                        <Link href="/privacidade" className="hover:text-wheat-400 transition-colors">
+                            Política de Privacidade
+                        </Link>
+                        <span className="text-slate-700">·</span>
+                        <Link href="/termos" className="hover:text-wheat-400 transition-colors">
+                            Termos de Uso
+                        </Link>
+                        <span className="text-slate-700">·</span>
+                        <a
+                            href="mailto:encarregado@drdiomarcangussu.com.br"
+                            className="hover:text-wheat-400 transition-colors"
+                        >
+                            Encarregado (DPO)
+                        </a>
+                        <span className="text-slate-700">·</span>
+                        <ManageCookiesButton />
+                    </div>
                 </div>
             </div>
         </footer>

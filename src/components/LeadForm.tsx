@@ -2,9 +2,14 @@
 
 import { useState, useCallback, useRef, type FormEvent, type ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Loader2, CheckCircle2, AlertCircle, Send } from "lucide-react";
+import { Loader2, CheckCircle2, AlertCircle, Send, Shield } from "lucide-react";
 import { useTracking } from "@/hooks/useTracking";
+import { CONSENT_VERSION } from "@/lib/consent";
+
+// Health-related interests classified as sensitive data (LGPD Art. 11)
+const SENSITIVE_INTERESTS = new Set(["ganho-peso", "sintomas-hormonais", "checkup"]);
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -55,6 +60,7 @@ export default function LeadForm({
   const [nome, setNome] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [interesse, setInteresse] = useState("");
+  const [consentAccepted, setConsentAccepted] = useState(false);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -72,6 +78,8 @@ export default function LeadForm({
   const nomeError = touched && nome.trim().length < 2;
   const whatsappError = touched && !isValidWhatsApp(whatsapp);
   const interesseError = touched && !interesse;
+  const consentError = touched && !consentAccepted;
+  const isSensitive = SENSITIVE_INTERESTS.has(interesse);
 
   const handleWhatsAppChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setWhatsapp(formatWhatsApp(e.target.value));
@@ -82,8 +90,13 @@ export default function LeadForm({
       e.preventDefault();
       setTouched(true);
 
-      // Client-side gate
-      if (nome.trim().length < 2 || !isValidWhatsApp(whatsapp) || !interesse) {
+      // Client-side gate (including LGPD consent)
+      if (
+        nome.trim().length < 2 ||
+        !isValidWhatsApp(whatsapp) ||
+        !interesse ||
+        !consentAccepted
+      ) {
         return;
       }
 
@@ -99,6 +112,8 @@ export default function LeadForm({
             whatsapp: extractDigits(whatsapp),
             interesse,
             source,
+            consent_accepted: consentAccepted,
+            consent_version: CONSENT_VERSION,
           }),
         });
 
@@ -124,7 +139,7 @@ export default function LeadForm({
         );
       }
     },
-    [nome, whatsapp, interesse, source, onSuccess, router]
+    [nome, whatsapp, interesse, consentAccepted, source, onSuccess, router, track]
   );
 
   const isCompact = variant === "compact";
@@ -256,6 +271,59 @@ export default function LeadForm({
                 </motion.p>
               )}
             </div>
+
+            {/* Sensitive data notice (LGPD Art. 11) */}
+            <AnimatePresence>
+              {isSensitive && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="flex items-start gap-2 bg-wheat-500/10 border border-wheat-500/25 rounded-xl px-3 py-2.5 text-xs text-slate-300"
+                >
+                  <Shield className="w-4 h-4 text-wheat-400 shrink-0 mt-0.5" />
+                  <p className="leading-relaxed">
+                    O motivo informado pode revelar condição de saúde — esses dados recebem proteção
+                    reforçada (LGPD Art. 11).
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* LGPD consent checkbox */}
+            <label className="flex items-start gap-2.5 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={consentAccepted}
+                onChange={(e) => setConsentAccepted(e.target.checked)}
+                disabled={status === "loading"}
+                aria-invalid={consentError}
+                aria-describedby={consentError ? "lead-consent-err" : undefined}
+                className="mt-0.5 w-4 h-4 rounded border-slate-600 bg-slate-800 accent-wheat-500 shrink-0"
+              />
+              <span className="text-xs text-slate-300 leading-relaxed">
+                Li e concordo com a{" "}
+                <Link
+                  href="/privacidade"
+                  target="_blank"
+                  className="text-wheat-400 underline"
+                >
+                  Política de Privacidade
+                </Link>{" "}
+                e autorizo o tratamento dos meus dados para agendar a consulta.
+              </span>
+            </label>
+            {consentError && (
+              <motion.p
+                id="lead-consent-err"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                className="flex items-center gap-1.5 text-sm text-red-400 -mt-2 ml-1"
+              >
+                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                É necessário aceitar a Política de Privacidade
+              </motion.p>
+            )}
 
             {/* Error banner */}
             <AnimatePresence>

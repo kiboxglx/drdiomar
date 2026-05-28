@@ -2,25 +2,28 @@
 
 import { useCallback, useEffect, useRef } from 'react';
 import { trackEvent, type TrackingEvent } from '@/lib/tracking';
+import { hasConsent } from '@/lib/consent';
 
 /**
  * useTracking — React hook for unified analytics.
  *
  * Provides:
- *  - track(): dispatch any TrackingEvent to GA4 + Meta + GAds
- *  - auto scroll-depth tracking at 25%, 50%, 75%, 100%
- *  - auto PageView on mount
+ *  - track(): dispatch any TrackingEvent to GA4 + Meta + GAds (auto-gated by LGPD consent in tracking.ts)
+ *  - auto scroll-depth tracking at 25%, 50%, 75%, 100% (only with analytics consent)
+ *  - auto PageView on mount (only with analytics consent)
  */
 export function useTracking() {
   const scrollMilestones = useRef(new Set<number>());
 
-  // --- Auto PageView on mount ---
+  // --- Auto PageView on mount (only fires after consent + when scripts loaded) ---
   useEffect(() => {
+    if (!hasConsent('analytics')) return;
     trackEvent({ name: 'page_view', params: { page_path: window.location.pathname } });
   }, []);
 
-  // --- Scroll depth tracking ---
+  // --- Scroll depth tracking (gated by analytics consent) ---
   useEffect(() => {
+    if (!hasConsent('analytics')) return;
     const milestones = [25, 50, 75, 100];
 
     function handleScroll() {

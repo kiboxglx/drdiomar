@@ -1,8 +1,11 @@
 /**
  * Unified Tracking Module
  * Dispatches events to GA4, Meta Pixel, and Google Ads simultaneously.
- * All IDs are read from env or hardcoded fallbacks for this deployment.
+ * LGPD-gated: analytics events only fire when user granted "analytics" consent;
+ * marketing events (Meta Pixel + Google Ads conversion) only fire with "marketing" consent.
  */
+
+import { hasConsent } from './consent';
 
 // --- Platform IDs ---
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || 'G-CN78RTJQKZ';
@@ -28,11 +31,12 @@ function fbqAvailable(): boolean {
   return typeof window !== 'undefined' && typeof window.fbq === 'function';
 }
 
-// --- GA4 helpers ---
+// --- GA4 helpers (gated by analytics consent) ---
 export function gtagEvent(
   eventName: string,
   params?: Record<string, unknown>
 ): void {
+  if (!hasConsent('analytics')) return;
   if (!gtagAvailable()) return;
   window.gtag('event', eventName, params);
 }
@@ -41,6 +45,7 @@ export function gtagConversion(
   conversionLabel: string,
   params?: Record<string, unknown>
 ): void {
+  if (!hasConsent('marketing')) return;
   if (!gtagAvailable()) return;
   window.gtag('event', 'conversion', {
     send_to: `${GADS_ID}/${conversionLabel}`,
@@ -48,11 +53,12 @@ export function gtagConversion(
   });
 }
 
-// --- Meta Pixel helpers ---
+// --- Meta Pixel helpers (gated by marketing consent) ---
 export function fbqTrack(
   eventName: string,
   params?: Record<string, unknown>
 ): void {
+  if (!hasConsent('marketing')) return;
   if (!fbqAvailable()) return;
   window.fbq('track', eventName, params);
 }
@@ -61,6 +67,7 @@ export function fbqTrackCustom(
   eventName: string,
   params?: Record<string, unknown>
 ): void {
+  if (!hasConsent('marketing')) return;
   if (!fbqAvailable()) return;
   window.fbq('trackCustom', eventName, params);
 }

@@ -7,6 +7,7 @@ interface LeadPayload {
   whatsapp: string;
   interesse: string;
   source?: string;
+  consent_version: string;
 }
 
 interface LeadRecord extends LeadPayload {
@@ -76,7 +77,19 @@ function validatePayload(
     return { ok: false, error: "Corpo da requisição inválido." };
   }
 
-  const { nome, whatsapp, interesse, source } = body as Record<string, unknown>;
+  const { nome, whatsapp, interesse, source, consent_accepted, consent_version } =
+    body as Record<string, unknown>;
+
+  // LGPD: consent is mandatory for processing personal data
+  if (consent_accepted !== true) {
+    return {
+      ok: false,
+      error: "É necessário aceitar a Política de Privacidade para prosseguir.",
+    };
+  }
+  if (typeof consent_version !== "string" || consent_version.length === 0) {
+    return { ok: false, error: "Versão de consentimento inválida." };
+  }
 
   // Nome: required, min 2 chars, max 120
   if (typeof nome !== "string" || nome.trim().length < 2) {
@@ -120,6 +133,7 @@ function validatePayload(
       whatsapp: digits,
       interesse: interesse as string,
       source: safeSource,
+      consent_version: consent_version,
     },
   };
 }
@@ -166,6 +180,7 @@ async function saveLead(record: LeadRecord): Promise<boolean> {
         interesse: record.interesse,
         source: record.source,
         ip: record.ip,
+        consent_version: record.consent_version,
       }),
     });
     return res.ok;

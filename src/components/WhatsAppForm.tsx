@@ -1,9 +1,17 @@
 "use client";
 
 import { useState, useCallback, useRef, type FormEvent, type ChangeEvent } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Loader2, CheckCircle2, AlertCircle, MessageCircle } from "lucide-react";
+import { Loader2, CheckCircle2, AlertCircle, MessageCircle, Shield } from "lucide-react";
 import { trackEvent } from "@/lib/tracking";
+import { CONSENT_VERSION } from "@/lib/consent";
+
+const SENSITIVE_INTERESTS = new Set([
+  "Ganho de peso / dificuldade para emagrecer",
+  "Fadiga / queda de libido / sintomas hormonais",
+  "Check-up e prevenção",
+]);
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -60,6 +68,7 @@ export default function WhatsAppForm({
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
   const [interesse, setInteresse] = useState("");
+  const [consentAccepted, setConsentAccepted] = useState(false);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [touched, setTouched] = useState(false);
@@ -74,6 +83,8 @@ export default function WhatsAppForm({
   const nomeError = touched && nome.trim().length < 2;
   const telefoneError = touched && !isValidPhone(telefone);
   const interesseError = touched && !interesse;
+  const consentError = touched && !consentAccepted;
+  const isSensitive = SENSITIVE_INTERESTS.has(interesse);
 
   const handlePhoneChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setTelefone(formatPhone(e.target.value));
@@ -84,7 +95,12 @@ export default function WhatsAppForm({
       e.preventDefault();
       setTouched(true);
 
-      if (nome.trim().length < 2 || !isValidPhone(telefone) || !interesse) {
+      if (
+        nome.trim().length < 2 ||
+        !isValidPhone(telefone) ||
+        !interesse ||
+        !consentAccepted
+      ) {
         return;
       }
 
@@ -101,6 +117,8 @@ export default function WhatsAppForm({
             whatsapp: telefone.replace(/\D/g, ""),
             interesse,
             source,
+            consent_accepted: consentAccepted,
+            consent_version: CONSENT_VERSION,
           }),
         });
 
@@ -126,7 +144,7 @@ export default function WhatsAppForm({
 
       setStatus("success");
     },
-    [nome, telefone, interesse, source]
+    [nome, telefone, interesse, consentAccepted, source]
   );
 
   const isCompact = variant === "compact";
@@ -267,6 +285,59 @@ export default function WhatsAppForm({
                 </motion.p>
               )}
             </div>
+
+            {/* Sensitive data notice (LGPD Art. 11) */}
+            <AnimatePresence>
+              {isSensitive && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="flex items-start gap-2 bg-wheat-500/10 border border-wheat-500/25 rounded-xl px-3 py-2.5 text-xs text-slate-300"
+                >
+                  <Shield className="w-4 h-4 text-wheat-400 shrink-0 mt-0.5" />
+                  <p className="leading-relaxed">
+                    O motivo informado pode revelar condição de saúde — esses dados recebem proteção
+                    reforçada (LGPD Art. 11).
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* LGPD consent checkbox */}
+            <label className="flex items-start gap-2.5 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={consentAccepted}
+                onChange={(e) => setConsentAccepted(e.target.checked)}
+                disabled={status === "submitting"}
+                aria-invalid={consentError}
+                aria-describedby={consentError ? "wa-consent-err" : undefined}
+                className="mt-0.5 w-4 h-4 rounded border-slate-600 bg-slate-800 accent-wheat-500 shrink-0"
+              />
+              <span className="text-xs text-slate-300 leading-relaxed">
+                Li e concordo com a{" "}
+                <Link
+                  href="/privacidade"
+                  target="_blank"
+                  className="text-wheat-400 underline"
+                >
+                  Política de Privacidade
+                </Link>{" "}
+                e autorizo o tratamento dos meus dados para agendar a consulta.
+              </span>
+            </label>
+            {consentError && (
+              <motion.p
+                id="wa-consent-err"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                className="flex items-center gap-1.5 text-sm text-red-400 -mt-2 ml-1"
+              >
+                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                É necessário aceitar a Política de Privacidade
+              </motion.p>
+            )}
 
             {/* Error banner */}
             <AnimatePresence>

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
-
-const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '';
+import ConsentGatedScripts from "@/components/ConsentGatedScripts";
+import CookieConsent from "@/components/CookieConsent";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -76,80 +75,8 @@ export default function RootLayout({
         >
           Pular para o conteúdo
         </a>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-CN78RTJQKZ"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-CN78RTJQKZ');
-            gtag('config', 'AW-17885917270');
-          `}
-        </Script>
-        <Script id="gads-whatsapp-conversion" strategy="afterInteractive">
-          {`
-            window.gtag_report_conversion = function(url) {
-              var callback = function () {
-                if (typeof(url) != 'undefined') { window.location = url; }
-              };
-              if (typeof gtag === 'function') {
-                gtag('event', 'conversion', {
-                  'send_to': 'AW-17885917270/FJy-CJiu8JgcENbg1dBC',
-                  'value': 25.0,
-                  'currency': 'BRL',
-                  'event_callback': callback
-                });
-              } else if (typeof(url) != 'undefined') {
-                window.location = url;
-              }
-              return false;
-            };
-            document.addEventListener('click', function(e) {
-              var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
-              if (!a) return;
-              var href = a.getAttribute('href') || '';
-              if (href.indexOf('wa.me') === -1 && href.indexOf('api.whatsapp.com') === -1) return;
-              if (typeof gtag !== 'function') return;
-              gtag('event', 'conversion', {
-                'send_to': 'AW-17885917270/FJy-CJiu8JgcENbg1dBC',
-                'value': 25.0,
-                'currency': 'BRL'
-              });
-            }, true);
-          `}
-        </Script>
-        {/* Meta Pixel */}
-        {FB_PIXEL_ID && (
-          <>
-            <Script id="meta-pixel" strategy="afterInteractive">
-              {`
-                !function(f,b,e,v,n,t,s)
-                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                n.queue=[];t=b.createElement(e);t.async=!0;
-                t.src=v;s=b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t,s)}(window, document,'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '${FB_PIXEL_ID}');
-                fbq('track', 'PageView');
-              `}
-            </Script>
-            <noscript>
-              <img
-                height="1"
-                width="1"
-                style={{ display: 'none' }}
-                src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
-                alt=""
-              />
-            </noscript>
-          </>
-        )}
+        {/* GA4 / Google Ads / Meta Pixel: carregados apenas após consentimento (LGPD) */}
+        <ConsentGatedScripts />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -317,6 +244,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <CookieConsent />
       </body>
     </html>
 
